@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              26</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Bespoke graphics<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#graphics">Bespoke graphics</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.html">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="graphics">Bespoke graphics</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    If you want to include your own textures,
+                                    you simply create them using an image editor
+                                    like Paint Shop Pro, and store them in the
+                                    etmain/textures/&lt;yourmapname&gt;
+                                    folder.&nbsp; They will need to have widths
+                                    and heights of 64, 128, 256 or 512
+                                    pixels.&nbsp; If your image isn't precisely
+                                    any of those sizes, maybe it's an irregular
+                                    shape like a person outline, then make the
+                                    dimensions of the image just large enough to
+                                    accommodate your irregular picture, still
+                                    keeping to one of those 4 pixel sizes, and
+                                    just use black for the unwanted image area.
+                                    <p>You can always crop a brush to remove the
+                                    unwanted black surround.</p>
+                                    <p>All textures have a shader, even the ones
+                                    you haven't created a shader for.&nbsp; This
+                                    is because ET uses a default shader for any
+                                    texture lacking a user-defined shader.&nbsp;
+                                    A shader tells ET what special properties
+                                    apply to the faces with this texture on
+                                    it.&nbsp; The default shader would have
+                                    things like: use the default footsteps
+                                    sound, the textured face blocks players and
+                                    bullets and missiles, the faces should show
+                                    bullet holes and scorch marks etc.</p>
+                                    <p>If you wanted areas of transparency you
+                                    must create a shader for your texture, else
+                                    the transparent area will just show as black
+                                    or whatever colour you used to represent
+                                    transparent.</p>
+                                    <p>We'll cover shaders later on.</p>
+                                    <p>Be aware that if you made a cubic brush
+                                    and applied your texture to all of them, 3
+                                    would show your image as is, and 3 would
+                                    show a mirror image of it.&nbsp; If you had
+                                    writing on your texture you'd need to make a
+                                    copy of it, apply your own mirror image, and
+                                    use that one for the 3 &quot;wrong&quot;
+                                    faces.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial27.html">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

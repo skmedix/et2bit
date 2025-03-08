@@ -1,0 +1,447 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              32</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Limbo camera and objectives narrative<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#camera">Placing limbo cameras</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#script">Scripting the objectives</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#desc">Writing the objective descriptions</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.html">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="camera">Placing limbo cameras</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    We've reached the final set of lessons
+                                    needed to reach the point where you can
+                                    create and distribute a fully operational
+                                    PK3.
+                                    <p>This lesson covers the use of limbo
+                                    cameras, which are the little (dynamic)
+                                    images that accompany the objectives text on
+                                    the limbo screen.&nbsp; With the views,
+                                    those blocks of&nbsp; text, and the tickes
+                                    and crosses you can superimpose on them,
+                                    this part of the limbo screen tells the
+                                    players what to do, the order to do it in
+                                    and roughly where to do it.</p>
+                                    <p>I'm not actually sure how many players
+                                    ever look at this information, whether they
+                                    are brand new to the map and could use the
+                                    instructions, or whether they are familiar
+                                    with the map and need to know which
+                                    objectives have been accomplished - but you
+                                    have to provide this information or you get
+                                    some ugly default views in the limbo camera
+                                    section.</p>
+                                    <p>The components to providing limbo camera
+                                    information are:</p>
+                                    <ul>
+                                      <li>the limbo cameras placed in the map</li>
+                                      <li>the script which associates each
+                                        camera to an objective</li>
+                                      <li>the script which dynamically puts
+                                        ticks and crosses on the objective text</li>
+                                      <li>the descriptive text which accompanies
+                                        the views</li>
+                                    </ul>
+                                    <p>We'll start with the camera placement.</p>
+                                    <p>Run Radiant and open the map.</p>
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">You
+    are limited to 8 objectives.&nbsp; Along with the general introduction limbo
+    camera view, this gives you a total of 9 limbo cameras available to you.
+	</td>
+</tr>
+</table>
+                                    <p>We will place 2 cameras and assume there
+                                    is one objective - for the allies to destroy
+                                    the main gate.</p>
+                                    <p>The first camera will show the general
+                                    view which introduces the map.&nbsp; In the
+                                    3D view, place the view where you want the
+                                    camera to be looking from, and aim the view
+                                    in the direction you want it to be looking
+                                    in.</p>
+                                    <p>In the 2D view, position the overhead
+                                    view so you can see the little blue eyeball
+                                    indicator.&nbsp; I've picked a general view,
+                                    just above the roof height, that offers a
+                                    far view of the gate.</p>
+                                    <p>Right-click just in front of the eyeball
+                                    and select <b>info/info_limbo_camera</b>.</p>
+                                    <p><img border="0" src="images/tutorial/32/Image1.jpg" width="438" height="456"></p>
+                                    <p>Now in the 2D view, adjust the height of
+                                    the camera until it is just in front of the
+                                    view in 3D.</p>
+                                    <p>Press N.</p>
+                                    <p>Enter <b>objective</b> and give it a
+                                    value of <b>0</b>.</p>
+                                    <p>Enter <b>target</b> and a value of <b>limbo0</b>.&nbsp;</p>
+                                    <p>Press ESC.</p>
+                                    <p>We must now place an indicator over in
+                                    front of the gate to tell the camera what to
+                                    look at.</p>
+                                    <p>Right-click in front of the gate and
+                                    select <b>info/info_notnull</b>.</p>
+                                    <p>In the side view, move the info_notnull
+                                    to a height about the middle of the gate.</p>
+                                    <p>Press N.</p>
+                                    <p>Enter <b>targetname</b> with a value of <b>limbo0</b>.</p>
+                                    <p>If you have done this correctly, the
+                                    camera will now join to the info_notnull
+                                    with a green line.</p>
+                                    <p><img border="0" src="images/tutorial/32/Image2.jpg" width="339" height="509"></p>
+                                    <p>Press ESC.</p>
+                                    <p>Now we'll place the second camera - it
+                                    will show a close-up view of the objective,
+                                    ie the gate.&nbsp; Get a close view in 3D
+                                    and place and position another limbo camera
+                                    entity as you did before.</p>
+                                    <p>Press N.</p>
+                                    <p>Enter <b>objective</b> and give it a
+                                    value of <b>1</b>.&nbsp; This is the first
+                                    of a possible 8 objectives.</p>
+                                    <p>Enter <b>target</b> and a value of <b>limbo1</b>.</p>
+                                    <p>Press ESC.</p>
+                                    <p>Place another info_notnull in front of
+                                    the gate.</p>
+                                    <p>Press N.</p>
+                                    <p>Enter <b>targetname</b> with a value of <b>limbo1</b>.</p>
+                                    <p>If you have done this correctly, the
+                                    camera will now join to the info_notnull
+                                    with a green line.</p>
+                                    <p><img border="0" src="images/tutorial/32/Image3.jpg" width="454" height="364">
+                                    <p>Save and compile the map.&nbsp; Don't run
+                                    ET yet.
+                                    <p>Remember that these are dynamic cameras,
+                                    and will show the view at the moment the
+                                    player is looking at it.&nbsp; Bear that in
+                                    mind if your view looks wrong or
+                                    inappropriate if the game circumstances
+                                    change.&nbsp; Don't worry too much though,
+                                    as I said, I doubt many people look at them
+                                    :(
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="script">Scripting the objectives</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Open etmain/maps/<b>tutorial.script</b>.<p>Add this line into the <b>game_manager</b>
+                                    <b>spawn</b>  trigger, after the line wm_set_round_timelimit</p>
+                                    <ul>
+                                      <li>wm_number_of_objectives 1</li>
+                                    </ul>
+                                    <p>This number will be a value between 1 and
+                                    8, depending on the number of <i>declared</i>
+                                    objectives.&nbsp; You can have more than 8
+                                    objectives, but you can only have limbo
+                                    cameras for 8 of them.
+                                    <p>Add these lines into the same trigger,
+                                    after the <b>wait 500</b>:
+                                    <ul>
+                                      <li>	//	Objectives</li>
+                                      <li>//	1	Primary Objective: Allies destroy main entrance</li>
+                                    </ul>
+                                    <p>These are just comments, to help remind
+                                    you what the following instructions are
+                                    actually referring to.</p>
+                                    <p>Add these lines below those just entered:</p>
+                                    <ul>
+                                      <li>// obj nbr, team, status (0=none, 1=passed, 2=failed)</li>
+                                      <li>wm_objective_status 1 0 0</li>
+                                      <li>wm_objective_status 1 1 0</li>
+                                    </ul>
+                                    <p>These lines set the starting conditions
+                                    for each objective.&nbsp; You would have 1
+                                    pair of these lines per objective.&nbsp;
+                                    This is what the lines mean:</p>
+                                    <table border="1" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF" bordercolor="#000000">
+                                      <tr>
+                                        <td><b>
+		wm_objective_status</b> 1 0 0</td>
+                                        <td>The instruction that sets the status
+                                          for an objective</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+		wm_objective_status <b> 1</b> 0 0</td>
+                                        <td>The objective number</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+		wm_objective_status 1 <b> 0</b> 0</td>
+                                        <td>The team number - 0=axis 1=allies</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+		wm_objective_status 1 0 <b> 0</b></td>
+                                        <td>The status - 0=unmarked 1=ticked
+                                          2=crossed</td>
+                                      </tr>
+                                    </table>
+
+
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Fiinally add these lines to the <b>gate
+                                    death</b> trigger, it doesn't matter where
+                                    precisely:
+                                    <ul>
+                                      <li>wm_objective_status 1 0 2</li>
+                                      <li>wm_objective_status 1 1 1</li>
+                                    </ul>
+                                    <p>So when the gate is blown, the axis
+                                    objective is marked with a cross, and the
+                                    allied with a tick.&nbsp; If the objective
+                                    you were marking in this way were say a
+                                    flag, which could be expected to switch back
+                                    and forth, you can repeatedly set the
+                                    objective status to show a team a tick, then
+                                    a cross, then a tick, etc.</p>
+                                    <p>That's the end of the script
+                                    changes.&nbsp; To finish we now just need to
+                                    create the text to go with the limbo views.
+
+
+
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="desc">Writing the objective
+                                            descriptions</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    The descriptions are written in a new text
+                                    file.
+                                    <p>Create a text file called etmain/maps/<b>tutorial.objdata</b>.</p>
+                                    <p>Edit the tutorial.objdata file, and add
+                                    these lines to it:</p>
+                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
+                                      <tr>
+                                        <td><font SIZE="2">// Set scenario
+                                          information
+                                          <p>wm_mapdescription allied
+                                          &quot;Destroy the main entrance!**Run
+                                          through the opening and laugh
+                                          madly!&quot;</p>
+                                          <p>wm_mapdescription axis &quot;Don't
+                                          let them destroy the main
+                                          entrance!&quot;</p>
+                                          <p>wm_mapdescription neutral &quot;The
+                                          Allies must blow the main gate.&quot;</p>
+                                          <p>// Axis Objective Descriptions</p>
+                                          <p>wm_objective_axis_desc 1
+                                          &quot;Primary Objective:**Don't let
+                                          them destroy the main entrance.**This
+                                          will lose the forward bunker and give
+                                          them access to the factory.&quot;</p>
+                                          <p>// Allied Objective Descriptions</p>
+                                          <p>wm_objective_allied_desc 1
+                                          &quot;Primary Objective:**Destroy the
+                                          main entrance.**This will capture the
+                                          forward bunker and give you access to
+                                          the factory.&quot;</font></td>
+                                      </tr>
+                                    </table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <font size="2">The first three lines of text
+                                    give the general map objectives display to
+                                    spectators, axis players and allied players,
+                                    before they look at any of the objective
+                                    limbo camera views.&nbsp; In limbo this will
+                                    appear as objective 1 of 2.</font>
+                                    <p><font size="2">The axis and allied
+                                    specific descriptions are numbered <b>1</b>,
+                                    and you'd have one line per objective,
+                                    obviously numbered 2, 3, 4, etc.&nbsp; Make
+                                    sure these match up with what you do in the
+                                    script!&nbsp; I have used the text from 110
+                                    Factory to illustrate the sort of thing you
+                                    might put.</font></p>
+                                    <p><font size="2">Generally you should make <b>Primary
+                                    Objective</b> those objectives that are
+                                    critical to game success, and the others
+                                    merely <b>Secondary Objective</b>.</font></p>
+                                    <p><font size="2">You can use <b>*</b> to
+                                    force a new line, and <b>**</b> to force a
+                                    new paragraph.</font></p>
+                                    <p><font size="2">Run ET and revel in your
+                                    limbo views and objective text :)</font>
+                                    <p><font size="2">You'll most likely find
+                                    that some views are slightly wrong or poorly
+                                    illuminated, so it is an iterative exercise
+                                    of tweaking camera positions until you are
+                                    happy with all of them.</font>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <font size="2"><a href="tutorial33.html">Next lesson</a></font>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

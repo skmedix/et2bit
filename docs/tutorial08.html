@@ -1,0 +1,324 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              8</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Creating the initial script<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#script">Creating the basic script</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.html">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="script">Creating the basic script</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Every map comes with a .script file, which
+                                    is a text file found in the maps folder.
+                                    <p>The purpose of the script is to tell the
+                                    game engine some basic operational details
+                                    about the map, like what the respawn times
+                                    are, and to power the interesting bits of
+                                    the map, like making a tank move, a balloon
+                                    fire rockets, or getting constructible
+                                    things to go all white/wavy and then turn
+                                    into the constructed thing.</p>
+                                    <p>Here is a .script file for the tutorial -
+                                    <a href="tutorial/tutorialscript.zip">click
+                                    here</a> - unzip it and put the .script file
+                                    into your maps (yes, maps) folder.&nbsp;
+                                    You'd think it would go in the scripts
+                                    folder wouldn't you.&nbsp; One of ET's
+                                    quirks.</p>
+                                    <p>Associate the
+                                    script suffix with Wordpad.&nbsp; Rename it
+                                    to &lt;yourmap&gt;.script if you are not
+                                    using the name &quot;tutorial&quot;.</p>
+                                    <p>Below is a brief explanation of its
+                                    contents.&nbsp; Don't worry, it's
+                                    straightforward.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Scripts contain a number of separate
+                                    sections, with each section handling a
+                                    particular aspect of something that features
+                                    in the map.&nbsp; A section is given a name,
+                                    and then its contents are marked out inside
+                                    a pair of curly brackets, like these {
+                                    }.&nbsp; The naming of the sections is up to
+                                    you, but the names chosen sometimes have to
+                                    match the names used in the map - we'll come
+                                    to that later on.
+                                    <p>The first and only section that <i>must</i>
+                                    appear in the script file, is called
+                                    &quot;game_manager&quot;.&nbsp; It contains
+                                    information about the fundamental elements
+                                    of your map, as you will see below.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    The <b>game_manager</b> section must contain
+                                    a procedure named <b>spawn</b>, which is the
+                                    procedure executed in a section when the map
+                                    starts.&nbsp; Each section can have a spawn
+                                    procedure if you want something to happen
+                                    for it when the game starts, but it isn't
+                                    mandatory.
+                                    <p>For example, the spawn procedure for a
+                                    tank might make the tank start the game
+                                    disabled.</p>
+                                    <p>Here are the contents of the script file
+                                    for the tutorial map, followed by
+                                    explanations.&nbsp; Most of it is obvious.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <table border="0" cellpadding="2" cellspacing="0" bgcolor="#D8D8D8">
+                                      <tr>
+                                        <td><font SIZE="2">game_manager
+                                          <p>{</font></td>
+                                        <td><font SIZE="2"></font>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td><font SIZE="2">spawn
+                                          <p>{</font></td>
+                                        <td><font SIZE="2"></font>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td><font SIZE="2">wm_axis_respawntime
+                                          10
+                                          <p>wm_allied_respawntime 10</p>
+                                          <p>wm_set_round_timelimit 30</p>
+                                          <p>// Stopwatch mode defending team
+                                          (0=Axis, 1=Allies)</p>
+                                          <p>wm_set_defending_team 0</p>
+                                          <p>// Winner on expiration of round
+                                          timer (0=Axis, 1=Allies, -1=Nobody)</p>
+                                          <p>wm_setwinner 0</p>
+                                          <p>wait 500</p>
+                                          <p>setautospawn &quot;Axis Spawn&quot;
+                                          0</p>
+                                          <p>setautospawn &quot;Allied
+                                          Spawn&quot; 1</font></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td><font SIZE="2">}</font></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td><font SIZE="2">}</font></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                    </table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <table border="0" cellpadding="2" cellspacing="0">
+                                      <tr>
+                                        <td valign="top"><font SIZE="2">wm_axis_respawntime
+                                          10</font></td>
+                                        <td>Sets the Axis respawntime to 10
+                                          seconds.&nbsp; This can be changed in
+                                          the script later on if wanted, say on
+                                          reaching a certain objective.</td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><font SIZE="2">wm_allied_respawntime
+                                          10</font></td>
+                                        <td>As above, for Allies.</td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><font SIZE="2">wm_set_round_timelimit
+                                          30</font></td>
+                                        <td>Sets how many minutes the map is to
+                                          last.</td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><font SIZE="2">wm_set_defending_team
+                                          0</font></td>
+                                        <td>For Stopwatch games, sets the
+                                          initial defending team.&nbsp; <b>Wherever
+                                          a team is referenced in the script, 0
+                                          means Axis and 1 means Allied</b></td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><font SIZE="2">wm_setwinner
+                                          0</font></td>
+                                        <td>If the map timer expires, the
+                                          winning team is declared to be team 0,
+                                          ie the Axis.</td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><font SIZE="2">wait 500</font></td>
+                                        <td>Wait 500 milliseconds, to allow the
+                                          other game components to start up, so
+                                          that they can be safely referenced</td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><font SIZE="2">setautospawn
+                                          &quot;Axis Spawn&quot; 0</font></td>
+                                        <td>Tells the game where the Axis
+                                          players should spawn by default.&nbsp;
+                                          In the tutorial map, the yellow
+                                          team_wolf_objective box for the Axis
+                                          team has a description (visible if you
+                                          select the box and press N) called
+                                          &quot;Axis Spawn&quot;.&nbsp; This is
+                                          what is being referenced in the
+                                          script.</td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap valign="top"><font SIZE="2">setautospawn
+                                          &quot;Allied Spawn&quot; 1&nbsp;&nbsp;</font></td>
+                                        <td>Likewise for the Allies.</td>
+                                      </tr>
+                                    </table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    T
+                                    <p>he handy thing about having at least this
+                                    much script in place is that it can set the
+                                    respawntime to 10 secs, making your testing
+                                    easier.</p>
+                                    <p>&nbsp;As you will have guessed, lines
+                                    that have <b>//</b> in them are treated as
+                                    comments from that point to the end of the
+                                    line.</p>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial09.html">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

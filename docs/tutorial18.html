@@ -1,0 +1,322 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              18</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Detail brushes vs structural brushes<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#brush">Detail brushes vs structural brushes</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.html">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="brush">Detail brushes vs structural brushes</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    What's the point in having <b>Detail</b>
+                                    brushes and <b>Structural</b> brushes?
+                                    <p> Imagine two large room
+                                    walls, one detail and one structural.&nbsp; This table shows the basic
+                                    difference.</p>
+                                    <table border="1" cellpadding="4" cellspacing="0" bordercolor="#000000">
+                                      <tr>
+                                        <td bgcolor="#CCCCCC"><b>Brush type</b></td>
+                                        <td bgcolor="#CCCCCC"><b>Blocks player
+                                          line of sight?</b></td>
+                                        <td bgcolor="#CCCCCC"><b>Blocks program
+                                          line of sight?</b></td>
+                                      </tr>
+                                      <tr>
+                                        <td bgcolor="#FFFFFF">Structural</td>
+                                        <td align="center" bgcolor="#FFFFFF">Yes</td>
+                                        <td align="center" bgcolor="#FFFFFF">Yes</td>
+                                      </tr>
+                                      <tr>
+                                        <td bgcolor="#FFFFFF">Detail</td>
+                                        <td align="center" bgcolor="#FFFFFF">Yes</td>
+                                        <td align="center" bgcolor="#FFFFFF">No</td>
+                                      </tr>
+                                    </table>
+                                    <p>What this means is that from a
+                                    player's perspective, he can't distinguish
+                                    &quot;detail&quot; brushes from
+                                    &quot;structural&quot; ones - but the
+                                    program can.<br>
+                                    </p>
+                                    <p>ET has to decide what elements of a map
+                                    might need to be drawn for a player every
+                                    time it refreshes the display.&nbsp; And it
+                                    does this by judging what is in a player's
+                                    line of sight, based on what <b> structural</b>
+                                    brushes are in the way.</p>
+                                    <p>When Radiant builds the map, it breaks
+                                    the whole volume of the map down into chunks
+                                    (called portals), whose edges are made up of
+                                    structural brushes.&nbsp; I'll use this
+                                    picture to illuastrate what this means in
+                                    practice.</p>
+                                    <table border="0" cellpadding="4" cellspacing="0">
+                                      <tr>
+                                        <td><img border="0" src="images/tutorial/18/Image1.jpg" width="284" height="554"></td>
+                                        <td valign="top">Suppose an area has
+                                          been created that connects two rooms,
+                                          as shown here.&nbsp; I'm sure you've
+                                          often seen examples where connecting
+                                          corridors or passageways go through
+                                          seemingly pointless 90 degree bends,
+                                          when a straight corridor would have
+                                          made more sense.&nbsp; Monte Cassino
+                                          is one.
+                                          <p>The map author has done this to
+                                          reduce the amount of work ET has to do
+                                          when drawing the screen for a player.</p>
+                                          <p>A player in room 1 can't see
+                                          anything in room 2 and vice
+                                          versa.&nbsp; Indeed a player can't
+                                          stand anywhere and see both rooms at
+                                          once.&nbsp; This is how it seems to
+                                          the player and how the map author
+                                          intended.</p>
+                                          <p>But this is only true when the
+                                          brushes are <b>structural</b>.&nbsp;
+                                          If the brushes had been <b>detail</b>
+                                          although it would all look the same to
+                                          the player, ET would actually draw
+                                          everything in the direction the player
+                                          faces, regardless of all the
+                                          intervening walls.&nbsp; The player
+                                          would still see the same though,
+                                          because the nearest wall would get
+                                          drawn last and would obscure all the
+                                          stuff behind it.</td>
+                                      </tr>
+                                    </table>
+                                    <p>So how do you choose when to use
+                                    structural and when to use detail?&nbsp; It
+                                    would seem that if you made everything out
+                                    of structural brushes there could not
+                                    possibly be any wasteful drawing by ET and
+                                    you'd always get the best FPS....</p>
+                                    <p>Well yes.&nbsp; And no.&nbsp; The problem
+                                    arises when some of the brushes you make are
+                                    small and irregular, say for crates that are
+                                    scattered about at odd angles, likewise
+                                    chairs, wall charts, steps of a flight of
+                                    stairs, window ledges, cables, ducts, wonky
+                                    fencing, planks stacked at different angles,
+                                    etc etc.&nbsp; You would make all these <b>detail</b>
+                                    brushes, because they reasonably wouldn't
+                                    affect overall line of sight - if you're
+                                    standing on a step, you'll see about the
+                                    same when you stand on the next step - but
+                                    more importantly if they were made of <b>structural</b>
+                                    brushes Radiant would break up the
+                                    surrounding volume into vast numbers of
+                                    portals that would make your compile take
+                                    forever and would clog up ET when it ran
+                                    with vast portal tables telling it the
+                                    450,000 portals you can see from one step,
+                                    and the 450,000 very similar portals you can
+                                    see from the next step and so on.</p>
+                                    <p><b>In summary:</b></p>
+                                    <p>Use <b>structural </b>brushes to define
+                                    buildings and principal areas/rooms.&nbsp;
+                                    Keep it in mind to try to separate main
+                                    areas in this way so that ET won't have to
+                                    draw more than it has to.&nbsp; For example,
+                                    in 110 Factory all of the outside is detail
+                                    brushwork, while the bunker and factory
+                                    walls are structural.&nbsp; A player
+                                    standing on the submarine will make ET draw
+                                    everything in the direction he is looking
+                                    at, but not the insides of the factory, nor
+                                    the rear of the bunker (it will have to draw
+                                    the inside front of the bunker because of
+                                    the window opening).</p>
+                                    <p>Use <b>detail</b> brushes to make small
+                                    details, intervening walls where it really
+                                    adds little to the display overhead, and any
+                                    surface like steps, ramps, walkways etc
+                                    where the view from one to the next differs
+                                    very little.&nbsp; Also you really must make
+                                    terrain with detail brushes when using
+                                    GtkGenSurf, which we'll cover later.</p>
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">You
+    will often forget to make brushes into detail as you make your map.&nbsp; A
+    very handy tip is to press ctrl+D from time to time to toggle the filtering
+    of detailed brushes.&nbsp; When you press it first, all your detail brushes
+    will disappear.&nbsp; It can then be very obvious that you've got some
+    structural brushes that ought to be detail.&nbsp; As you go around making
+    them detail, they disappear too.&nbsp; When you're satisfied, ctrl+D to get
+    the detail brushes displayed again.
+	</td>
+</tr>
+</table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    These pictures are of a Radiant view of
+                                    2Tanks.&nbsp; The first shows all the
+                                    brushes.
+                                    <p><img border="0" src="images/tutorial/18/Image2.jpg" width="834" height="564"></p>
+                                    <p>Then we press ctrl+D and filter out all
+                                    the detail brushes.</p>
+                                    <p><img border="0" src="images/tutorial/18/Image3.jpg" width="835" height="556"></p>
+                                    <p>You'll notice virtually all of the roads,
+                                    terrain and buildings disappear.&nbsp; They
+                                    are all detail.&nbsp; The main areas the
+                                    players can get inside are made of
+                                    structural brushes, so for example ET won't
+                                    have to draw the inside of the Fuel Dump nor
+                                    the inside of the V-1 Base unless the player
+                                    is in there.</p>
+                                    <p>There was no point in making roads and
+                                    dummy buildings structural, because there
+                                    are too many ways for the player to see over
+                                    the top of them anyway, so they wouldn't
+                                    really act as efficient blocks to line of
+                                    sight.&nbsp; By keeping the dummy buildings
+                                    simple the overhead in displaying them is
+                                    small, and it cuts down hugely on
+                                    unnecessary portals (and keeps my compile
+                                    time sensible!).</p>
+                                    <p>With 6Flags the difference is even more
+                                    startling.&nbsp; Here's the normal view:</p>
+                                    <p><img border="0" src="images/tutorial/18/Image4.jpg" width="880" height="561"></p>
+                                    <p>And now with the detail brushes hidden:</p>
+                                    <p><img border="0" src="images/tutorial/18/Image5.jpg" width="882" height="556"></p>
+                                    <p>The open, rolling terrain, on which a
+                                    player could get quite high, made it
+                                    impractical to use structural brushes.&nbsp;
+                                    It also meant I couldn't go overboard on
+                                    including too many fancy buildings etc as
+                                    they would start to be a drain on the FPS.</p>
+                                    <p>Finally here's an &quot;outside&quot;
+                                    view of TankBuster, showing how structural
+                                    caulk brushes surround the overall
+                                    environment.</p>
+                                    <p><img border="0" src="images/tutorial/18/Image6.jpg" width="610" height="415">
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial19.html">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

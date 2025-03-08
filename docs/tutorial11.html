@@ -1,0 +1,393 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+    <td><a href="http://www.thetibetclan.com" target="_blank" class="1">TibeT Clan</a> <span class="style1">|</span> 
+      <a href="#" title="ClanBar link not yet active" class="1">ClanBar.com</a></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              11</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Planting a tree<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#model">Introduction to models</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#ceiling">Making some ceiling space</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#plant">Putting a tree model into place</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#prefab">Making a tree prefab</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.html">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="model">Introduction to models</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    What's a model?&nbsp; It's a predefined
+                                    object that you can plonk straight into your
+                                    map, without having to make or paint any
+                                    brushes.&nbsp; Just like putting a
+                                    ready-made MG42 into the map, we can put in
+                                    any ready-made models we want, things like
+                                    trucks, tanks, trees, vases...
+                                    <p>For Radiant to see a model to give you
+                                    the option of picking it, it has to be
+                                    within your ET folder structure, rather than
+                                    just in a PK3.&nbsp; When Radiant installs,
+                                    it creates the models folder within etmain,
+                                    and the mapobjects folder within
+                                    models.&nbsp; Inside there are a load of
+                                    folders each of which contain model files,
+                                    ending in .MD3.</p>
+                                    <p>Models are great ways to include some
+                                    graphical detail without having to do any
+                                    work. :)</p>
+                                    <p>Apart from a bit.&nbsp; Models are drawn
+                                    by the game, but do not affect player or
+                                    missile movement.&nbsp; So if you put a tree
+                                    model into place and leave it at that, the
+                                    players would be able to run clean through
+                                    it.&nbsp; You'll see how you can stop that
+                                    further down in this lesson.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="ceiling">Making some ceiling space</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Trees are tall.&nbsp; In our little space we
+                                    need to raise the ceiling.&nbsp; This should
+                                    also prevent the
+                                    &quot;grenades-through-the-sky&quot;
+                                    syndrome.&nbsp; If you find you can still
+                                    manage to get a grenade through the sky, you
+                                    could lift the ceiling higher again until
+                                    you can't.
+                                    <p>Run Radiant and open the map.&nbsp;
+                                    Ctrl+tab to see the side view.&nbsp; Select
+                                    the sky brush, and move it down until it
+                                    sits on the 256 Z line.&nbsp; We're doing
+                                    this to get the brush dimensions to fit
+                                    nicely into a very large grid size.</p>
+                                    <p><img border="0" src="images/tutorial/11/Image1.jpg" width="284" height="529"></p>
+                                    <p>Press ESC.&nbsp; Select the 4 walls, and
+                                    decrease their height to meet the ceiling.</p>
+                                    <p><img border="0" src="images/tutorial/11/Image2.jpg" width="247" height="378"></p>
+                                    <p>Press <b>9</b> for a nice big grid
+                                    size.&nbsp; Duplicate the four walls.&nbsp;
+                                    Move them onto the top of the other walls.
+                                    <p><img border="0" src="images/tutorial/11/Image3.jpg" width="444" height="394">
+                                    <p>Press ESC.&nbsp; Select the sky again,
+                                    and move it up one notch.
+                                    <p><img border="0" src="images/tutorial/11/Image4.jpg" width="274" height="410">
+                                    <p>Press ESC.&nbsp; Now select all the inner
+                                    wall faces of the new high walls we just
+                                    built, and finally select the sky face
+                                    too.&nbsp; You should have 5 faces selected,
+                                    and the sky one must be the last.&nbsp; Why
+                                    did we select the sky face?&nbsp; Because
+                                    it's a handy way of getting the sky texture
+                                    visible in the textures window.&nbsp; Click
+                                    it now and it will apply sky texture to all
+                                    the selected faces.&nbsp; Press ESC.
+                                    <p><img border="0" src="images/tutorial/11/Image5.jpg" width="394" height="385"> 
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="plant">Putting a tree model into place</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Get the overhead view.&nbsp; Press <b>5</b>
+                                    to get a reasonable grid scale.&nbsp; Right
+                                    click where shown here:
+                                    <p><img border="0" src="images/tutorial/11/Image6.jpg" width="416" height="409"></p>
+                                    <p>Click misc/misc_model and a window will
+                                    open.&nbsp; Double-click mapobjects then
+                                    trees_sd, then tree_a.md3.</p>
+                                    <p><img border="0" src="images/tutorial/11/Image7.jpg" width="250" height="272"></p>
+                                    <p>Get a side view, and move the tree down
+                                    to the ground <b>by click/dragging somewhere
+                                    within the actual tree shape, rather than
+                                    just somewhere within the box it comes in.</b></p>
+                                    <p><img border="0" src="images/tutorial/11/Image8.jpg" width="256" height="323"></p>
+                                    <p>Maybe it's a little too big.&nbsp; Press
+                                    N and enter a key of &quot;modelscale&quot;
+                                    and a value of &quot;0.8&quot; and press
+                                    return.</p>
+                                    <p>Ok the tree is about the right size, now
+                                    we must add a &quot;clip&quot; brush, which
+                                    is a brush that isn't drawn, but will act as
+                                    the solid tree trunk to block movement, and
+                                    also to give a wooden bullet ricochet noise
+                                    if the clip brush is hit.</p>
+                                    <p>Press ESC.&nbsp; Get the overhead view
+                                    and draw a brush as shown.</p>
+                                    <p><img border="0" src="images/tutorial/11/Image9.jpg" width="210" height="232"></p>
+                                    <p>Then select Region/Set Tall Brush from
+                                    the menu at the top of the screen.&nbsp;
+                                    This restricts what Radiant draws to
+                                    whatever is inside the box you drew.&nbsp;
+                                    The box is deleted as it has fulfillled its
+                                    task of indicating the area you are
+                                    interested in.</p>
+                                    <p>Get a side view and draw a brush as
+                                    shown.&nbsp; I've coloured it yellow so you
+                                    can see the red dashed outline against the
+                                    red model.</p>
+                                    <p><img border="0" src="images/tutorial/11/Image10.jpg" width="312" height="590"></p>
+                                    <p>Get the next side view, and shrink the
+                                    brush to about the right size by pressing <b>4</b>
+                                    to get a better grid scale..</p>
+                                    <p>Once the brush is about right, but a bit
+                                    lumpy and straight upright, use the Edge
+                                    tool and grab the corner blue dots to make
+                                    the brush hug the tree trunk up to about the
+                                    point where you no longer need clipping, ie
+                                    up high in the leaves.</p>
+                                    <p><img border="0" src="images/tutorial/11/Image11.jpg" width="242" height="650"></p>
+                                    <p>Keep using ctrl+tab to check the 2 side
+                                    views as you refine the clip brush.&nbsp;
+                                    Use <b>3</b> if you want to get the fit
+                                    really snug.&nbsp; You can see in the 3D how
+                                    you are doing.</p>
+                                    <p>&nbsp;<img border="0" src="images/tutorial/11/Image12.jpg" width="216" height="718"></p>
+                                    <p>Press E when you are satisfied with
+                                    it.&nbsp; Then click Textures/common and
+                                    click on the Clip Weapon Wood (green/mauve
+                                    check) texture.&nbsp; Finally right-click in
+                                    the 2D and select Make Detail.&nbsp; This
+                                    deselects the brush too.</p>
+                                    <p>Ctrl+tab to get the overhead view.&nbsp;
+                                    Press <b>7</b> to return to a sensible grid
+                                    scale.&nbsp; Click Region/Off to see the
+                                    whole map again.&nbsp; Save your work.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="prefab">Making a tree prefab</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Happily you won't have to do that for every
+                                    tree.
+                                    <p>Make a folder called &quot;prefabs&quot;
+                                    in your maps folder.</p>
+                                    <p>Select the tree model and its clip,
+                                    either by clicking them both (fiddly) or by
+                                    drawing a box around them and
+                                    &quot;selecting complete tall&quot;.</p>
+                                    <p>Click File/<b>Save Selected...</b> then
+                                    double-click the prefabs folder, give a file
+                                    name of say &quot;snowy_tree_1&quot; and
+                                    save it as a .map file type.&nbsp; Press
+                                    ESC.</p>
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" style="float: left" width="48" height="42">You can
+    save any collection of brushes as a prefab.&nbsp; This is hugely helpful, as
+    it means you can import prefabs as you need, without having to reinvent
+    every little detail.
+	</td>
+</tr>
+</table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    To include a prefab into your map, you click
+                                    File/<b>Import...</b> and navigate to the
+                                    prefab you want.&nbsp; It will appear within
+                                    your map, at the co-ordinates that it was
+                                    saved at, and already selected ready for you
+                                    to move into place.&nbsp; When moving a
+                                    model/clip like this, be sure to put your
+                                    cursor within the clip area, or you may
+                                    distort the clip by accident.
+                                    <p>If you change the modelscale of your tree
+                                    later on, be sure to change the size of the
+                                    clip brush too.&nbsp; More on that later.</p>
+                                    <p>To make a little clump of trees it is
+                                    best to make a few prefabs using different
+                                    trees and different scales, and then import
+                                    a variety so they don't all look the same.</p>
+                                    <p>Compile and test to make sure your tree
+                                    is ok.&nbsp; Notice how the wall and ceiling
+                                    sky textures are seamlessly merged by the
+                                    game engine.&nbsp; Neat.&nbsp; And your tree
+                                    model casts a plausible shadow.&nbsp; Very
+                                    neat.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial12.html">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>
