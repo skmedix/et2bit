@@ -1,329 +1,657 @@
 <html>
 <head>
-<title>2Bit Enemy Territory</title>
-<link href="styles.css" rel="stylesheet" type="text/css">
+    <title>2Bit Enemy Territory</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
-  <tr>
-    <td width="1"><a href="https://skmedix.github.io/et2bit/"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
-    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
-  </tr>
+<table
+        width="100%"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        bgcolor="#525C69"
+>
+    <tr>
+        <td width="1">
+            <a href="https://skmedix.github.io/et2bit/"
+            ><img
+                    src="images/url.gif"
+                    alt="2Bit's Mapping Corner on www.PythonOnline.co.uk"
+                    hspace="36"
+                    vspace="5"
+                    border="0"
+                    width="166"
+                    height="15"
+            /></a>
+        </td>
+        <td width="1"><img src="images/s.gif" width="36" height="1"/></td>
+    </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td>
-		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td valign="top">
-				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
-				<tr class=grey>
-					<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
-					<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font></td>
-				</tr>
-				<tr>
-					<td colspan=2>
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td valign="top">
+                        <table
+                                width="100%"
+                                border="0"
+                                align="center"
+                                cellpadding="0"
+                                cellspacing="0"
+                        >
+                            <tr class="grey">
+                                <td>
+                                    <img
+                                            src="images/logo.jpg"
+                                            hspace="6"
+                                            width="227"
+                                            height="250"
+                                    />
+                                </td>
+                                <td width="100%" align="center">
+                                    <font size="6">ET Mapping Tutorial</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
                                         <tr>
-                                          <td width="50%" class=header>Introduction</td>
-                                          <td width="50%" align="right"></td>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="0"
+                                                                    cellspacing="0"
+                                                                    width="100%"
+                                                            >
+                                                                <tr>
+                                                                    <td width="50%" class="header">
+                                                                        Introduction
+                                                                    </td>
+                                                                    <td width="50%" align="right"></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            This tutorial has been set up to help would-be
+                                                            mappers looking for a step-by-step guide from
+                                                            the beginning.&nbsp; It assumes the reader has
+                                                            no idea how to use GtkRadiant and knows
+                                                            nothing about scripting and the like.
+                                                            <p>
+                                                                These pages were originally created for
+                                                                members of the TibeT clan and regular
+                                                                players on the TibeT servers, but anyone
+                                                                finding this tutorial is welcome to use it
+                                                                :)
+                                                            </p>
+                                                            <p>
+                                                                I don't claim to know everything about
+                                                                mapping but I've learnt enough from various
+                                                                sources to be able to make
+                                                                <a
+                                                                        href="https://skmedix.github.io/et2bit"
+                                                                        target="_blank"
+                                                                >
+                                                                    maps</a
+                                                                >
+                                                                of reasonable complexity.&nbsp; I've had a
+                                                                number of people asking various mapping
+                                                                questions and I thought it was a better idea
+                                                                to explain it all once to anyone
+                                                                interested.&nbsp; The tutorial is incomplete
+                                                                but I continue to add pages as I get the
+                                                                time.&nbsp;
+                                                            </p>
+                                                            <p>
+                                                                Be aware that the subject is very large so
+                                                                there's a lot to explain; and that to make a
+                                                                decent fair-sized map can easily take over
+                                                                200 hours, so with this as a hobby you need
+                                                                a lot of patience and spare time, but at
+                                                                least the tools to do the job are
+                                                                free.&nbsp; The best maps out there might
+                                                                have taken their authors 18 months to
+                                                                create, depending on how much free time they
+                                                                had.
+                                                            </p>
+                                                            <p>
+                                                                Disclaimer: I may be wrong in my
+                                                                understanding of any aspect of the subject,
+                                                                but hey, I'm doing my best :)
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
                                         </tr>
-                                      </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-This tutorial has been set up to help would-be mappers looking for a
-step-by-step guide from the beginning.&nbsp; It assumes the reader has no idea
-how to use GtkRadiant and knows nothing about scripting and the like.
-<p>These pages were originally created for members of the TibeT clan and regular
-players on the TibeT servers, but anyone finding this tutorial is welcome to use
-it :)</p>
-<p>I don't claim to know everything about mapping but I've learnt enough from various
-sources to be able to make <a href="https://skmedix.github.io/et2bit" target="_blank"> maps</a>
-of reasonable complexity.&nbsp; I've had a
-number of people asking various mapping questions and I thought it was a better
-idea to explain it all once to anyone interested.&nbsp;
-The tutorial is incomplete but I continue to add pages as I get the time.&nbsp;</p>
-<p>Be aware that the subject is very large so there's a lot to explain; and
-that to make a decent fair-sized map can easily take over 200 hours, so with this as a
-hobby you need a lot of patience and spare time, but at least the tools to do
-the job are free.&nbsp; The best maps out there might have taken their authors
-18 months to create, depending on how much free time they had.</p>
-<p>Disclaimer: I may be wrong in my understanding of any aspect of the
-subject, but hey, I'm doing my best :)</p>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                    </table>
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Introductory topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-To get from knowing nothing about mapping to being able to run around in your
-own first little map, follow these introductory topics in order from start to finish.
-<ul>
-  <li><a href="tutorial01.html">Getting Started</a></li>
-  <li><a href="tutorial02.html">Making your first brush</a></li>
-  <li><a href="tutorial03.html">Making your first map</a></li>
-</ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">
+                                                            Introductory topics
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            To get from knowing nothing about mapping to
+                                                            being able to run around in your own first
+                                                            little map, follow these introductory topics
+                                                            in order from start to finish.
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="tutorial01.html"
+                                                                    >Getting Started</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial02.html"
+                                                                    >Making your first brush</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial03.html"
+                                                                    >Making your first map</a
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>First set of
-                                      intermediate topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Create a building inside a landscape, with a
-                                    destructible window and working door.
-                                    <ul>
-                                      <li><a href="tutorial04.html">Creating an environment</a></li>
-                                      <li><a href="tutorial05a.html">Making a
-                                        building outline in your environment</a></li>
-                                      <li><a href="tutorial06.html">Making a door</a></li>
-                                      <li><a href="tutorial07.html">Making a destructible
-                                        window</a></li>
-                                    </ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">
+                                                            First set of intermediate topics
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Create a building inside a landscape, with a
+                                                            destructible window and working door.
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="tutorial04.html"
+                                                                    >Creating an environment</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial05a.html"
+                                                                    >Making a building outline in your
+                                                                        environment</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial06.html"
+                                                                    >Making a door</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial07.html"
+                                                                    >Making a destructible window</a
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Second set of
-                                      intermediate topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    A break from brushes: a quick delve into <i>
-                                    some</i> of the other mapping elements.
-                                    <ul>
-                                      <li><a href="tutorial08.html">Creating the initial script</a></li>
-                                      <li><a href="tutorial09.html">Creating the mission text to be shown
-                                        as the map loads</a></li>
-                                      <li><a href="tutorial10.html">Adding ambient sounds</a></li>
-                                    </ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">
+                                                            Second set of intermediate topics
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            A break from brushes: a quick delve into
+                                                            <i> some</i> of the other mapping elements.
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="tutorial08.html"
+                                                                    >Creating the initial script</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial09.html"
+                                                                    >Creating the mission text to be shown
+                                                                        as the map loads</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial10.html"
+                                                                    >Adding ambient sounds</a
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Third set of
-                                      intermediate topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Back to Radiant again, for models, simple destructibles and constructibles.&nbsp;
-                                    Starting to get more interesting now.&nbsp; Don't attempt these unless you've completed
-                                    the previous topics.
-                                    <ul>
-                                      <li><a href="tutorial11.html">Planting a
-                                        tree</a></li>
-                                      <li><a href="tutorial12.html">Making stuff you can shoot up</a></li>
-                                      <li><a href="tutorial13.html">Making barbed wire</a></li>
-                                      <li><a href="tutorial14.html">Making a
-                                        ladder</a></li>
-                                      <li><a href="tutorial15.html">Making a constructible MG42</a></li>
-                                    </ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">
+                                                            Third set of intermediate topics
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Back to Radiant again, for models, simple
+                                                            destructibles and constructibles.&nbsp;
+                                                            Starting to get more interesting now.&nbsp;
+                                                            Don't attempt these unless you've completed
+                                                            the previous topics.
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="tutorial11.html"
+                                                                    >Planting a tree</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial12.html"
+                                                                    >Making stuff you can shoot up</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial13.html"
+                                                                    >Making barbed wire</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial14.html"
+                                                                    >Making a ladder</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial15.html"
+                                                                    >Making a constructible MG42</a
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Fourth set of
-                                      intermediate topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    A set of topics with some variety, helping
-                                    you ease into some of the more complicated
-                                    subjects..
-                                    <ul>
-                                      <li><a href="tutorial16.html">Secure doors</a></li>
-                                      <li><a href="tutorial17.html">Lighting</a></li>
-                                      <li><a href="tutorial18.html">Detail brushes vs structural brushes</a></li>
-                                      <li><a href="tutorial19.html">Health and ammo cabinets</a></li>
-                                    </ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">
+                                                            Fourth set of intermediate topics
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            A set of topics with some variety, helping you
+                                                            ease into some of the more complicated
+                                                            subjects..
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="tutorial16.html">Secure doors</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial17.html">Lighting</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial18.html"
+                                                                    >Detail brushes vs structural brushes</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial19.html"
+                                                                    >Health and ammo cabinets</a
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Fifth set of
-                                      intermediate topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Some of the principal game features, the CP,
-                                    bendy shapes and terrain.
-                                    <ul>
-                                      <li><a href="tutorial20.html">Command Posts</a></li>
-                                      <li><a href="tutorial21.html">Curved walls
-                                        and arches</a></li>
-                                      <li><a href="tutorial22.html">Cylinders, cones and curved roads</a></li>
-                                      <li><a href="tutorial23.html">Making
-                                        terrain using GtkGenSurf</a></li>
-                                      <li><a href="tutorial24.html">Fine tuning
-                                        the terrain by dragging vertices</a></li>
-                                      <li><a href="tutorial25.html">Skyboxes</a></li>
-                                    </ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">
+                                                            Fifth set of intermediate topics
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Some of the principal game features, the CP,
+                                                            bendy shapes and terrain.
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="tutorial20.html"
+                                                                    >Command Posts</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial21.html"
+                                                                    >Curved walls and arches</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial22.html"
+                                                                    >Cylinders, cones and curved roads</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial23.html"
+                                                                    >Making terrain using GtkGenSurf</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial24.html"
+                                                                    >Fine tuning the terrain by dragging
+                                                                        vertices</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial25.html">Skyboxes</a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Sixth set of
-                                      intermediate topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Some topics that help to bring interest to
-                                    your map.
-                                    <ul>
-                                      <li><a href="tutorial26.html">Bespoke graphics</a></li>
-                                      <li><a href="tutorial27.html">Making a constructible object like a
-                                        ramp</a></li>
-                                      <li><a href="tutorial28.html">Making a destructible object like a
-                                        gate</a></li>
-                                      <li><a href="tutorial29.html">Forward spawn flags</a></li>
-                                      <li><a href="tutorial30.html">Water</a></li>
-                                      <li><a href="tutorial31.html">Team speech</a></li>
-                                    </ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">
+                                                            Sixth set of intermediate topics
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Some topics that help to bring interest to
+                                                            your map.
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="tutorial26.html"
+                                                                    >Bespoke graphics</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial27.html"
+                                                                    >Making a constructible object like a
+                                                                        ramp</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial28.html"
+                                                                    >Making a destructible object like a
+                                                                        gate</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial29.html"
+                                                                    >Forward spawn flags</a
+                                                                    >
+                                                                </li>
+                                                                <li><a href="tutorial30.html">Water</a></li>
+                                                                <li>
+                                                                    <a href="tutorial31.html">Team speech</a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Final set of
-                                      intermediate topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    This last set of intermediate topics cover
-                                    the remaining components you'll want to make a
-                                    distributable PK3 package.
-                                    <ul>
-                                      <li><a href="tutorial32.html">Limbo camera and objectives narrative</a></li>
-                                      <li><a href="tutorial33.html">Making the game end</a></li>
-                                      <li><a href="tutorial34.html">Generating a tracemap</a></li>
-                                      <li><a href="tutorial35.html">Making the command map</a></li>
-                                      <li><a href="tutorial36.html">Making the picture to be shown while
-                                        the map loads</a></li>
-                                      <li><a href="tutorial37.html">Making a PK3 file</a></li>
-                                    </ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">
+                                                            Final set of intermediate topics
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            This last set of intermediate topics cover the
+                                                            remaining components you'll want to make a
+                                                            distributable PK3 package.
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="tutorial32.html"
+                                                                    >Limbo camera and objectives
+                                                                        narrative</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial33.html"
+                                                                    >Making the game end</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial34.html"
+                                                                    >Generating a tracemap</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial35.html"
+                                                                    >Making the command map</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial36.html"
+                                                                    >Making the picture to be shown while
+                                                                        the map loads</a
+                                                                    >
+                                                                </li>
+                                                                <li>
+                                                                    <a href="tutorial37.html"
+                                                                    >Making a PK3 file</a
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Advanced topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    This final set of topics covers some of the
-                                    more complicated stuff that you may never
-                                    want to use - but if you've made it this far
-                                    with the tutorial, you probably will :)
-                                    <ul>
-                                      <li><a href="tutorial38.html">The Tank</a></li>
-                                      <li>Scripting in detail</li>
-                                      <li>Grabbing the gold or radar parts, etc</li>
-                                      <li>Making constructible/destructible
-                                        doors</li>
-                                      <li>Bespoke sound</li>
-                                      <li>Making something simple move</li>
-                                      <li>Trucks</li>
-                                      <li>Shaders</li>
-                                      <li>Custom command map icons</li>
-                                    </ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-
-					</td>
-				</tr>
-				</table>          
-			</td>
-		</tr>
-		</table>
-	</td>
-</tr>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">
+                                                            Advanced topics
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            This final set of topics covers some of the
+                                                            more complicated stuff that you may never want
+                                                            to use - but if you've made it this far with
+                                                            the tutorial, you probably will :)
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="tutorial38.html">The Tank</a>
+                                                                </li>
+                                                                <li>Scripting in detail</li>
+                                                                <li>
+                                                                    Grabbing the gold or radar parts, etc
+                                                                </li>
+                                                                <li>
+                                                                    Making constructible/destructible doors
+                                                                </li>
+                                                                <li>Bespoke sound</li>
+                                                                <li>Making something simple move</li>
+                                                                <li>Trucks</li>
+                                                                <li>Shaders</li>
+                                                                <li>Custom command map icons</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
 </body>
 </html>

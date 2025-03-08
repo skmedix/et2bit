@@ -1,185 +1,322 @@
 <html>
 <head>
-<title>2Bit Enemy Territory</title>
-<link href="styles.css" rel="stylesheet" type="text/css">
+    <title>2Bit Enemy Territory</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
-  <tr>
-    <td width="1"><a href="https://skmedix.github.io/et2bit/"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
-    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
-  </tr>
+<table
+        width="100%"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        bgcolor="#525C69"
+>
+    <tr>
+        <td width="1">
+            <a href="https://skmedix.github.io/et2bit/"
+            ><img
+                    src="images/url.gif"
+                    alt="2Bit's Mapping Corner on www.PythonOnline.co.uk"
+                    hspace="36"
+                    vspace="5"
+                    border="0"
+                    width="166"
+                    height="15"
+            /></a>
+        </td>
+        <td width="1"><img src="images/s.gif" width="36" height="1"/></td>
+    </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td>
-		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td valign="top">
-				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
-				<tr class=grey>
-					<td>
-						<table width="100%" border="0" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
-							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
-                              28</font></p></td>
-						</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-<b><br>
-Making a destructible object like a gate<br>
-&nbsp;</b>
-<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
-  <tr>
-    <td></td>
-    <td><a href="#prep">Preparation</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a href="#make">Making the destructible</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a href="#script">Writing the script</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a href="tutorial.html">Back to main menu</a></td>
-  </tr>
-</table>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-<!-- Alert boxout
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
-	</td>
-</tr>
-</table>
--->
-<!--
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td valign="top">
+                        <table
+                                width="100%"
+                                border="0"
+                                align="center"
+                                cellpadding="0"
+                                cellspacing="0"
+                        >
+                            <tr class="grey">
+                                <td>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                    >
                                         <tr>
-                                          <td width="50%" class=header><a name="name">name</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                            <td>
+                                                <img
+                                                        src="images/logo.jpg"
+                                                        hspace="6"
+                                                        width="227"
+                                                        height="250"
+                                                />
+                                            </td>
+                                            <td width="100%" align="center">
+                                                <font size="6">ET Mapping Tutorial</font>
+                                                <p><font size="5">Lesson 28</font></p>
+                                            </td>
                                         </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">Topics</td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <b
+                                                            ><br/>
+                                                                Making a destructible object like a gate<br/>
+                                                                &nbsp;</b
+                                                            >
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="2"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td><a href="#prep">Preparation</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <a href="#make"
+                                                                        >Making the destructible</a
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <a href="#script">Writing the script</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <a href="tutorial.html"
+                                                                        >Back to main menu</a
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- Alert boxout
+              <table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+              <tr>
+                  <td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+                  <img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+                  </td>
+              </tr>
+              </table>
+              -->
+                                    <!--
+                                      <table width="100%"  border="0" cellspacing="0" cellpadding="8">
+                                      <tr>
+                                          <td>
+                                              <table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+                                              <tr valign="top">
+                                                  <td width="100%">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td width="50%" class=header><a name="name">name</a></td>
+                                                        <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                              </tr>
+                                              <tr valign="top">
+                                                  <td width="100%" bgcolor="#EAEBED">
+                                                  </td>
+                                              </tr>
+                                              </table>
+                                          </td>
+                                      </tr>
                                       </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
--->
+              -->
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
                                         <tr>
-                                          <td width="50%" class=header><a name="prep">Preparation</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
-                                        </tr>
-                                      </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Like constructibles, destructibles are best
-                                    made by using a template already created.
-                                    <p>I have put an allied destructible template
-                                    <a href="tutorial/prefab_allied_destructible.zip">here</a>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="0"
+                                                                    cellspacing="0"
+                                                                    width="100%"
+                                                            >
+                                                                <tr>
+                                                                    <td width="50%" class="header">
+                                                                        <a name="prep">Preparation</a>
+                                                                    </td>
+                                                                    <td width="50%" align="right">
+                                                                        <a href="#">[Top]</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Like constructibles, destructibles are best
+                                                            made by using a template already created.
+                                                            <p>
+                                                                I have put an allied destructible template
+                                                                <a
+                                                                        href="tutorial/prefab_allied_destructible.zip"
+                                                                >here</a
+                                                                >
                                     for you to download.&nbsp; Unzip it and put
                                     the 2 files into your maps/prefabs
                                     folder.&nbsp; Don't amend these, just use
                                     them as the template to stamp out allied
-                                    destructibles as you need them.</p>
-                                    <p>Make a
-                                    copy of <font color="#0000FF">etmain/maps/prefabs/prefab_allied_destructible_template.map</font>
-                                    and call it <font color="#0000FF">etmain/maps/_temp.map</font>.&nbsp;
-                                    By calling the copy &quot;_temp&quot; it
-                                    will appear early in your list when you
-                                    import it, and you know to chuck it away
-                                    later on because it is &quot;temp&quot;.<p>Edit
-                                    _temp.map with Wordpad or similar.&nbsp; Make these changes:
-                                    <ul>
-                                      <li>Replace all instances of
-                                        &quot;allied_destructible&quot; with
-                                        &quot;gate&quot; as this is
-                                        the name we'll use for the gate
-                                        destructible.&nbsp; You could of course
-                                        use any name that suits you.</li>
-                                      <li>Replace all instances of&nbsp; &quot;Allied
-                                        Destructible&quot; with
-                                        the name to appear on the Command Map
-                                        and next to &quot;you are
-                                        near...&quot;.&nbsp; In this instance
-                                        we're making a big gate, so make it &quot;Main
-                                        Gate&quot;.</li>
-                                      <li>Save and close the file.</li>
-                                    </ul>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td width="50%" class=header><a name="make">Making the destructible</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                                                destructibles as you need them.
+                                                            </p>
+                                                            <p>
+                                                                Make a copy of
+                                                                <font color="#0000FF"
+                                                                >etmain/maps/prefabs/prefab_allied_destructible_template.map</font
+                                                                >
+                                                                and call it
+                                                                <font color="#0000FF"
+                                                                >etmain/maps/_temp.map</font
+                                                                >.&nbsp; By calling the copy
+                                                                &quot;_temp&quot; it will appear early in
+                                                                your list when you import it, and you know
+                                                                to chuck it away later on because it is
+                                                                &quot;temp&quot;.
+                                                            </p>
+
+                                                            <p>
+                                                                Edit _temp.map with Wordpad or
+                                                                similar.&nbsp; Make these changes:
+                                                            </p>
+
+                                                            <ul>
+                                                                <li>
+                                                                    Replace all instances of
+                                                                    &quot;allied_destructible&quot; with
+                                                                    &quot;gate&quot; as this is the name we'll
+                                                                    use for the gate destructible.&nbsp; You
+                                                                    could of course use any name that suits
+                                                                    you.
+                                                                </li>
+                                                                <li>
+                                                                    Replace all instances of&nbsp;
+                                                                    &quot;Allied Destructible&quot; with the
+                                                                    name to appear on the Command Map and next
+                                                                    to &quot;you are near...&quot;.&nbsp; In
+                                                                    this instance we're making a big gate, so
+                                                                    make it &quot;Main Gate&quot;.
+                                                                </li>
+                                                                <li>Save and close the file.</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
                                         </tr>
-                                      </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Run Radiant and open the map.&nbsp; We're
-                                    going to put the destructible gate into some
-                                    clear space.
-                                    <p>Select grid size 9.&nbsp; Get the 2D view
+                                    </table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="0"
+                                                                    cellspacing="0"
+                                                                    width="100%"
+                                                            >
+                                                                <tr>
+                                                                    <td width="50%" class="header">
+                                                                        <a name="make"
+                                                                        >Making the destructible</a
+                                                                        >
+                                                                    </td>
+                                                                    <td width="50%" align="right">
+                                                                        <a href="#">[Top]</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Run Radiant and open the map.&nbsp; We're
+                                                            going to put the destructible gate into some
+                                                            clear space.
+                                                            <p>
+                                                                Select grid size 9.&nbsp; Get the 2D view
                                     over the clear space and delete the few bits
-                                    of terrain as shown.</p>
-                                    <p><img border="0" src="images/tutorial/28/Image1.jpg" width="370" height="378"></p>
-                                    <p>Now draw a brush in the space we've made,
+                                                                of terrain as shown.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/28/Image1.jpg"
+                                                                        width="370"
+                                                                        height="378"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                Now draw a brush in the space we've made,
                                     make it wall03_mid texture, and make it
                                     Detail.&nbsp; Then select it again, lift it
                                     up so you can see the bottom and caulk the
@@ -187,38 +324,72 @@ Making a destructible object like a gate<br>
                                     caulked, then also select a nearby caulked
                                     face - this will bring the caulk texture
                                     into view in the textures window, ready for
-                                    your quick selection.)</p>
-                                    <p>Then move the brush back down into the
-                                    gap, and ensure it neatly fits with no gaps
+                                                                your quick selection.)
+                                                            </p>
+                                                            <p>
+                                                                Then move the brush back down into the gap,
+                                                                and ensure it neatly fits with no gaps
                                     showing around the sides where the terrain
-                                    brushes meet it.</p>
-                                    <p><img border="0" src="images/tutorial/28/Image2.jpg" width="436" height="394"></p>
-                                    <p>We will put the gate to be destroyed on
-                                    this nice flat surface.&nbsp; Import
-                                    _temp.map and move the imported selection
-                                    onto the middle of the flat slab.</p>
-                                    <p><img border="0" src="images/tutorial/28/Image3.jpg" width="542" height="526"></p>
-                                    <p>Now to explain what we have here.</p>
-                                    <p>Shift+alt+click the trigger brush, and
-                                    press N.&nbsp; Close the window and press N
-                                    again so we see the tick boxes.</p>
-                                    <p><img border="0" src="images/tutorial/28/Image5.jpg" width="415" height="262"></p>
-                                    <p>This is an <b>axis_objective</b> because
-                                    it is owned by the axis team.&nbsp; It seems
-                                    to me that something to be destroyed by the
+                                                                brushes meet it.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/28/Image2.jpg"
+                                                                        width="436"
+                                                                        height="394"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                We will put the gate to be destroyed on this
+                                                                nice flat surface.&nbsp; Import _temp.map
+                                                                and move the imported selection onto the
+                                                                middle of the flat slab.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/28/Image3.jpg"
+                                                                        width="542"
+                                                                        height="526"
+                                                                />
+                                                            </p>
+                                                            <p>Now to explain what we have here.</p>
+                                                            <p>
+                                                                Shift+alt+click the trigger brush, and press
+                                                                N.&nbsp; Close the window and press N again
+                                                                so we see the tick boxes.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/28/Image5.jpg"
+                                                                        width="415"
+                                                                        height="262"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                This is an <b>axis_objective</b> because it
+                                                                is owned by the axis team.&nbsp; It seems to
+                                                                me that something to be destroyed by the
                                     allies ought to signify an allied objective,
                                     which is exactly why you should use a prefab
                                     as it is easy to tick the wrong boxes when
-                                    creating one from scratch.</p>
-                                    <p>The <b>targetname</b> and <b>scriptname</b>
-                                    are gate_toi, being the name of the
-                                    destructible plus &quot;_toi&quot; to
-                                    indicate the trigger_objective_info.&nbsp;
-                                    This is not a universal naming standard,
-                                    it's just one I adopted for myself so I
-                                    could easily identify an entity type by the
-                                    type of name it had.</p>
-                                    <p>The <b>target</b> is the name of the
+                                                                creating one from scratch.
+                                                            </p>
+                                                            <p>
+                                                                The <b>targetname</b> and
+                                                                <b>scriptname</b> are gate_toi, being the
+                                                                name of the destructible plus
+                                                                &quot;_toi&quot; to indicate the
+                                                                trigger_objective_info.&nbsp; This is not a
+                                                                universal naming standard, it's just one I
+                                                                adopted for myself so I could easily
+                                                                identify an entity type by the type of name
+                                                                it had.
+                                                            </p>
+                                                            <p>
+                                                                The <b>target</b> is the name of the
                                     destructible entity - you can tell if you've
                                     made a naming error because the trigger
                                     brush won't have an arrow line connecting it
@@ -229,57 +400,116 @@ Making a destructible object like a gate<br>
                                     the attacker must plant&nbsp;dyna or chuck
                                     the satchel.&nbsp; So to see it, select grid
                                     scale 9 and drag the trigger brush away a
-                                    notch.</p>
-                                    <p><img border="0" src="images/tutorial/28/Image6.jpg" width="385" height="399"></p>
-                                    <p>Now you can see the arrow connecting
-                                    line, so the names are ok.&nbsp; Put the
-                                    brush back over the gate.</p>
-                                    <p>The <b>objflags</b> is set to 4, telling
-                                    ET to show a dyna symbol when a player
-                                    enters the brush.&nbsp; I haven't seen a
-                                    full list of possible values and I don't
-                                    remember where I read even the partial list
-                                    that told me to use 4 for dyna, but there
-                                    will be a different value for different
-                                    symbols.&nbsp; The only other one you might
-                                    want really is the satchel symbol.&nbsp;
-                                    Experiment with powers of 2 (1, 2, 4, 8 etc)
-                                    to discover what the symbols are if you need
-                                    symbols other than dyna.</p>
-                                    <p>The <b>spawnflags</b> is set to 1, which
-                                    is a reflection of the tick box settings we
-                                    have.&nbsp; The other values are obvious.</p>
-                                    <p>Hide the trigger so we can examine the
-                                    other components.</p>
-                                    <p>Shift+alt+click the middle of the gate until
+                                                                notch.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/28/Image6.jpg"
+                                                                        width="385"
+                                                                        height="399"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                Now you can see the arrow connecting line,
+                                                                so the names are ok.&nbsp; Put the brush
+                                                                back over the gate.
+                                                            </p>
+                                                            <p>
+                                                                The <b>objflags</b> is set to 4, telling ET
+                                                                to show a dyna symbol when a player enters
+                                                                the brush.&nbsp; I haven't seen a full list
+                                                                of possible values and I don't remember
+                                                                where I read even the partial list that told
+                                                                me to use 4 for dyna, but there will be a
+                                                                different value for different symbols.&nbsp;
+                                                                The only other one you might want really is
+                                                                the satchel symbol.&nbsp; Experiment with
+                                                                powers of 2 (1, 2, 4, 8 etc) to discover
+                                                                what the symbols are if you need symbols
+                                                                other than dyna.
+                                                            </p>
+                                                            <p>
+                                                                The <b>spawnflags</b> is set to 1, which is
+                                                                a reflection of the tick box settings we
+                                                                have.&nbsp; The other values are obvious.
+                                                            </p>
+                                                            <p>
+                                                                Hide the trigger so we can examine the other
+                                                                components.
+                                                            </p>
+                                                            <p>
+                                                                Shift+alt+click the middle of the gate until
                                     the whole rectangle is selected (I'm using
-                                    grid scale 6 again now).</p>
-                                    <p><img border="0" src="images/tutorial/28/Image7.jpg" width="414" height="258"></p>
-                                    <p>This is the thing we want to blow
-                                    up.&nbsp; Press N.</p>
-                                    <p><img border="0" src="images/tutorial/28/Image8.jpg" width="291" height="222"></p>
-                                    <p>We have the <b>useshader</b> ticked so
-                                    the temporary fragments are textured nicely.</p>
-                                    <p>The <b>mass</b> tells ET how chunky to
-                                    make the bits that fly away from the
-                                    bang.&nbsp; These bits will all disappear
-                                    after a short time.</p>
-                                    <p>The <b>targetname</b> and <b>scriptname</b>
-                                    are &quot;gate&quot;, which will be
-                                    referenced in the script.</p>
-                                    <p>Hide the gate.&nbsp; Now you can see the
+                                                                grid scale 6 again now).
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/28/Image7.jpg"
+                                                                        width="414"
+                                                                        height="258"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                This is the thing we want to blow up.&nbsp;
+                                                                Press N.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/28/Image8.jpg"
+                                                                        width="291"
+                                                                        height="222"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                We have the <b>useshader</b> ticked so the
+                                                                temporary fragments are textured nicely.
+                                                            </p>
+                                                            <p>
+                                                                The <b>mass</b> tells ET how chunky to make
+                                                                the bits that fly away from the bang.&nbsp;
+                                                                These bits will all disappear after a short
+                                                                time.
+                                                            </p>
+                                                            <p>
+                                                                The <b>targetname</b> and
+                                                                <b>scriptname</b> are &quot;gate&quot;,
+                                                                which will be referenced in the script.
+                                                            </p>
+                                                            <p>
+                                                                Hide the gate.&nbsp; Now you can see the
                                     remnants that will be permanently shown
                                     after the explosion.&nbsp; They won't be
                                     visible before the explosion because they
                                     will be invisible when the map starts.&nbsp;
                                     You don't have to have remnants, it's up to
                                     you.&nbsp; I include them here so you can
-                                    see how they are made if you want them.</p>
-                                    <p>Shift+alt+click on a remnant brush and
-                                    they will all get selected.</p>
-                                    <p><img border="0" src="images/tutorial/28/Image11.jpg" width="540" height="370"></p>
-                                    <p><img border="0" src="images/tutorial/28/Image9.jpg" width="173" height="129"></p>
-                                    <p>These bits were made by copying the gate
+                                                                see how they are made if you want them.
+                                                            </p>
+                                                            <p>
+                                                                Shift+alt+click on a remnant brush and they
+                                                                will all get selected.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/28/Image11.jpg"
+                                                                        width="540"
+                                                                        height="370"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/28/Image9.jpg"
+                                                                        width="173"
+                                                                        height="129"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                These bits were made by copying the gate
                                     brush (and then right-click and &quot;Move
                                     into Worldspawn&quot; so that the copy
                                     wasn't a desctructible).&nbsp; The copy was
@@ -287,94 +517,143 @@ Making a destructible object like a gate<br>
                                     Most of the copy was deleted, some of the
                                     bits were left in place, and some scattered
                                     onto nearby ground (with the downward face
-                                    caulked of course).</p>
-                                    <p>Then all the bits were selected and made
+                                                                caulked of course).
+                                                            </p>
+                                                            <p>
+                                                                Then all the bits were selected and made
                                     into a <b>func_static</b> which is a way of
                                     making some brushes into an entity so you
                                     can refer to that entity.&nbsp; We will need
                                     an entity name because we will want to make
-                                    these bits visible after the explosion.</p>
-                                    <p>The <b>start_invis</b> box is
-                                    ticked.&nbsp; Makes sense.&nbsp; I gave the
-                                    entity a <b>targetname</b> of gate_bits so I
-                                    knew what I would be referring to in the
-                                    script.</p>
-                                    <p>Reveal the hidden brushes, close the Info
+                                                                these bits visible after the explosion.
+                                                            </p>
+                                                            <p>
+                                                                The <b>start_invis</b> box is ticked.&nbsp;
+                                                                Makes sense.&nbsp; I gave the entity a
+                                                                <b>targetname</b> of gate_bits so I knew
+                                                                what I would be referring to in the script.
+                                                            </p>
+                                                            <p>
+                                                                Reveal the hidden brushes, close the Info
                                     window if you have it open, save the map and
                                     compile it.&nbsp; Don't run ET yet.
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td width="50%" class=header><a name="script">Writing the script</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
                                         </tr>
-                                      </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Using Wordpad or similar, open the
-                                    prefab_allied_destructible_template.script
-                                    file.&nbsp; Copy all the text, and paste it
-                                    into the tutorial.script file, at the bottom
-                                    of the file.&nbsp; This is because we will
-                                    name this section &quot;gate&quot;, and so
-                                    that will be the right place alphabetically.
-                                    <p>Replace all 5 instances of <b>allied_destructible</b>
-                                    with <b>gate</b>.</p>
-                                    <p>Later on we'll add some speech but we'll
-                                    skip that for now.</p>
-                                    <p>As the gate should be destroyable by
-                                    dyna, change the constructible_class to 3.</p>
-                                    <p>As the script is simple I will explain
+                                    </table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="0"
+                                                                    cellspacing="0"
+                                                                    width="100%"
+                                                            >
+                                                                <tr>
+                                                                    <td width="50%" class="header">
+                                                                        <a name="script">Writing the script</a>
+                                                                    </td>
+                                                                    <td width="50%" align="right">
+                                                                        <a href="#">[Top]</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Using Wordpad or similar, open the
+                                                            prefab_allied_destructible_template.script
+                                                            file.&nbsp; Copy all the text, and paste it
+                                                            into the tutorial.script file, at the bottom
+                                                            of the file.&nbsp; This is because we will
+                                                            name this section &quot;gate&quot;, and so
+                                                            that will be the right place alphabetically.
+                                                            <p>
+                                                                Replace all 5 instances of
+                                                                <b>allied_destructible</b> with <b>gate</b>.
+                                                            </p>
+                                                            <p>
+                                                                Later on we'll add some speech but we'll
+                                                                skip that for now.
+                                                            </p>
+                                                            <p>
+                                                                As the gate should be destroyable by dyna,
+                                                                change the constructible_class to 3.
+                                                            </p>
+                                                            <p>
+                                                                As the script is simple I will explain
                                     what's happening as if we were writing it
-                                    from scratch.</p>
-                                    <p>&nbsp;</p>
-                                    <p>You start by declaring a procedure by
+                                                                from scratch.
+                                                            </p>
+                                                            <p>&nbsp;</p>
+                                                            <p>
+                                                                You start by declaring a procedure by
                                     entering its name.&nbsp; A procedure must be
                                     wholly enclosed by &quot;{&quot; and
-                                    &quot;}&quot;.</p>
-                                    <p>So you would begin writing the procedure
-                                    by typing:</p>
-                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
-                                      <tr>
-                                        <td><b>gate</b></td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td><b>{</b></td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td><b>}</b></td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                    </table>
-                                    <p>Within the procedure you can have as many
+                                                                &quot;}&quot;.
+                                                            </p>
+                                                            <p>
+                                                                So you would begin writing the procedure by
+                                                                typing:
+                                                            </p>
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="4"
+                                                                    cellspacing="0"
+                                                                    bgcolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td><b>gate</b></td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>{</b></td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>}</b></td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <p>
+                                                                Within the procedure you can have as many
                                     blocks of script as you need.&nbsp; These
                                     blocks are called <b>triggers</b>.&nbsp;
                                     There are several triggers with predefined
-                                    names, such as <b>spawn</b> and <b>death</b>.</p>
-                                    <p>The <b>spawn</b>  trigger is optional
-                                    in any procedure.&nbsp; If included, it gets
+                                                                names, such as <b>spawn</b> and
+                                                                <b>death</b>.
+                                                            </p>
+                                                            <p>
+                                                                The <b>spawn</b> trigger is optional in any
+                                                                procedure.&nbsp; If included, it gets
                                     executed once-only, at the start of the
                                     map.&nbsp; You should always put a small
                                     delay in at the start of a spawn trigger, to
                                     allow all the spawning entities to arrive in
                                     the map before you might start trying to
-                                    reference them.</p>
-                                    <p>First we'd add the spawn trigger.&nbsp; It
+                                                                reference them.
+                                                            </p>
+                                                            <p>
+                                                                First we'd add the spawn trigger.&nbsp; It
                                     is created inside the brackets of its parent
                                     procedure.&nbsp; I always add the
                                     &quot;{&quot; and &quot;}&quot; immediately
@@ -383,34 +662,41 @@ Making a destructible object like a gate<br>
                                     &quot;}&quot;.&nbsp; If you do, it can
                                     create some interesting errors when the map
                                     loads and you'll wonder what the hell is
-                                    wrong.</p>
-                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
-                                      <tr>
-                                        <td>gate</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td><b>spawn</b></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td><b>{</b></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td><b>}</b></td>
-                                      </tr>
-                                      <tr>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                    </table>
-                                    <p>We need a spawn trigger because we have to
+                                                                wrong.
+                                                            </p>
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="4"
+                                                                    cellspacing="0"
+                                                                    bgcolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td>gate</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td><b>spawn</b></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td><b>{</b></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td><b>}</b></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <p>
+                                                                We need a spawn trigger because we have to
                                     tell ET what weapons can destroy this
                                     destructible.&nbsp; So we add this info to
                                     the spawn trigger, following a wait of 300
@@ -418,410 +704,535 @@ Making a destructible object like a gate<br>
                                     500 is usual, with the choice being fairly
                                     random really.&nbsp; Two slashes
                                     &quot;//&quot; mean the rest of the line is
-                                    just comments and not script.</p>
-                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
-                                      <tr>
-                                        <td>gate</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>spawn</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><b>wait 300</b></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2"><b>constructible_class
-                                          3 // 2=satchel 3=dyna</b></font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                    </table>
-                                    <p>We also need a <b>death</b> trigger, to
-                                    tell ET what to do when the gate is
+                                                                just comments and not script.
+                                                            </p>
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="4"
+                                                                    cellspacing="0"
+                                                                    bgcolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td>gate</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>spawn</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td><b>wait 300</b></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        ><b
+                                                                        >constructible_class 3 // 2=satchel
+                                                                            3=dyna</b
+                                                                        ></font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <p>
+                                                                We also need a <b>death</b> trigger, to tell
+                                                                ET what to do when the gate is
                                     destroyed.&nbsp; The death trigger is also
                                     placed within the &quot;{&quot; and
                                     &quot;}&quot; of its parent gate procedure,
                                     not within the brackets of the spawn
-                                    trigger.</p>
-                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
-                                      <tr>
-                                        <td>gate</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>spawn</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>wait 300</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2">constructible_class
-                                          3 // 2=satchel 3=dyna</font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td><b>death</b></td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td><b>{</b></td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td><b>}</b></td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                    </table>
-                                    <p>This is what we want to happen when the
-                                    gate is destroyed:</p>
-                                    <ul>
-                                      <li>Hide the original undamaged gate -
-                                        this is automatically done and we don't
-                                        have to script anything</li>
-                                      <li>Show the damaged gate bits - <b>alertentity
-                                        gate_bits</b> : alertentity toggles the
-                                        visibility of the gate_bits entity, ie
-                                        reveals it in this instance</li>
-                                      <li>Remove the &quot;You are near...&quot;
-                                        prompt - <b>trigger gate_toi remove</b>
-                                        : which means execute the <b>remove</b>
-                                        trigger in the <b>gate_toi</b> procedure</li>
-                                      <li>Tell the players that the gate has
-                                        been blown up - <font SIZE="2"><b>wm_announce
-                                        &quot;The Allies have destroyed the
-                                        gate!&quot;</b></font></li>
-                                    </ul>
-                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
-                                      <tr>
-                                        <td>gate</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>spawn</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>wait 300</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2">constructible_class
-                                          3 // 2=satchel 3=dyna</font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>death</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2"><b>alertentity
-                                          gate_bits</b></font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2"><b>trigger gate_toi
-                                          remove</b></font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><b>&nbsp;</b></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2"><b>wm_announce
-                                          &quot;The Allies have destroyed the
-                                          gate!&quot;</b></font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                    </table>
-                                    <p>Finally we have to create a procedure for
+                                                                trigger.
+                                                            </p>
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="4"
+                                                                    cellspacing="0"
+                                                                    bgcolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td>gate</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>spawn</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>wait 300</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        >constructible_class 3 // 2=satchel
+                                                                            3=dyna</font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td><b>death</b></td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td><b>{</b></td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td><b>}</b></td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <p>
+                                                                This is what we want to happen when the gate
+                                                                is destroyed:
+                                                            </p>
+                                                            <ul>
+                                                                <li>
+                                                                    Hide the original undamaged gate - this is
+                                                                    automatically done and we don't have to
+                                                                    script anything
+                                                                </li>
+                                                                <li>
+                                                                    Show the damaged gate bits -
+                                                                    <b>alertentity gate_bits</b> : alertentity
+                                                                    toggles the visibility of the gate_bits
+                                                                    entity, ie reveals it in this instance
+                                                                </li>
+                                                                <li>
+                                                                    Remove the &quot;You are near...&quot;
+                                                                    prompt - <b>trigger gate_toi remove</b> :
+                                                                    which means execute the
+                                                                    <b>remove</b> trigger in the
+                                                                    <b>gate_toi</b> procedure
+                                                                </li>
+                                                                <li>
+                                                                    Tell the players that the gate has been
+                                                                    blown up -
+                                                                    <font size="2"
+                                                                    ><b
+                                                                    >wm_announce &quot;The Allies have
+                                                                        destroyed the gate!&quot;</b
+                                                                    ></font
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="4"
+                                                                    cellspacing="0"
+                                                                    bgcolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td>gate</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>spawn</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>wait 300</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        >constructible_class 3 // 2=satchel
+                                                                            3=dyna</font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>death</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        ><b>alertentity gate_bits</b></font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        ><b>trigger gate_toi remove</b></font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td><b>&nbsp;</b></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        ><b
+                                                                        >wm_announce &quot;The Allies have
+                                                                            destroyed the gate!&quot;</b
+                                                                        ></font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <p>
+                                                                Finally we have to create a procedure for
                                     the trigger_objective_info entity, so that
                                     it can be removed when the gate is
-                                    destroyed.</p>
-                                    <p>
-                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
-                                      <tr>
-                                        <td>gate</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>spawn</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>wait 300</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2">constructible_class
-                                          3 // 2=satchel 3=dyna</font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>death</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>{</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2">alertentity
-                                          gate_bits</font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2">trigger gate_toi
-                                          remove</font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2">wm_announce
-                                          &quot;The Allies have destroyed the
-                                          gate!&quot;</font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>}</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td><b>gate_toi</b></td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td><b>{</b></td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2"><b>trigger remove</b></font></td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2"><b>{</b></font></td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2"><b>remove</b></font></td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td><font SIZE="2"><b>}</b></font></td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td><font SIZE="2"><b>}</b></font></td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                    </table>
-                                    <p>The trigger called &quot;remove&quot; is
-                                    not a standard ET provision, so we have to
-                                    show that it is a user-defined trigger, ie
-                                    made up by us, by prefixing it with the word
-                                    &quot;trigger&quot;.</p>
-                                    <p>The &quot;remove&quot; instruction within
+                                                                destroyed.
+                                                            </p>
+                                                            <p></p>
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="4"
+                                                                    cellspacing="0"
+                                                                    bgcolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td>gate</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>spawn</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>wait 300</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        >constructible_class 3 // 2=satchel
+                                                                            3=dyna</font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>death</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        >alertentity gate_bits</font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        >trigger gate_toi remove</font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        >wm_announce &quot;The Allies have
+                                                                            destroyed the gate!&quot;</font
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>gate_toi</b></td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>{</b></td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"
+                                                                        ><b>trigger remove</b></font
+                                                                        >
+                                                                    </td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"><b>{</b></font>
+                                                                    </td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"><b>remove</b></font>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <font size="2"><b>}</b></font>
+                                                                    </td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <font size="2"><b>}</b></font>
+                                                                    </td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <p>
+                                                                The trigger called &quot;remove&quot; is not
+                                                                a standard ET provision, so we have to show
+                                                                that it is a user-defined trigger, ie made
+                                                                up by us, by prefixing it with the word
+                                                                &quot;trigger&quot;.
+                                                            </p>
+                                                            <p>
+                                                                The &quot;remove&quot; instruction within
                                     the trigger tells ET to delete this brush
                                     from the game as we no longer need it at all
-                                    - which is why we don't just hide it.</p>
-                                    <p>Save and close the script file.</p>
-                                    <p>Run ET and have fun destroying the
+                                                                - which is why we don't just hide it.
+                                                            </p>
+                                                            <p>Save and close the script file.</p>
+                                                            <p>
+                                                                Run ET and have fun destroying the
                                     gate&nbsp; :)
-                                    <p>I'll get some Axis templates together for
-                                    you shortly.
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">You
-    may now have visions of making a map with dozens of constructibles and
-    destructibles.&nbsp; Unfortunately there is a limit of 18
-    trigger_objective_info entities in a map.&nbsp; And it's easier than you
-    might think to eat away at that total amount, as TOI entities get used for
-    other main game elements too.&nbsp; Consider Fueldump, and count the TOIs:
-    <ol>
-      <li>Tank</li>
-      <li>Ammo cabinet in the Allied shack</li>
-      <li>Allied MG42 outside the shack</li>
-      <li>Bridge</li>
-      <li>Footbridge</li>
-      <li>Axis CP</li>
-      <li>Axis MG42 tower overlooking bridge</li>
-      <li>Allied CP</li>
-      <li>Ammo cabinet near allied CP</li>
-      <li>Axis MG42 tower&nbsp; near allied CP</li>
-      <li>Allied MG42 near allied CP</li>
-      <li>West fence</li>
-      <li>East fence</li>
-      <li>Fuel dump</li>
-    </ol>
-	</td>
-</tr>
-</table>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    <a href="tutorial29.html">
-                                    Next lesson</a>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                                            </p>
 
-					</td>
-				</tr>
-				</table>          
-			</td>
-		</tr>
-		</table>
-	</td>
-</tr>
+                                                            <p>
+                                                                I'll get some Axis templates together for
+                                    you shortly.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="5"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#000000"
+                                                            >
+                                                                <tr>
+                                                                    <td
+                                                                            bordercolor="#000000"
+                                                                            style="
+                                          border-style: solid;
+                                          border-width: 1;
+                                        "
+                                                                            valign="top"
+                                                                            bgcolor="#F4F4F4"
+                                                                    >
+                                                                        <img
+                                                                                border="0"
+                                                                                src="images/tutorial/alert.gif"
+                                                                                width="48"
+                                                                                height="42"
+                                                                                style="float: left"
+                                                                        />You may now have visions of making a
+                                                                        map with dozens of constructibles and
+                                                                        destructibles.&nbsp; Unfortunately there
+                                                                        is a limit of 18 trigger_objective_info
+                                                                        entities in a map.&nbsp; And it's easier
+                                                                        than you might think to eat away at that
+                                                                        total amount, as TOI entities get used
+                                                                        for other main game elements too.&nbsp;
+                                                                        Consider Fueldump, and count the TOIs:
+                                                                        <ol>
+                                                                            <li>Tank</li>
+                                                                            <li>
+                                                                                Ammo cabinet in the Allied shack
+                                                                            </li>
+                                                                            <li>Allied MG42 outside the shack</li>
+                                                                            <li>Bridge</li>
+                                                                            <li>Footbridge</li>
+                                                                            <li>Axis CP</li>
+                                                                            <li>
+                                                                                Axis MG42 tower overlooking bridge
+                                                                            </li>
+                                                                            <li>Allied CP</li>
+                                                                            <li>Ammo cabinet near allied CP</li>
+                                                                            <li>
+                                                                                Axis MG42 tower&nbsp; near allied CP
+                                                                            </li>
+                                                                            <li>Allied MG42 near allied CP</li>
+                                                                            <li>West fence</li>
+                                                                            <li>East fence</li>
+                                                                            <li>Fuel dump</li>
+                                                                        </ol>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <a href="tutorial29.html"> Next lesson</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
 </body>
 </html>

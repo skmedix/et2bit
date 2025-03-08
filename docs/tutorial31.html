@@ -1,344 +1,508 @@
 <html>
 <head>
-<title>2Bit Enemy Territory</title>
-<link href="styles.css" rel="stylesheet" type="text/css">
+    <title>2Bit Enemy Territory</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
-  <tr>
-    <td width="1"><a href="https://skmedix.github.io/et2bit/"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
-    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
-  </tr>
+<table
+        width="100%"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        bgcolor="#525C69"
+>
+    <tr>
+        <td width="1">
+            <a href="https://skmedix.github.io/et2bit/"
+            ><img
+                    src="images/url.gif"
+                    alt="2Bit's Mapping Corner on www.PythonOnline.co.uk"
+                    hspace="36"
+                    vspace="5"
+                    border="0"
+                    width="166"
+                    height="15"
+            /></a>
+        </td>
+        <td width="1"><img src="images/s.gif" width="36" height="1"/></td>
+    </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td>
-		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td valign="top">
-				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
-				<tr class=grey>
-					<td>
-						<table width="100%" border="0" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
-							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
-                              31</font></p></td>
-						</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-<b><br>
-Team speech<br>
-&nbsp;</b>
-<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
-  <tr>
-    <td></td>
-    <td><a href="#script">Adding speech to the script</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a href="#sounds">Adding data to the sounds file</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a href="tutorial.html">Back to main menu</a></td>
-  </tr>
-</table>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-<!-- Alert boxout
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
-	</td>
-</tr>
-</table>
--->
-<!--
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td valign="top">
+                        <table
+                                width="100%"
+                                border="0"
+                                align="center"
+                                cellpadding="0"
+                                cellspacing="0"
+                        >
+                            <tr class="grey">
+                                <td>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                    >
                                         <tr>
-                                          <td width="50%" class=header><a name="name">name</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                            <td>
+                                                <img
+                                                        src="images/logo.jpg"
+                                                        hspace="6"
+                                                        width="227"
+                                                        height="250"
+                                                />
+                                            </td>
+                                            <td width="100%" align="center">
+                                                <font size="6">ET Mapping Tutorial</font>
+                                                <p><font size="5">Lesson 31</font></p>
+                                            </td>
                                         </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">Topics</td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <b
+                                                            ><br/>
+                                                                Team speech<br/>
+                                                                &nbsp;</b
+                                                            >
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="2"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <a href="#script"
+                                                                        >Adding speech to the script</a
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <a href="#sounds"
+                                                                        >Adding data to the sounds file</a
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <a href="tutorial.html"
+                                                                        >Back to main menu</a
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- Alert boxout
+              <table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+              <tr>
+                  <td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+                  <img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+                  </td>
+              </tr>
+              </table>
+              -->
+                                    <!--
+                                      <table width="100%"  border="0" cellspacing="0" cellpadding="8">
+                                      <tr>
+                                          <td>
+                                              <table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+                                              <tr valign="top">
+                                                  <td width="100%">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td width="50%" class=header><a name="name">name</a></td>
+                                                        <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                              </tr>
+                                              <tr valign="top">
+                                                  <td width="100%" bgcolor="#EAEBED">
+                                                  </td>
+                                              </tr>
+                                              </table>
+                                          </td>
+                                      </tr>
                                       </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
--->
+              -->
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
                                         <tr>
-                                          <td width="50%" class=header><a name="script">Adding speech to the script</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
-                                        </tr>
-                                      </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    To get speech to be broadcast to each team,
-                                    like &quot;Build the Command Post!&quot;,
-                                    takes two elements: something in the script,
-                                    and something in the sounds file.&nbsp;
-                                    We'll address the scripting element first.
-                                    <p>Open tutorial.script.</p>
-                                    <p>To make speech that is heard by all the
-                                    players in a team, you use the <b>wm_teamvoiceannounce</b>
-                                    instruction.</p>
-                                    <p>We'll add speech that tells the allies to
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="0"
+                                                                    cellspacing="0"
+                                                                    width="100%"
+                                                            >
+                                                                <tr>
+                                                                    <td width="50%" class="header">
+                                                                        <a name="script"
+                                                                        >Adding speech to the script</a
+                                                                        >
+                                                                    </td>
+                                                                    <td width="50%" align="right">
+                                                                        <a href="#">[Top]</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            To get speech to be broadcast to each team,
+                                                            like &quot;Build the Command Post!&quot;,
+                                                            takes two elements: something in the script,
+                                                            and something in the sounds file.&nbsp; We'll
+                                                            address the scripting element first.
+                                                            <p>Open tutorial.script.</p>
+                                                            <p>
+                                                                To make speech that is heard by all the
+                                                                players in a team, you use the
+                                                                <b>wm_teamvoiceannounce</b> instruction.
+                                                            </p>
+                                                            <p>
+                                                                We'll add speech that tells the allies to
                                     blow up the main gate, and the axis to
-                                    prevent this.</p>
-                                    <p>Add these 2 lines to the end of the <b>spawn</b>
-                                    trigger in the <b>game_manager</b>
-                                    procedure:</p>
-                                    <ul>
-                                      <li>wm_teamvoiceannounce 0 "radar_axis_entrance1_stop"</li>
-                                      <li>wm_teamvoiceannounce 1 "radar_allies_entrance1_destroy"</li>
-                                    </ul>
-                                    <p>The &quot;0&quot; means that the Axis
-                                    team will hear the speech; the &quot;1&quot;
-                                    means the Allies will hear it.<p>The use of
-                                    the word &quot;radar&quot; indicates that
-                                    the speech comes from the Radar map.&nbsp;
-                                    Generally you use &quot;axis&quot; in the
-                                    speech name so that it is clear to you that
-                                    the speech is with a german accent, and
-                                    similarly you use &quot;allies&quot; for
-                                    american speech.<p>&quot;entrance1_destroy&quot;
-                                    and &quot;entrance1_stop&quot; then make it
+                                                                prevent this.
+                                                            </p>
+                                                            <p>
+                                                                Add these 2 lines to the end of the
+                                                                <b>spawn</b> trigger in the
+                                                                <b>game_manager</b> procedure:
+                                                            </p>
+                                                            <ul>
+                                                                <li>
+                                                                    wm_teamvoiceannounce 0
+                                                                    "radar_axis_entrance1_stop"
+                                                                </li>
+                                                                <li>
+                                                                    wm_teamvoiceannounce 1
+                                                                    "radar_allies_entrance1_destroy"
+                                                                </li>
+                                                            </ul>
+                                                            <p>
+                                                                The &quot;0&quot; means that the Axis team
+                                                                will hear the speech; the &quot;1&quot;
+                                                                means the Allies will hear it.
+                                                            </p>
+
+                                                            <p>
+                                                                The use of the word &quot;radar&quot;
+                                                                indicates that the speech comes from the
+                                                                Radar map.&nbsp; Generally you use
+                                                                &quot;axis&quot; in the speech name so that
+                                                                it is clear to you that the speech is with a
+                                                                german accent, and similarly you use
+                                                                &quot;allies&quot; for american speech.
+                                                            </p>
+
+                                                            <p>
+                                                                &quot;entrance1_destroy&quot; and
+                                                                &quot;entrance1_stop&quot; then make it
                                     clear what the speech says.
-                                    <p>The "radar_axis_entrance1_stop" tells ET
-                                    to look up this reference in the sounds
-                                    file, and play the WAV associated with
-                                    it.&nbsp; Same for "radar_allies_entrance1_destroy".
+                                                            </p>
 
-
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    As soon as the <b>wm_teamvoiceannounce</b>
-                                    instruction is executed, the speech is
-                                    queued up to be spoken, that is, if there is
-                                    already speech being spoken, they won't
-                                    shout each other down or interrupt each
-                                    other, they just queue up.
-                                    <p>But you will sometimes want certain
-                                    speech to be spoken as soon as a player
-                                    joins a team, even if it is after the start
-                                    of the game.</p>
-                                    <p>So add these lines after the other two:</p>
-                                    <ul>
-                                      <li>
-                                        wm_addteamvoiceannounce 0 "radar_axis_entrance1_stop"</li>
-                                      <li>
-                                        wm_addteamvoiceannounce 1 "radar_allies_entrance1_destroy"</li>
-                                    </ul>
-                                    <b>
-                                        wm_addteamvoiceannounce</b> means
-                                    &quot;don't speak this now, but speak it to
-                                    any players who join the team later&quot;.
-                                    <p>The last bits to go into the script are
-                                    the instructions to stop telling newly
-                                    arrived players to destroy the main gate, <i>if</i>
-                                    the main gate has already been destroyed.</p>
-                                    <p>Add these lines to the <b>gate</b>
-                                    procedure at the end of the <b>death</b>
-                                    trigger:</p>
-                                    <ul>
-                                      <li>wm_removeteamvoiceannounce	0 "radar_axis_entrance1_stop"</li>
-                                      <li>
-		wm_removeteamvoiceannounce	1 "radar_allies_entrance1_destroy"</li>
-                                    </ul>
-                                    <p>When the gate is destroyed, and its
+                                                            <p>
+                                                                The "radar_axis_entrance1_stop" tells ET to
+                                                                look up this reference in the sounds file,
+                                                                and play the WAV associated with it.&nbsp;
+                                                                Same for "radar_allies_entrance1_destroy".
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            As soon as the <b>wm_teamvoiceannounce</b>
+                                                            instruction is executed, the speech is queued
+                                                            up to be spoken, that is, if there is already
+                                                            speech being spoken, they won't shout each
+                                                            other down or interrupt each other, they just
+                                                            queue up.
+                                                            <p>
+                                                                But you will sometimes want certain speech
+                                                                to be spoken as soon as a player joins a
+                                                                team, even if it is after the start of the
+                                                                game.
+                                                            </p>
+                                                            <p>So add these lines after the other two:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    wm_addteamvoiceannounce 0
+                                                                    "radar_axis_entrance1_stop"
+                                                                </li>
+                                                                <li>
+                                                                    wm_addteamvoiceannounce 1
+                                                                    "radar_allies_entrance1_destroy"
+                                                                </li>
+                                                            </ul>
+                                                            <b> wm_addteamvoiceannounce</b> means
+                                                            &quot;don't speak this now, but speak it to
+                                                            any players who join the team later&quot;.
+                                                            <p>
+                                                                The last bits to go into the script are the
+                                                                instructions to stop telling newly arrived
+                                                                players to destroy the main gate,
+                                                                <i>if</i> the main gate has already been
+                                                                destroyed.
+                                                            </p>
+                                                            <p>
+                                                                Add these lines to the <b>gate</b> procedure
+                                                                at the end of the <b>death</b> trigger:
+                                                            </p>
+                                                            <ul>
+                                                                <li>
+                                                                    wm_removeteamvoiceannounce 0
+                                                                    "radar_axis_entrance1_stop"
+                                                                </li>
+                                                                <li>
+                                                                    wm_removeteamvoiceannounce 1
+                                                                    "radar_allies_entrance1_destroy"
+                                                                </li>
+                                                            </ul>
+                                                            <p>
+                                                                When the gate is destroyed, and its
                                     &quot;death&quot; trigger is executed, ET
                                     will now remove these speech elements from
                                     the list of speeches to play to newly
                                     arriving players.
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td width="50%" class=header><a name="sounds">Adding data to the sounds file</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
                                         </tr>
-                                      </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    You will need to create a folder called <b>scripts</b>
-                                    inside the etmain/sounds folder, if it isn't
-                                    already there.
-                                    <p>Now create a text file called
-                                    etmain/sounds/scripts/<b>tutorial.sounds.</b></p>
-                                    <p>Add this text to the new file:</p>
-                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
-                                      <tr>
-                                        <td colspan="2">
-
-
-radar_allies_entrance1_destroy</td>
-                                      </tr>
-                                      <tr>
-                                        <td width="50">
-{</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>
-	sound sound/vo/radar/allies/hq_entrance1dyn.wav</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>
-	voice&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>
-	streaming&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-}</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td colspan="2">
-
-radar_axis_entrance1_stop</td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-{</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>
-	sound sound/vo/radar/axis/hq_entrance1stop.wav</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>
-	voice&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                        <td>
-	streaming&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-}</td>
-                                        <td>&nbsp;</td>
-                                      </tr>
                                     </table>
-                                    <p>As you can see, you will need a
-                                    definition with the same name as that
-                                    specified in each <b>wm_teamvoiceannounce</b>
-                                    instruction.</p>
-                                    <p>The <b>sound</b> line tells ET which WAV
-                                    to play.</p>
-                                    <p>It is always <b>voice</b> and <b>streaming</b>.&nbsp;
-                                    If you have additional <b>sound</b> lines
-                                    then ET will play one or the other, giving
-                                    you some variety in intonation.</p>
-                                    <p>You can look into the .sounds files of
-                                    other maps to get ideas for the sort of
-                                    speech other people have used - the WAVs
-                                    don't have to be those that came with ET;
-                                    you can create your own WAVs and have them
-                                    spoken in just the same way.</p>
-                                    <p>I prefer not to put on a fake german
-                                    accent for the speech I need, if there isn't
-                                    one already supplied by ET - instead I found
-                                    it better to cut up existing WAVs using a
-                                    WAV editor and then put the words together
-                                    in the construct that I wanted.&nbsp; For
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="0"
+                                                                    cellspacing="0"
+                                                                    width="100%"
+                                                            >
+                                                                <tr>
+                                                                    <td width="50%" class="header">
+                                                                        <a name="sounds"
+                                                                        >Adding data to the sounds file</a
+                                                                        >
+                                                                    </td>
+                                                                    <td width="50%" align="right">
+                                                                        <a href="#">[Top]</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            You will need to create a folder called
+                                                            <b>scripts</b>
+                                                            inside the etmain/sounds folder, if it isn't
+                                                            already there.
+                                                            <p>
+                                                                Now create a text file called
+                                                                etmain/sounds/scripts/<b
+                                                            >tutorial.sounds.</b
+                                                            >
+                                                            </p>
+                                                            <p>Add this text to the new file:</p>
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="4"
+                                                                    cellspacing="0"
+                                                                    bgcolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        radar_allies_entrance1_destroy
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="50">{</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        sound
+                                                                        sound/vo/radar/allies/hq_entrance1dyn.wav
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>voice&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>streaming&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        radar_axis_entrance1_stop
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>{</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        sound
+                                                                        sound/vo/radar/axis/hq_entrance1stop.wav
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>voice&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>streaming&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>}</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <p>
+                                                                As you can see, you will need a definition
+                                                                with the same name as that specified in each
+                                                                <b>wm_teamvoiceannounce</b> instruction.
+                                                            </p>
+                                                            <p>
+                                                                The <b>sound</b> line tells ET which WAV to
+                                                                play.
+                                                            </p>
+                                                            <p>
+                                                                It is always <b>voice</b> and
+                                                                <b>streaming</b>.&nbsp; If you have
+                                                                additional <b>sound</b> lines then ET will
+                                                                play one or the other, giving you some
+                                                                variety in intonation.
+                                                            </p>
+                                                            <p>
+                                                                You can look into the .sounds files of other
+                                                                maps to get ideas for the sort of speech
+                                                                other people have used - the WAVs don't have
+                                                                to be those that came with ET; you can
+                                                                create your own WAVs and have them spoken in
+                                                                just the same way.
+                                                            </p>
+                                                            <p>
+                                                                I prefer not to put on a fake german accent
+                                                                for the speech I need, if there isn't one
+                                                                already supplied by ET - instead I found it
+                                                                better to cut up existing WAVs using a WAV
+                                                                editor and then put the words together in
+                                                                the construct that I wanted.&nbsp; For
                                     2tanks I had to assemble 53 new WAV files
                                     for the various team speech, and it was all
                                     done by using words lifted from the various
-                                    standard ET maps.</p>
-                                    <p>With the script and sounds files now
-                                    ready, you can run ET and you should hear
-                                    the &quot;destroy the main entrance&quot;
-                                    etc on arrival - but not after the gate has
-                                    been blown up.
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    <a href="tutorial32.html">
-                                    Next lesson</a>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-
-					</td>
-				</tr>
-				</table>          
-			</td>
-		</tr>
-		</table>
-	</td>
-</tr>
+                                                                standard ET maps.
+                                                            </p>
+                                                            <p>
+                                                                With the script and sounds files now ready,
+                                                                you can run ET and you should hear the
+                                                                &quot;destroy the main entrance&quot; etc on
+                                                                arrival - but not after the gate has been
+                                                                blown up.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <a href="tutorial32.html"> Next lesson</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
 </body>
 </html>

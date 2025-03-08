@@ -1,123 +1,186 @@
-*
-{
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+* {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-body
-{
-	background-color: #eceef0;
-	font-size: 100%;
-	margin: 0;
+body {
+  background-color: #eceef0;
+  font-size: 100%;
+  margin: 0;
 }
 
-th { font-size: 80%}
-th p { font-size: 100%}
-th p b { font-size: 110%}
-td ul { font-size: 100%}
-td ol { font-size: 100%}
-td ul ul { font-size: 100%}
-td ul ul ul { font-size: 100%}
-td p { font-size: 100%}
-td label { font-size: 100%}
-td { font-size: 80%}
-
-.header
-{
-	font-size: 12pt;
-	font-weight: bold;
-	color: #222;
+th {
+  font-size: 80%;
 }
 
-.grey_bg
-{
-	background-image: url('https://skmedix.github.io/et2bit/images/content_main_tbl_bg.jpg');
-	background-repeat: repeat-x;
+th p {
+  font-size: 100%;
 }
 
-.grey
-{
-	background-image: url('https://skmedix.github.io/et2bit/images/grey.gif');
+th p b {
+  font-size: 110%;
 }
 
-a.1:active,a.1:link,a.1:visited
-{
-	color: #DCDDE7;
-	font-weight: bold;
+td ul {
+  font-size: 100%;
+}
+
+td ol {
+  font-size: 100%;
+}
+
+td ul ul {
+  font-size: 100%;
+}
+
+td ul ul ul {
+  font-size: 100%;
+}
+
+td p {
+  font-size: 100%;
+}
+
+td label {
+  font-size: 100%;
+}
+
+td {
+  font-size: 80%;
+}
+
+.header {
+  font-size: 12pt;
+  font-weight: bold;
+  color: #222;
+}
+
+.grey_bg {
+  background-image: url("https://skmedix.github.io/et2bit/images/content_main_tbl_bg.jpg");
+  background-repeat: repeat-x;
+}
+
+.grey {
+  background-image: url("https://skmedix.github.io/et2bit/images/grey.gif");
+}
+
+a
+
+.1
+:active,
+a
+
+.1
+:link,
+a
+
+.1
+:visited {
+  color: #dcdde7;
+  font-weight: bold;
 }
 
 a.1:hover {
-	color: #99FE01;
-	text-decoration: none;
-	font-weight: bold;
+     color: #99fe01;
+     text-decoration: none;
+     font-weight: bold;
 }
 
-a.2:active,a.2:link,a.2:visited
-{
-	color: #FFFFFF;
-	font-size: 16px;
-	font-weight: bold;
+a
+
+.2
+:active,
+a
+
+.2
+:link,
+a
+
+.2
+:visited {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-a.2:hover
-{
-	color: #FFFFFF;
-	font-size: 16px;
-	font-weight: bold;
-	text-decoration: none;
+a
+
+.2
+:hover {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-a.3:active,a.3:link,a.3:visited
-{
-	color: #0000FF;
+a
+
+.3
+:active,
+a
+
+.3
+:link,
+a
+
+.3
+:visited {
+  color: #0000ff;
 }
 
 a.3:hover {
-	background-color: #eceef0;
-	color: #0000FF;
-	text-decoration: none;
+     background-color: #eceef0;
+     color: #0000ff;
+     text-decoration: none;
 }
 
-a.4:active,a.4:link,a.4:visited
-{
-	color: #0000FF;
+a
+
+.4
+:active,
+a
+
+.4
+:link,
+a
+
+.4
+:visited {
+  color: #0000ff;
 }
 
 a.4:hover {
-	color: #0000FF;
-	text-decoration: none;
+     color: #0000ff;
+     text-decoration: none;
 }
 
 .nicefield {
-	font-family: Arial, Helvetica, sans-serif;
-	border: 1px solid;
-	border-color: #DCDDE7;
-	background-color: #F8F8F8;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid;
+  border-color: #dcdde7;
+  background-color: #f8f8f8;
 }
 
-.style1
-{	color: #8997A2}
-
-.text
-{
-    FONT-SIZE: 10pt;
-    COLOR: #333333;
-    FONT-FAMILY: Arial;
-    TEXT-ALIGN: justify
+.style1 {
+  color: #8997a2;
 }
 
-.mapname
-{
-	color: #fff;
-	font-size: 14pt;
+.text {
+  font-size: 10pt;
+  color: #333333;
+  font-family: Arial;
+  text-align: justify;
 }
 
-table#log
-{
-	background-color: #C3D2DC;
-	border-collapse: collapse;
+.mapname {
+  color: #fff;
+  font-size: 14pt;
 }
 
-table#log td
-{
-	border: 1px solid #8DA3B3;
+table#log {
+  background-color: #c3d2dc;
+  border-collapse: collapse;
+}
+
+table#log td {
+  border: 1px solid #8da3b3;
 }

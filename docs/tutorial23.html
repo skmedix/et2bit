@@ -1,606 +1,1208 @@
 <html>
 <head>
-<title>2Bit Enemy Territory</title>
-<link href="styles.css" rel="stylesheet" type="text/css">
+    <title>2Bit Enemy Territory</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
-  <tr>
-    <td width="1"><a href="https://skmedix.github.io/et2bit/"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
-    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
-  </tr>
+<table
+        width="100%"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        bgcolor="#525C69"
+>
+    <tr>
+        <td width="1">
+            <a href="https://skmedix.github.io/et2bit/"
+            ><img
+                    src="images/url.gif"
+                    alt="2Bit's Mapping Corner on www.PythonOnline.co.uk"
+                    hspace="36"
+                    vspace="5"
+                    border="0"
+                    width="166"
+                    height="15"
+            /></a>
+        </td>
+        <td width="1"><img src="images/s.gif" width="36" height="1"/></td>
+    </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td>
-		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td valign="top">
-				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
-				<tr class=grey>
-					<td>
-						<table width="100%" border="0" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
-							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
-                              23</font></p></td>
-						</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%" class=header>Topics</td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-<b><br>
-Making terrain using GtkGenSurf<br>
-&nbsp;</b>
-<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
-  <tr>
-    <td></td>
-    <td><a href="#Concepts">Concepts</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a href="#prep">Preparation</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a href="#gtk">GtkGenSurf</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a href="tutorial.html">Back to main menu</a></td>
-  </tr>
-</table>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-<!-- Alert boxout
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
-	</td>
-</tr>
-</table>
--->
-<!--
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td valign="top">
+                        <table
+                                width="100%"
+                                border="0"
+                                align="center"
+                                cellpadding="0"
+                                cellspacing="0"
+                        >
+                            <tr class="grey">
+                                <td>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                    >
                                         <tr>
-                                          <td width="50%" class=header><a name="name">name</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                            <td>
+                                                <img
+                                                        src="images/logo.jpg"
+                                                        hspace="6"
+                                                        width="227"
+                                                        height="250"
+                                                />
+                                            </td>
+                                            <td width="100%" align="center">
+                                                <font size="6">ET Mapping Tutorial</font>
+                                                <p><font size="5">Lesson 23</font></p>
+                                            </td>
                                         </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%" class="header">Topics</td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <b
+                                                            ><br/>
+                                                                Making terrain using GtkGenSurf<br/>
+                                                                &nbsp;</b
+                                                            >
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="2"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#FFFFFF"
+                                                            >
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td><a href="#Concepts">Concepts</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td><a href="#prep">Preparation</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td><a href="#gtk">GtkGenSurf</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <a href="tutorial.html"
+                                                                        >Back to main menu</a
+                                                                        >
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- Alert boxout
+              <table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+              <tr>
+                  <td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+                  <img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+                  </td>
+              </tr>
+              </table>
+              -->
+                                    <!--
+                                      <table width="100%"  border="0" cellspacing="0" cellpadding="8">
+                                      <tr>
+                                          <td>
+                                              <table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+                                              <tr valign="top">
+                                                  <td width="100%">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td width="50%" class=header><a name="name">name</a></td>
+                                                        <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                              </tr>
+                                              <tr valign="top">
+                                                  <td width="100%" bgcolor="#EAEBED">
+                                                  </td>
+                                              </tr>
+                                              </table>
+                                          </td>
+                                      </tr>
                                       </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
--->
+              -->
 
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
                                         <tr>
-                                          <td width="50%" class=header><a name="concepts">Concepts</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
-                                        </tr>
-                                      </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Sooner or later you're going to want to make
-                                    some outdoor environments, and unless it's
-                                    all in a concreted area, you're going to
-                                    need to make hills, dunes, grassy paths,
-                                    snowy mounds etc.
-                                    <p>The usual way of making brushes to make
-                                    an object doesn't really work here, so
-                                    instead people use a third party tool.&nbsp;
-                                    One is EasyGen, which I don't use, and
-                                    another is GtkGenSurf (a plugin included
-                                    within Radiant) which I do.</p>
-                                    <p>I haven't tried EasyGen so I can't
-                                    comment on it.&nbsp; Also there's a new
-                                    terrain-generating-kid on the block called FATE,
-                                    which looks like it will be really good when
-                                    finished.&nbsp; As I haven't used it I will
-                                    stick to explaining how to do things in
-                                    GtkGenSurf.</p>
-                                    <p>GtkGenSurf will generate an area of
-                                    terrain using lots of triangular brushes,
-                                    like the box Toblerone comes in, with one
-                                    end face the required texture and all the
-                                    rest as caulk.&nbsp; You
-                                    tell GtkGenSurf the area dimensions, the
-                                    required size of triangles, the textures to
-                                    be used and the contours you want and hit
-                                    the Go button: GtkGenSurf then produces the
-                                    terrain mesh, already grouped and ready for
-                                    you to slot into place.</p>
-                                    <p>The approach I take to making terrain is
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="0"
+                                                                    cellspacing="0"
+                                                                    width="100%"
+                                                            >
+                                                                <tr>
+                                                                    <td width="50%" class="header">
+                                                                        <a name="concepts">Concepts</a>
+                                                                    </td>
+                                                                    <td width="50%" align="right">
+                                                                        <a href="#">[Top]</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Sooner or later you're going to want to make
+                                                            some outdoor environments, and unless it's all
+                                                            in a concreted area, you're going to need to
+                                                            make hills, dunes, grassy paths, snowy mounds
+                                                            etc.
+                                                            <p>
+                                                                The usual way of making brushes to make an
+                                                                object doesn't really work here, so instead
+                                                                people use a third party tool.&nbsp; One is
+                                                                EasyGen, which I don't use, and another is
+                                                                GtkGenSurf (a plugin included within
+                                                                Radiant) which I do.
+                                                            </p>
+                                                            <p>
+                                                                I haven't tried EasyGen so I can't comment
+                                                                on it.&nbsp; Also there's a new
+                                                                terrain-generating-kid on the block called
+                                                                FATE, which looks like it will be really
+                                                                good when finished.&nbsp; As I haven't used
+                                                                it I will stick to explaining how to do
+                                                                things in GtkGenSurf.
+                                                            </p>
+                                                            <p>
+                                                                GtkGenSurf will generate an area of terrain
+                                                                using lots of triangular brushes, like the
+                                                                box Toblerone comes in, with one end face
+                                                                the required texture and all the rest as
+                                                                caulk.&nbsp; You tell GtkGenSurf the area
+                                                                dimensions, the required size of triangles,
+                                                                the textures to be used and the contours you
+                                                                want and hit the Go button: GtkGenSurf then
+                                                                produces the terrain mesh, already grouped
+                                                                and ready for you to slot into place.
+                                                            </p>
+                                                            <p>
+                                                                The approach I take to making terrain is
                                     this:
-                                    <ul>
-                                      <li>Identify the area in the map that
-                                        needs terrain - it will need to be
-                                        rectangular although when the terrain is
-                                        generated you can always chop away the
-                                        stuff you don't want.</li>
-                                      <li>Make the dimensions multiples of 256
-                                        unless the terrain area is small, in
-                                        which case you could use multiples of
-                                        128 or 64 etc.&nbsp; The smaller the
-                                        triangles you create, the more of them
-                                        there will be.&nbsp; More triangles
-                                        means nicer looking, but higher demands
-                                        on the PC to draw them.&nbsp; I have
-                                        always used 256 to date.</li>
-                                      <li>I give GtkGenSurf a rough description
-                                        of the required geography and do the
-                                        first generation.</li>
-                                      <li>If it looks roughly ok in Radiant,
-                                        compile it and go run around in ET.</li>
-                                      <li>Note down the imperfections, like this
-                                        bit is too tall, that bit is too steep,
-                                        etc.</li>
-                                      <li>Go back to Radiant, delete the
-                                        terrain, refine the description to
-                                        GtkGenSurf and try again.</li>
-                                      <li>Repeat as many times as necessary to
-                                        get it mostly right.&nbsp; This might
-                                        take 20 goes or so.</li>
-                                      <li>For fine tuning I drag individual
-                                        triangle vertices about in
-                                        Radiant.&nbsp; This is very tiresome and
-                                        to be done last.</li>
-                                    </ul>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">The
-    brushes created this way for terrain should be of Detail type, otherwise
-    you'd create a zillion portals in the compile.&nbsp; This also means that
-    the undulating terrain does not block program line of sight, so for example
-    the program will draw what's on the other side of a hill, even if a player
-    couldn't see it.&nbsp; This is why in many maps you'll find buildings
-    separating areas of the outdoors, so that the Structural brushes of the
-    buildings can intervene between the Detail brushes of the terrain and reduce
-    the demands on your graphics card and so improve the FPS.
-    <p>This is why with large outdoor expanses like in Glider, 6Flags and
-    2tanks, I've had to be careful with the amount of cosmetic detail included,
-    because so much of the map will be drawn all the time.</p>
-	</td>
-</tr>
-</table>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td width="50%" class=header><a name="prep">Preparation</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                                            </p>
+
+                                                            <ul>
+                                                                <li>
+                                                                    Identify the area in the map that needs
+                                                                    terrain - it will need to be rectangular
+                                                                    although when the terrain is generated you
+                                                                    can always chop away the stuff you don't
+                                                                    want.
+                                                                </li>
+                                                                <li>
+                                                                    Make the dimensions multiples of 256
+                                                                    unless the terrain area is small, in which
+                                                                    case you could use multiples of 128 or 64
+                                                                    etc.&nbsp; The smaller the triangles you
+                                                                    create, the more of them there will
+                                                                    be.&nbsp; More triangles means nicer
+                                                                    looking, but higher demands on the PC to
+                                                                    draw them.&nbsp; I have always used 256 to
+                                                                    date.
+                                                                </li>
+                                                                <li>
+                                                                    I give GtkGenSurf a rough description of
+                                                                    the required geography and do the first
+                                                                    generation.
+                                                                </li>
+                                                                <li>
+                                                                    If it looks roughly ok in Radiant, compile
+                                                                    it and go run around in ET.
+                                                                </li>
+                                                                <li>
+                                                                    Note down the imperfections, like this bit
+                                                                    is too tall, that bit is too steep, etc.
+                                                                </li>
+                                                                <li>
+                                                                    Go back to Radiant, delete the terrain,
+                                                                    refine the description to GtkGenSurf and
+                                                                    try again.
+                                                                </li>
+                                                                <li>
+                                                                    Repeat as many times as necessary to get
+                                                                    it mostly right.&nbsp; This might take 20
+                                                                    goes or so.
+                                                                </li>
+                                                                <li>
+                                                                    For fine tuning I drag individual triangle
+                                                                    vertices about in Radiant.&nbsp; This is
+                                                                    very tiresome and to be done last.
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="5"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#000000"
+                                                            >
+                                                                <tr>
+                                                                    <td
+                                                                            bordercolor="#000000"
+                                                                            style="
+                                          border-style: solid;
+                                          border-width: 1;
+                                        "
+                                                                            valign="top"
+                                                                            bgcolor="#F4F4F4"
+                                                                    >
+                                                                        <img
+                                                                                border="0"
+                                                                                src="images/tutorial/alert.gif"
+                                                                                width="48"
+                                                                                height="42"
+                                                                                style="float: left"
+                                                                        />The brushes created this way for
+                                                                        terrain should be of Detail type,
+                                                                        otherwise you'd create a zillion portals
+                                                                        in the compile.&nbsp; This also means
+                                                                        that the undulating terrain does not
+                                                                        block program line of sight, so for
+                                                                        example the program will draw what's on
+                                                                        the other side of a hill, even if a
+                                                                        player couldn't see it.&nbsp; This is
+                                                                        why in many maps you'll find buildings
+                                                                        separating areas of the outdoors, so
+                                                                        that the Structural brushes of the
+                                                                        buildings can intervene between the
+                                                                        Detail brushes of the terrain and reduce
+                                                                        the demands on your graphics card and so
+                                                                        improve the FPS.
+                                                                        <p>
+                                                                            This is why with large outdoor
+                                                                            expanses like in Glider, 6Flags and
+                                                                            2tanks, I've had to be careful with
+                                                                            the amount of cosmetic detail
+                                                                            included, because so much of the map
+                                                                            will be drawn all the time.
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
                                         </tr>
-                                      </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    GtkGenSurf is capable of producing terrain
-                                    according to a number of styles, but I've
-                                    found there is just one that seems to be the
-                                    most practical, and I've stuck to it for all
-                                    the terrain I've ever made.
-                                    <p>It can base the undulations on the forms
-                                    of waves, cylinders or fractals, or from a
+                                    </table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="0"
+                                                                    cellspacing="0"
+                                                                    width="100%"
+                                                            >
+                                                                <tr>
+                                                                    <td width="50%" class="header">
+                                                                        <a name="prep">Preparation</a>
+                                                                    </td>
+                                                                    <td width="50%" align="right">
+                                                                        <a href="#">[Top]</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            GtkGenSurf is capable of producing terrain
+                                                            according to a number of styles, but I've
+                                                            found there is just one that seems to be the
+                                                            most practical, and I've stuck to it for all
+                                                            the terrain I've ever made.
+                                                            <p>
+                                                                It can base the undulations on the forms of
+                                                                waves, cylinders or fractals, or from a
                                     bitmap which specifies how the lumps and
                                     dips should be laid out.&nbsp; In practice
                                     I've found the bitmap method to be the most
-                                    useful, so that is what I'll describe here.</p>
-                                    <p>You can create a rectangular bitmap, ie a
+                                                                useful, so that is what I'll describe here.
+                                                            </p>
+                                                            <p>
+                                                                You can create a rectangular bitmap, ie a
                                     graphical file of type .BMP, and by
                                     colouring the pixels in it in varying shades
                                     of black to white, tell GtkGenSurf how you
-                                    want the terrain to rise and fall.</p>
-                                    <p>The tutorial map is 2048 * 2048.&nbsp;
-                                    We'll make the terrain mesh size 256 units
-                                    (1 box&nbsp; in grid scale 9) as this will
-                                    be fine for the demonstration.&nbsp; 2048 /
-                                    256 is 8, so the size of the bitmap will be
-                                    8 * 8 pixels.</p>
-                                    <p>The tutorial map currently has lots of
-                                    stuff in the bottom left quarter, with the
-                                    rest more or less empty.&nbsp; We'll make
-                                    the empty 3/4 a bit hilly, and make the
-                                    bottom 1/4 flatter.</p>
-                                    <p>Use Paint Shop Pro or any graphics
-                                    editing software to create an 8*8
-                                    image.&nbsp; Make it <b>greyscale</b>, ie
-                                    256 shades of grey only.&nbsp; A coloured
-                                    BMP will not do.&nbsp; Fill it with black.</p>
-                                    <p>Black represents 0 height.&nbsp; White
-                                    means 255 high.&nbsp; The lighter the grey
-                                    the greater the corresponding height, as
-                                    interpreted by GtkGenSurf.</p>
-                                    <p>Make the top &amp; right area some dappling of grey to
-                                    give some slopes there.&nbsp; Here is
-                                    a zoomed in image of an example 8*8 BMP.</p>
-                                    <p><img border="0" src="images/tutorial/23/Image2.jpg" width="114" height="114"></p>
-                                    <p>As can be seen I've left the bottom left
+                                                                want the terrain to rise and fall.
+                                                            </p>
+                                                            <p>
+                                                                The tutorial map is 2048 * 2048.&nbsp; We'll
+                                                                make the terrain mesh size 256 units (1
+                                                                box&nbsp; in grid scale 9) as this will be
+                                                                fine for the demonstration.&nbsp; 2048 / 256
+                                                                is 8, so the size of the bitmap will be 8 *
+                                                                8 pixels.
+                                                            </p>
+                                                            <p>
+                                                                The tutorial map currently has lots of stuff
+                                                                in the bottom left quarter, with the rest
+                                                                more or less empty.&nbsp; We'll make the
+                                                                empty 3/4 a bit hilly, and make the bottom
+                                                                1/4 flatter.
+                                                            </p>
+                                                            <p>
+                                                                Use Paint Shop Pro or any graphics editing
+                                                                software to create an 8*8 image.&nbsp; Make
+                                                                it <b>greyscale</b>, ie 256 shades of grey
+                                                                only.&nbsp; A coloured BMP will not
+                                                                do.&nbsp; Fill it with black.
+                                                            </p>
+                                                            <p>
+                                                                Black represents 0 height.&nbsp; White means
+                                                                255 high.&nbsp; The lighter the grey the
+                                                                greater the corresponding height, as
+                                                                interpreted by GtkGenSurf.
+                                                            </p>
+                                                            <p>
+                                                                Make the top &amp; right area some dappling
+                                                                of grey to give some slopes there.&nbsp;
+                                                                Here is a zoomed in image of an example 8*8
+                                                                BMP.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image2.jpg"
+                                                                        width="114"
+                                                                        height="114"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                As can be seen I've left the bottom left
                                     corner flat for now, to avoid some of the
                                     features we've put there disappearing into
-                                    the terrain.</p>
-                                    <p>Save the file as a .BMP file type, eg <b>tutorial.bmp</b>.
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    &nbsp;
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
-						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
-						<tr>
-							<td>
-								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
-								<tr valign="top">
-									<td width="100%">
-                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                          <td width="50%" class=header><a name="gtk">GtkGenSurf</a></td>
-                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                                                the terrain.
+                                                            </p>
+                                                            <p>
+                                                                Save the file as a .BMP file type, eg
+                                                                <b>tutorial.bmp</b>.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">&nbsp;</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
                                         </tr>
-                                      </table>
-                                    </td>
-								</tr> 
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Run Radiant and open the tutorial map.&nbsp;
-                                    Select grid size 9.
-                                    <p>Zoom/move the 2D view so you can see the
-                                    whole map.</p>
-                                    <p>Click <b>Plugins/GtkGenSurf/Ground
-                                    Surface...</b>&nbsp; and this window opens
-                                    up.</p>
-                                    <p><img border="0" src="images/tutorial/23/Image3.jpg" width="406" height="464"></p>
-                                    <p>Make sure that:</p>
-                                    <ul>
-                                      <li>&quot;Quake 3 Arena&quot; is chosen as
-                                        the Game</li>
-                                      <li>&quot;Ground surface&quot; is selected
-                                        for Orientation</li>
-                                      <li>&quot;From bitmap&quot; is selected
-                                        for the Waveform</li>
-                                      <li>A &quot;Roughness&quot; value (how
-                                        much irregularity should be introduced
-                                        to the undulations) of 50 is fine, and
-                                        pick any random seed you fancy (a
-                                        starting point for the random numbers
-                                        used - who cares really).&nbsp; With a
-                                        non-zero roughness it means that areas
-                                        you've specified as black, ie flat at
-                                        ground level, won't actually be
-                                        completely flat, there will still be
-                                        little curves and bumps.</li>
-                                      <li>&quot;Antialiased lines&quot; ticked
-                                        is nice</li>
-                                    </ul>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Click on <b>Extents</b> tab.
-                                    <p><img border="0" src="images/tutorial/23/Image4.jpg" width="406" height="464"></p>
-                                    <p>We must enter the map extents, ie tell
+                                    </table>
+                                    <table
+                                            width="100%"
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="8"
+                                    >
+                                        <tr>
+                                            <td>
+                                                <table
+                                                        width="100%"
+                                                        border="0"
+                                                        cellpadding="5"
+                                                        cellspacing="2"
+                                                        class="nicefield"
+                                                >
+                                                    <tr valign="top">
+                                                        <td width="100%">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="0"
+                                                                    cellspacing="0"
+                                                                    width="100%"
+                                                            >
+                                                                <tr>
+                                                                    <td width="50%" class="header">
+                                                                        <a name="gtk">GtkGenSurf</a>
+                                                                    </td>
+                                                                    <td width="50%" align="right">
+                                                                        <a href="#">[Top]</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Run Radiant and open the tutorial map.&nbsp;
+                                                            Select grid size 9.
+                                                            <p>
+                                                                Zoom/move the 2D view so you can see the
+                                                                whole map.
+                                                            </p>
+                                                            <p>
+                                                                Click
+                                                                <b>Plugins/GtkGenSurf/Ground Surface...</b
+                                                                >&nbsp; and this window opens up.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image3.jpg"
+                                                                        width="406"
+                                                                        height="464"
+                                                                />
+                                                            </p>
+                                                            <p>Make sure that:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    &quot;Quake 3 Arena&quot; is chosen as the
+                                                                    Game
+                                                                </li>
+                                                                <li>
+                                                                    &quot;Ground surface&quot; is selected for
+                                                                    Orientation
+                                                                </li>
+                                                                <li>
+                                                                    &quot;From bitmap&quot; is selected for
+                                                                    the Waveform
+                                                                </li>
+                                                                <li>
+                                                                    A &quot;Roughness&quot; value (how much
+                                                                    irregularity should be introduced to the
+                                                                    undulations) of 50 is fine, and pick any
+                                                                    random seed you fancy (a starting point
+                                                                    for the random numbers used - who cares
+                                                                    really).&nbsp; With a non-zero roughness
+                                                                    it means that areas you've specified as
+                                                                    black, ie flat at ground level, won't
+                                                                    actually be completely flat, there will
+                                                                    still be little curves and bumps.
+                                                                </li>
+                                                                <li>
+                                                                    &quot;Antialiased lines&quot; ticked is
+                                                                    nice
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Click on <b>Extents</b> tab.
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image4.jpg"
+                                                                        width="406"
+                                                                        height="464"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                We must enter the map extents, ie tell
                                     GtkGenSurf the size of the area to create
                                     terrain for.&nbsp; Seeing as we are using
                                     the whole map and we created the map with
                                     the lower left corner at (0,0), this is
                                     easy: the bottom left is (0,0) and the top
-                                    right is (2048,2048).</p>
-                                    <p>As it happens, the Divisions default is
-                                    x=8 and y=8, which happens to be what we
-                                    want for our 8*8 terrain mesh.&nbsp; If the
-                                    map had been 4096*4096 and the box size were
+                                                                right is (2048,2048).
+                                                            </p>
+                                                            <p>
+                                                                As it happens, the Divisions default is x=8
+                                                                and y=8, which happens to be what we want
+                                                                for our 8*8 terrain mesh.&nbsp; If the map
+                                                                had been 4096*4096 and the box size were
                                     still 256, you'd enter 16 and 16 here.
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-                                    Click on <b>Bitmap</b> tab.
-                                    <p><img border="0" src="images/tutorial/23/Image5.jpg" width="413" height="464"></p>
-                                    <p>Browse to the BMP file you created.&nbsp;
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Click on <b>Bitmap</b> tab.
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image5.jpg"
+                                                                        width="413"
+                                                                        height="464"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                Browse to the BMP file you created.&nbsp;
                                     Don't worry about the map color boxes, they
                                     can be used to scale the undulations to
                                     increase the height range above 256, but we
-                                    don't need that now.</p>
-                                    <p>Click the <b>Preview</b> box.&nbsp; This
+                                                                don't need that now.
+                                                            </p>
+                                                            <p>
+                                                                Click the <b>Preview</b> box.&nbsp; This
                                     will show you what the geography will look
-                                    like.</p>
-                                    <p><img border="0" src="images/tutorial/23/Image6.jpg" width="308" height="434"></p>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">GtkGenSurf
-    has some quirks and bugs.&nbsp; One bug is that if you run it again, even
-    though the Preview box is ticked, it won't open the Preview window - you
-    have to un-tick it and tick it again.
-	</td>
-</tr>
-</table>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-You can view the mesh from different angles by changing the Elevation and
-Azimuth of the viewpoint.&nbsp; Remember 30/30 is the default view.
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">Another
-    oddity is that the 3D preview isn't easily matched to the top/bottom of your
-    map.&nbsp; You'll have all sorts of fun trying to guess which bits of the
-    terrain will go in which parts of your map.&nbsp; With a simple 8*8 where
-    the terrain is obvious, it's ok.&nbsp; When the terrain is 80*80 with lots
-    of bumps and valleys, it becomes less obvious.&nbsp; This is because of
-    another quirk which you'll see next as we get the opportunity to fine tune any
-    of the terrain grid intersections using the Fix Points feature.
-	</td>
-</tr>
-</table>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-By the way, I generally place the GtkGensurf window top left on my screen and put the
-preview window next to it, and then make the preview window as large as
-possible.&nbsp; This doesn't matter at 8*8, but it will at 80*80 or similar.
-<p>Click the <b>Texture</b> tab.</p>
-<p><img border="0" src="images/tutorial/23/Image7.jpg" width="406" height="464"></p>
-<p>The <b>Surface</b> texture is the main texture that GtkGenSurf will use when
-it makes the terrain.&nbsp; You can change this to the texture you want.&nbsp;
-While I'm making the Ludendorff map I am using some grassy dirt texture.&nbsp;
-You should pick an organic texture, something like grass, dirt, snow, gravel,
-sand etc.&nbsp; There are some good grassy choices in the textures/temperate_sd
-set, so for now I suggest you choose master_grass_dirt3.&nbsp; There is no
-&quot;browse&quot; option, so you have to type it in.&nbsp; Don't put .tga or
-.jpg at the end, just give the texture name.</p>
-<p>The <b>Other</b> texture should be left as caulk.</p>
-<p>The <b>Steep</b> texture is the texture to use for steep angles, defined as 60 degrees or more unless you change it.&nbsp; You would make this
-either the same as the main surface, or if you wanted say hills to be grassy
-mainly but rocky on the steep slopes, you'd give a rocky texture here.</p>
-<p><b>Make sure the &quot;Use detail brushes&quot; box is ticked.</b></p>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">Yet
-    another bug is that often GtkGenSurf will not use the texture you
-    specified.&nbsp; It tends to get it right more often if the texture is already in use
-    somewhere in your map, but this isn't guaranteed.&nbsp; Once it starts to
-    get it wrong it's quite tiresome trying to convince it to use the right
-    texture.&nbsp; It may also forget
-    the texture used when you save an INI file to record the settings you are
-    using.&nbsp; You may have to go into the INI file and change it by hand, as
-    explained later.&nbsp; Sometimes closing Radiant and starting it again will
-    help GtkGenSurf get its act together.
-	</td>
-</tr>
-</table>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-&nbsp;Click the <b>Fix Points</b> tab.
-<p><img border="0" src="images/tutorial/23/Image8.jpg" width="406" height="464"></p>
-<p>The main window of interest is the preview window.</p>
-<p><img border="0" src="images/tutorial/23/Image10.jpg" width="308" height="434"></p>
-<p>We can change the height of any point (except the yellow ones) by clicking on
-an intersection, and then entering the required height value.&nbsp; If you enter
-a value in the Range Affected box, nearby points will be adjusted too.&nbsp; As
-the adjacent points are 256 units away, you'd enter say 512 to affect your 2
-nearest neighbours in all directions.</p>
-<p>Click on a point and increase the height value so you can see the effect of
-your adjustment.&nbsp; I have made an exaggerated adjustment here to make it
-obvious.</p>
-<p><img border="0" src="images/tutorial/23/Image11.jpg" width="308" height="434"></p>
-<p>I don't really want this spike, so I can release it by clicking <b>Free</b>
-and it will return to its original value.</p>
-<p>What you will find is that it is hard to equate where you click on the grid
-to where in the terrain you are actually affecting.&nbsp; This is a pain.&nbsp;
-Sometimes I flip the image upside down with the Elevation and spin it around
-with the Azimuth to get the left and rights to match up - but then the top and
-bottom are reversed. :(</p>
-<p>It's trial and error and you must pick the view orientation that makes the
-most sense to you.</p>
-<p>I'll repeat the point adjustment, but this time with a Range of 512.</p>
-<p><img border="0" src="images/tutorial/23/Image12.jpg" width="308" height="434"></p>
-<p>You'll see how the neighbouring points are dragged upward.&nbsp; This is neat
-and goes some way to compensating for the aggro you'll have in trying to work
-out which point is which...</p>
-<p>You can adjust multiple points simultaneously by ctrl+clicking on the grid,
-and you can do rectangular ranges by shift+clicking.</p>
-<p>For now we'll just leave it to the default values.&nbsp; If you've made the
-grid a mess, click <b>Free All</b>.</p>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-Nearly done.&nbsp; To record all these settings so you don't start from scratch
-next time, you should now click <b>Save As... </b>
-and save your settings as <b>tutorial.ini</b> in the Radiant folder.<b><br>
-&nbsp;</b>
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">Yet
-    another bug is sometimes the Save As dialogue box will have gibberish in the
-    &quot;Save as type&quot; box.&nbsp; Ignore it and just type the name of the
-    file you want to save to.
-	</td>
-</tr>
-</table>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-You are now ready to create the terrain.&nbsp; Click the <b>Ok</b> button
-on the GtkGenSurf window.&nbsp; It will create the brushes, being 2 triangles
-per box, already grouped (so they show as blue triangles) at the (0,0,0) co-ord.
-<p><img border="0" src="images/tutorial/23/Image13.jpg" width="402" height="410"></p>
-<p>Your view should look something like this:</p>
-<p><img border="0" src="images/tutorial/23/Image14.jpg" width="498" height="438"></p>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-We have new terrain and the old floor overlapping.&nbsp; Either we'll need to
-move everything up a bit, or move the old floor down.&nbsp; We can't just delete
-the old floor because it forms part of the structural boundary of the map.&nbsp;
-In general you'll make maps that are totally enclosed in hull caulk cubes, with
-all 6 faces of the surrounding brushes given hull caulk, so that you are free to
-create/delete anything inside it without worrying that you are making a hole
-into the void.
-<p>For the sake of simplicity we'll just move the floor down a notch.&nbsp; Get
-a 2D side view.&nbsp; Change to grid size 7.&nbsp; Select the old floor brush
-and move it down one notch.&nbsp; Click on the hull_caulk texture in the
-textures window to give the whole brush that texture - we don't need it to be
-drawn as snow any more.</p>
-<p>Press ESC.&nbsp; Select all 4 of the surrounding wall brushes, and extend
-them down one notch to meet the bottom hull_caulk brush, thus making the solid
-surrounding cube again.</p>
-<p>Press ESC.&nbsp; Your view should now look something like this:</p>
-<p><img border="0" src="images/tutorial/23/Image15.jpg" width="558" height="194"></p>
-<p><img border="0" src="images/tutorial/23/Image16.jpg" width="478" height="429"></p>
-<p>If you generally don't like how the terrain has come out, rather than
-specific detailed parts which we could fix by hand, select and delete the
-terrain group and go back to GtkGenSurf.&nbsp; It will still have your details
-so you can just Fix Points differently and try again.</p>
-<p>If though you have exited Radiant, GtkGenSurf will not know your terrain
-settings, so you will first have to use GtkGenSurf's <b>Open...</b> button and
-tell it to open &quot;tutorial.ini&quot;.</p>
-<p>An important detail to note is that there is a chunk of terrain inside the
-building.</p>
-<p><img border="0" src="images/tutorial/23/Image17.jpg" width="468" height="429"></p>
-<p>It's at this point that it starts to become clear why we have taken such
-trouble to make our buildings line up along big grid lines where possible.&nbsp;
-Choose grid size 9 and get the overhead 2D and you can see the terrain triangles
-that fall within the building.&nbsp; There are 6 of them.</p>
-<p><img border="0" src="images/tutorial/23/Image18.jpg" width="446" height="420"></p>
-<p>Select all 6 triangles in the 3D view, by first hiding the intervening floor
-brushes, and delete them.&nbsp; Press shift+H to reveal the floor brushes again
-and it should look like this:</p>
-<p><img border="0" src="images/tutorial/23/Image19.jpg" width="355" height="342"></p>
-<p>This will have revealed some gaps around the bottom of the building, as shown
-here:</p>
-<p><img border="0" src="images/tutorial/23/Image20.jpg" width="394" height="367"></p>
-<p>The better solution to all this is to manually adjust the triangles in
-Radiant, but we'll come to that in the next lesson.&nbsp; For now just select
-all the floor brushes again and extend them downwards in the 2D side view using
-grid scale 5.&nbsp; This will still leave a problem with the door, because the
-terrain comes up the door a bit, and you'll see its caulk when opening the door
-from the inside.&nbsp; We'll fix all this in the next lesson.</p>
-<p>Save, compile and run around in your new hilly environment.</p>
-<p>By the way, when taking screenshots from ET you usually have to increase the
-brightness (eg 40%) and contrast (eg 20%) otherwise the JPG looks too gloomy.
-<p><img border="0" src="images/tutorial/23/Image21.jpg" width="640" height="512"></p>
-<p>Whether or not you can plant landmines will depend on the texture you
-used.&nbsp; If it's a shader with landmines enabled, you'll be able to plant
-landmines.</p>
-<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
-<tr>
-	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
-	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">A
-    neat way to see if a texture is actually a shader (ie there is a bit of
-    script-like information for it which gives it properties instead of just
-    being a picture) is to shift+click on the texture of interest in the
-    textures window.&nbsp; Make sure you have pressed ESC first or you will
-    apply the texture to any selected brushes/faces.
-    <p>If the image is a plain texture, Radiant will report something like:
-    ERROR: textures/egypt_floor_sd/block-16sq is not a shader, it's a texture.</p>
-    <p>If it's a shader, ie there is an entry for it in a shader file, Radiant
-    will open the shader file using Wordpad or whatever you have associated with
-    .shader file types.&nbsp; Find the texture name in there and see if &quot;<font SIZE="2">surfaceparm
-    landmine&quot; is given under it.&nbsp; If it is, you can plant landmines on
-    faces with this texture.</font></p>
-	</td>
-</tr>
-</table>
-									</td>
-								</tr>
-								<tr valign="top">
-									<td width="100%" bgcolor="#EAEBED">
-<a href="tutorial24.html">
-Next lesson</a>
-									</td>
-								</tr>
-								</table>
-							</td>
-						</tr>
-						</table>
+                                                                like.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image6.jpg"
+                                                                        width="308"
+                                                                        height="434"
+                                                                />
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="5"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#000000"
+                                                            >
+                                                                <tr>
+                                                                    <td
+                                                                            bordercolor="#000000"
+                                                                            style="
+                                          border-style: solid;
+                                          border-width: 1;
+                                        "
+                                                                            valign="top"
+                                                                            bgcolor="#F4F4F4"
+                                                                    >
+                                                                        <img
+                                                                                border="0"
+                                                                                src="images/tutorial/alert.gif"
+                                                                                width="48"
+                                                                                height="42"
+                                                                                style="float: left"
+                                                                        />GtkGenSurf has some quirks and
+                                                                        bugs.&nbsp; One bug is that if you run
+                                                                        it again, even though the Preview box is
+                                                                        ticked, it won't open the Preview window
+                                                                        - you have to un-tick it and tick it
+                                                                        again.
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            You can view the mesh from different angles by
+                                                            changing the Elevation and Azimuth of the
+                                                            viewpoint.&nbsp; Remember 30/30 is the default
+                                                            view.
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="5"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#000000"
+                                                            >
+                                                                <tr>
+                                                                    <td
+                                                                            bordercolor="#000000"
+                                                                            style="
+                                          border-style: solid;
+                                          border-width: 1;
+                                        "
+                                                                            valign="top"
+                                                                            bgcolor="#F4F4F4"
+                                                                    >
+                                                                        <img
+                                                                                border="0"
+                                                                                src="images/tutorial/alert.gif"
+                                                                                width="48"
+                                                                                height="42"
+                                                                                style="float: left"
+                                                                        />Another oddity is that the 3D preview
+                                                                        isn't easily matched to the top/bottom
+                                                                        of your map.&nbsp; You'll have all sorts
+                                                                        of fun trying to guess which bits of the
+                                                                        terrain will go in which parts of your
+                                                                        map.&nbsp; With a simple 8*8 where the
+                                                                        terrain is obvious, it's ok.&nbsp; When
+                                                                        the terrain is 80*80 with lots of bumps
+                                                                        and valleys, it becomes less
+                                                                        obvious.&nbsp; This is because of
+                                                                        another quirk which you'll see next as
+                                                                        we get the opportunity to fine tune any
+                                                                        of the terrain grid intersections using
+                                                                        the Fix Points feature.
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            By the way, I generally place the GtkGensurf
+                                                            window top left on my screen and put the
+                                                            preview window next to it, and then make the
+                                                            preview window as large as possible.&nbsp;
+                                                            This doesn't matter at 8*8, but it will at
+                                                            80*80 or similar.
+                                                            <p>Click the <b>Texture</b> tab.</p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image7.jpg"
+                                                                        width="406"
+                                                                        height="464"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                The <b>Surface</b> texture is the main
+                                                                texture that GtkGenSurf will use when it
+                                                                makes the terrain.&nbsp; You can change this
+                                                                to the texture you want.&nbsp; While I'm
+                                                                making the Ludendorff map I am using some
+                                                                grassy dirt texture.&nbsp; You should pick
+                                                                an organic texture, something like grass,
+                                                                dirt, snow, gravel, sand etc.&nbsp; There
+                                                                are some good grassy choices in the
+                                                                textures/temperate_sd set, so for now I
+                                                                suggest you choose master_grass_dirt3.&nbsp;
+                                                                There is no &quot;browse&quot; option, so
+                                                                you have to type it in.&nbsp; Don't put .tga
+                                                                or .jpg at the end, just give the texture
+                                                                name.
+                                                            </p>
+                                                            <p>
+                                                                The <b>Other</b> texture should be left as
+                                                                caulk.
+                                                            </p>
+                                                            <p>
+                                                                The <b>Steep</b> texture is the texture to
+                                                                use for steep angles, defined as 60 degrees
+                                                                or more unless you change it.&nbsp; You
+                                                                would make this either the same as the main
+                                                                surface, or if you wanted say hills to be
+                                                                grassy mainly but rocky on the steep slopes,
+                                                                you'd give a rocky texture here.
+                                                            </p>
+                                                            <p>
+                                                                <b
+                                                                >Make sure the &quot;Use detail
+                                                                    brushes&quot; box is ticked.</b
+                                                                >
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="5"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#000000"
+                                                            >
+                                                                <tr>
+                                                                    <td
+                                                                            bordercolor="#000000"
+                                                                            style="
+                                          border-style: solid;
+                                          border-width: 1;
+                                        "
+                                                                            valign="top"
+                                                                            bgcolor="#F4F4F4"
+                                                                    >
+                                                                        <img
+                                                                                border="0"
+                                                                                src="images/tutorial/alert.gif"
+                                                                                width="48"
+                                                                                height="42"
+                                                                                style="float: left"
+                                                                        />Yet another bug is that often
+                                                                        GtkGenSurf will not use the texture you
+                                                                        specified.&nbsp; It tends to get it
+                                                                        right more often if the texture is
+                                                                        already in use somewhere in your map,
+                                                                        but this isn't guaranteed.&nbsp; Once it
+                                                                        starts to get it wrong it's quite
+                                                                        tiresome trying to convince it to use
+                                                                        the right texture.&nbsp; It may also
+                                                                        forget the texture used when you save an
+                                                                        INI file to record the settings you are
+                                                                        using.&nbsp; You may have to go into the
+                                                                        INI file and change it by hand, as
+                                                                        explained later.&nbsp; Sometimes closing
+                                                                        Radiant and starting it again will help
+                                                                        GtkGenSurf get its act together.
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            &nbsp;Click the <b>Fix Points</b> tab.
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image8.jpg"
+                                                                        width="406"
+                                                                        height="464"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                The main window of interest is the preview
+                                                                window.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image10.jpg"
+                                                                        width="308"
+                                                                        height="434"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                We can change the height of any point
+                                                                (except the yellow ones) by clicking on an
+                                                                intersection, and then entering the required
+                                                                height value.&nbsp; If you enter a value in
+                                                                the Range Affected box, nearby points will
+                                                                be adjusted too.&nbsp; As the adjacent
+                                                                points are 256 units away, you'd enter say
+                                                                512 to affect your 2 nearest neighbours in
+                                                                all directions.
+                                                            </p>
+                                                            <p>
+                                                                Click on a point and increase the height
+                                                                value so you can see the effect of your
+                                                                adjustment.&nbsp; I have made an exaggerated
+                                                                adjustment here to make it obvious.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image11.jpg"
+                                                                        width="308"
+                                                                        height="434"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                I don't really want this spike, so I can
+                                                                release it by clicking <b>Free</b> and it
+                                                                will return to its original value.
+                                                            </p>
+                                                            <p>
+                                                                What you will find is that it is hard to
+                                                                equate where you click on the grid to where
+                                                                in the terrain you are actually
+                                                                affecting.&nbsp; This is a pain.&nbsp;
+                                                                Sometimes I flip the image upside down with
+                                                                the Elevation and spin it around with the
+                                                                Azimuth to get the left and rights to match
+                                                                up - but then the top and bottom are
+                                                                reversed. :(
+                                                            </p>
+                                                            <p>
+                                                                It's trial and error and you must pick the
+                                                                view orientation that makes the most sense
+                                                                to you.
+                                                            </p>
+                                                            <p>
+                                                                I'll repeat the point adjustment, but this
+                                                                time with a Range of 512.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image12.jpg"
+                                                                        width="308"
+                                                                        height="434"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                You'll see how the neighbouring points are
+                                                                dragged upward.&nbsp; This is neat and goes
+                                                                some way to compensating for the aggro
+                                                                you'll have in trying to work out which
+                                                                point is which...
+                                                            </p>
+                                                            <p>
+                                                                You can adjust multiple points
+                                                                simultaneously by ctrl+clicking on the grid,
+                                                                and you can do rectangular ranges by
+                                                                shift+clicking.
+                                                            </p>
+                                                            <p>
+                                                                For now we'll just leave it to the default
+                                                                values.&nbsp; If you've made the grid a
+                                                                mess, click <b>Free All</b>.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            Nearly done.&nbsp; To record all these
+                                                            settings so you don't start from scratch next
+                                                            time, you should now click
+                                                            <b>Save As... </b> and save your settings as
+                                                            <b>tutorial.ini</b> in the Radiant folder.<b
+                                                        ><br/>
+                                                            &nbsp;</b
+                                                        >
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="5"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#000000"
+                                                            >
+                                                                <tr>
+                                                                    <td
+                                                                            bordercolor="#000000"
+                                                                            style="
+                                          border-style: solid;
+                                          border-width: 1;
+                                        "
+                                                                            valign="top"
+                                                                            bgcolor="#F4F4F4"
+                                                                    >
+                                                                        <img
+                                                                                border="0"
+                                                                                src="images/tutorial/alert.gif"
+                                                                                width="48"
+                                                                                height="42"
+                                                                                style="float: left"
+                                                                        />Yet another bug is sometimes the Save
+                                                                        As dialogue box will have gibberish in
+                                                                        the &quot;Save as type&quot; box.&nbsp;
+                                                                        Ignore it and just type the name of the
+                                                                        file you want to save to.
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            You are now ready to create the terrain.&nbsp;
+                                                            Click the <b>Ok</b> button on the GtkGenSurf
+                                                            window.&nbsp; It will create the brushes,
+                                                            being 2 triangles per box, already grouped (so
+                                                            they show as blue triangles) at the (0,0,0)
+                                                            co-ord.
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image13.jpg"
+                                                                        width="402"
+                                                                        height="410"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                Your view should look something like this:
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image14.jpg"
+                                                                        width="498"
+                                                                        height="438"
+                                                                />
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            We have new terrain and the old floor
+                                                            overlapping.&nbsp; Either we'll need to move
+                                                            everything up a bit, or move the old floor
+                                                            down.&nbsp; We can't just delete the old floor
+                                                            because it forms part of the structural
+                                                            boundary of the map.&nbsp; In general you'll
+                                                            make maps that are totally enclosed in hull
+                                                            caulk cubes, with all 6 faces of the
+                                                            surrounding brushes given hull caulk, so that
+                                                            you are free to create/delete anything inside
+                                                            it without worrying that you are making a hole
+                                                            into the void.
+                                                            <p>
+                                                                For the sake of simplicity we'll just move
+                                                                the floor down a notch.&nbsp; Get a 2D side
+                                                                view.&nbsp; Change to grid size 7.&nbsp;
+                                                                Select the old floor brush and move it down
+                                                                one notch.&nbsp; Click on the hull_caulk
+                                                                texture in the textures window to give the
+                                                                whole brush that texture - we don't need it
+                                                                to be drawn as snow any more.
+                                                            </p>
+                                                            <p>
+                                                                Press ESC.&nbsp; Select all 4 of the
+                                                                surrounding wall brushes, and extend them
+                                                                down one notch to meet the bottom hull_caulk
+                                                                brush, thus making the solid surrounding
+                                                                cube again.
+                                                            </p>
+                                                            <p>
+                                                                Press ESC.&nbsp; Your view should now look
+                                                                something like this:
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image15.jpg"
+                                                                        width="558"
+                                                                        height="194"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image16.jpg"
+                                                                        width="478"
+                                                                        height="429"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                If you generally don't like how the terrain
+                                                                has come out, rather than specific detailed
+                                                                parts which we could fix by hand, select and
+                                                                delete the terrain group and go back to
+                                                                GtkGenSurf.&nbsp; It will still have your
+                                                                details so you can just Fix Points
+                                                                differently and try again.
+                                                            </p>
+                                                            <p>
+                                                                If though you have exited Radiant,
+                                                                GtkGenSurf will not know your terrain
+                                                                settings, so you will first have to use
+                                                                GtkGenSurf's <b>Open...</b> button and tell
+                                                                it to open &quot;tutorial.ini&quot;.
+                                                            </p>
+                                                            <p>
+                                                                An important detail to note is that there is
+                                                                a chunk of terrain inside the building.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image17.jpg"
+                                                                        width="468"
+                                                                        height="429"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                It's at this point that it starts to become
+                                                                clear why we have taken such trouble to make
+                                                                our buildings line up along big grid lines
+                                                                where possible.&nbsp; Choose grid size 9 and
+                                                                get the overhead 2D and you can see the
+                                                                terrain triangles that fall within the
+                                                                building.&nbsp; There are 6 of them.
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image18.jpg"
+                                                                        width="446"
+                                                                        height="420"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                Select all 6 triangles in the 3D view, by
+                                                                first hiding the intervening floor brushes,
+                                                                and delete them.&nbsp; Press shift+H to
+                                                                reveal the floor brushes again and it should
+                                                                look like this:
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image19.jpg"
+                                                                        width="355"
+                                                                        height="342"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                This will have revealed some gaps around the
+                                                                bottom of the building, as shown here:
+                                                            </p>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image20.jpg"
+                                                                        width="394"
+                                                                        height="367"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                The better solution to all this is to
+                                                                manually adjust the triangles in Radiant,
+                                                                but we'll come to that in the next
+                                                                lesson.&nbsp; For now just select all the
+                                                                floor brushes again and extend them
+                                                                downwards in the 2D side view using grid
+                                                                scale 5.&nbsp; This will still leave a
+                                                                problem with the door, because the terrain
+                                                                comes up the door a bit, and you'll see its
+                                                                caulk when opening the door from the
+                                                                inside.&nbsp; We'll fix all this in the next
+                                                                lesson.
+                                                            </p>
+                                                            <p>
+                                                                Save, compile and run around in your new
+                                                                hilly environment.
+                                                            </p>
+                                                            <p>
+                                                                By the way, when taking screenshots from ET
+                                                                you usually have to increase the brightness
+                                                                (eg 40%) and contrast (eg 20%) otherwise the
+                                                                JPG looks too gloomy.
+                                                            </p>
 
-					</td>
-				</tr>
-				</table>          
-			</td>
-		</tr>
-		</table>
-	</td>
-</tr>
+                                                            <p>
+                                                                <img
+                                                                        border="0"
+                                                                        src="images/tutorial/23/Image21.jpg"
+                                                                        width="640"
+                                                                        height="512"
+                                                                />
+                                                            </p>
+                                                            <p>
+                                                                Whether or not you can plant landmines will
+                                                                depend on the texture you used.&nbsp; If
+                                                                it's a shader with landmines enabled, you'll
+                                                                be able to plant landmines.
+                                                            </p>
+                                                            <table
+                                                                    border="0"
+                                                                    cellpadding="5"
+                                                                    cellspacing="0"
+                                                                    bordercolor="#000000"
+                                                            >
+                                                                <tr>
+                                                                    <td
+                                                                            bordercolor="#000000"
+                                                                            style="
+                                          border-style: solid;
+                                          border-width: 1;
+                                        "
+                                                                            valign="top"
+                                                                            bgcolor="#F4F4F4"
+                                                                    >
+                                                                        <img
+                                                                                border="0"
+                                                                                src="images/tutorial/alert.gif"
+                                                                                width="48"
+                                                                                height="42"
+                                                                                style="float: left"
+                                                                        />A neat way to see if a texture is
+                                                                        actually a shader (ie there is a bit of
+                                                                        script-like information for it which
+                                                                        gives it properties instead of just
+                                                                        being a picture) is to shift+click on
+                                                                        the texture of interest in the textures
+                                                                        window.&nbsp; Make sure you have pressed
+                                                                        ESC first or you will apply the texture
+                                                                        to any selected brushes/faces.
+                                                                        <p>
+                                                                            If the image is a plain texture,
+                                                                            Radiant will report something like:
+                                                                            ERROR:
+                                                                            textures/egypt_floor_sd/block-16sq is
+                                                                            not a shader, it's a texture.
+                                                                        </p>
+                                                                        <p>
+                                                                            If it's a shader, ie there is an entry
+                                                                            for it in a shader file, Radiant will
+                                                                            open the shader file using Wordpad or
+                                                                            whatever you have associated with
+                                                                            .shader file types.&nbsp; Find the
+                                                                            texture name in there and see if
+                                                                            &quot;<font size="2"
+                                                                        >surfaceparm landmine&quot; is given
+                                                                            under it.&nbsp; If it is, you can
+                                                                            plant landmines on faces with this
+                                                                            texture.</font
+                                                                        >
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td width="100%" bgcolor="#EAEBED">
+                                                            <a href="tutorial24.html"> Next lesson</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
 </body>
 </html>
