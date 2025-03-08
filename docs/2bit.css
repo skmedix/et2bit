@@ -30,13 +30,13 @@ td { font-size: 80%}
 
 .grey_bg
 {
-	background-image: url('/images/content_main_tbl_bg.jpg');
+	background-image: url('https://skmedix.github.io/et2bit/images/content_main_tbl_bg.jpg');
 	background-repeat: repeat-x;
 }
 
 .grey
 {
-	background-image: url('/images/grey.gif');
+	background-image: url('https://skmedix.github.io/et2bit/images/grey.gif');
 }
 
 a.1:active,a.1:link,a.1:visited
