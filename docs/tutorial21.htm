@@ -1,0 +1,375 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              21</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Curved walls and arches<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#curvedwall">Curved walls</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#arch">Making an arch</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="curvedwall">Curved walls</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    We can demonstrate how to use a simple
+                                    curved surface by making one of the room
+                                    corners rounded instead of
+                                    right-angled.&nbsp; You'll be able to apply
+                                    this technique to making bulges in a wall,
+                                    or convex shapes like arcs of a column.
+                                    <p>Run Radiant and open the map.</p>
+                                    <p>Select grid size <b>5 and</b> draw a
+                                    brush as shown.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image1.jpg" width="390" height="366"></p>
+                                    <p>Give yourself the 3D view that will show
+                                    you what's going on in the corner.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image2.jpg" width="337" height="326"></p>
+                                    <p>Depending on what other brush
+                                    manipulations you've been doing, you may or
+                                    may not see the brush in front of you.&nbsp;
+                                    Let's assume you don't.</p>
+                                    <p>Click Curve\Bevel and see what you get in
+                                    the 2D view.&nbsp; The brush has been converted
+                                    into a curve called a patch.&nbsp; You still
+                                    select patches just like a brush, ie
+                                    shift+click.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image2a.jpg" width="330" height="288"></p>
+                                    <p>Do a Z-axis rotate 3 times so that the
+                                    curved line fills the gap between the walls.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image3.jpg" width="320" height="306"></p>
+                                    <p>Ctrl+tab so you can position the curved
+                                    section to fill up the gap from floor to
+                                    ceiling.&nbsp; You'll need to change to grid
+                                    <b>4</b> to make the fit.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image4.jpg" width="203" height="278"></p>
+                                    <p>In the 3D view you'll now see some faint
+                                    lines of your curved surface, but no
+                                    texture, so you can see through the new
+                                    brush.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image5.jpg" width="334" height="382"></p>
+                                    <p>Click Curve\Matrix\Invert to flip the
+                                    drawn face to this side.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image6.jpg" width="300" height="340"></p>
+                                    <p>We will give the new curve the matching
+                                    wooden texture of the rest of the wall.</p>
+                                    <p>Press <b>shift</b>+S to bring up the
+                                    Patch Properties window.</p>
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">Shift+S
+    for patches (the name given to this type of modified brush) is like S for
+    the faces of regular brushes. <b>BUT</b>: if you accidentally press shift+S when
+    you meant &quot;S&quot;, or &quot;S&quot; when you meant shift+S, you will
+    very likely crash your PC.
+	</td>
+</tr>
+</table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Scroll your textures window until you see
+                                    the wood_test texture and click it.&nbsp; Ok
+                                    the texture gets applied but it looks
+                                    terrible.
+                                    <p>Click <b>Natural</b>.&nbsp; This will
+                                    look better, but it may be upside
+                                    down.&nbsp; If so, click the up arrow <b>Rotate
+                                    Step</b> four times.</p>
+                                    <p>Press ESC.&nbsp; It should now look like
+                                    this:</p>
+                                    <p><img border="0" src="images/tutorial/21/Image7.jpg" width="478" height="542"></p>
+                                    <p>With a texture that has no discernible
+                                    pattern, like concrete or metal, you won't
+                                    see the join.&nbsp; With this panel effect,
+                                    we do see the join.&nbsp; It probably won't
+                                    be noticed by anyone: did you notice the bad
+                                    join in any of the inner corners?&nbsp; They
+                                    are probably there but not noticed.</p>
+                                    <p>We can either cover the join with some
+                                    cosmetic furniture or trunking or similar;
+                                    or we can adjust the positioning/stretch of
+                                    the texture to try to get a better fit.</p>
+                                    <p>Select all the inner room wall faces,
+                                    other than the curved bit, but including the
+                                    faces around the window and door, and click
+                                    the wood_test texture again.&nbsp; This
+                                    makes the texture run properly from one face
+                                    to the next, but it also highlights what
+                                    happens when brushes don't sit squarely at Z
+                                    height intervals of 128.&nbsp; Because our
+                                    wall brushes are up a notch, the textures
+                                    are vertically wrong by a notch.
+                                    <p>We correct that by pressing <b>S</b> and
+                                    the up arrow V Shift 4 times and then click
+                                    Done.&nbsp; Press ESC.&nbsp; So alright, the
+                                    wall textures are all run smoothly, but the
+                                    curved texture still doesn't quite fit.
+                                    <p>Select the curve patch, zoom in in 2D and
+                                    press <b>V</b> (Vertex tool).
+                                    <p><img border="0" src="images/tutorial/21/Image8.jpg" width="382" height="368">
+                                    <p>Click on the top left green dot and drag
+                                    one notch to the left.
+                                    <p>Click on the bottom right green dot and
+                                    drag one notch downwards.
+                                    <p>Press ESC twice.&nbsp; We've now got the
+                                    curve probably as good as we're going to get
+                                    it.
+                                    <p><img border="0" src="images/tutorial/21/Image9.jpg" width="420" height="432">
+                                    <p>Finally we want to eliminate the wasteful
+                                    face drawing that is behind our new patch.
+                                    <p>Still in overhead 2D, select the north
+                                    wall and cut it (X tool) where shown.&nbsp;
+                                    Use Shift+Return to keep both parts.
+                                    <p><img border="0" src="images/tutorial/21/Image10.jpg" width="316" height="259">
+                                    <p>Press ESC twice and select the side wall,
+                                    and cut it also where it meets the edge of
+                                    the curve.&nbsp; Press ESC until everything
+                                    is deselected.
+                                    <p><img border="0" src="images/tutorial/21/Image12.jpg" width="322" height="346">
+                                    <p>Now select the patch and Hide it.
+                                    <p>Select the wall faces that are obscured
+                                    by the patch, and caulk them.&nbsp; Press
+                                    ESC.
+                                    <p><img border="0" src="images/tutorial/21/Image11.jpg" width="372" height="424">
+                                    <p>Then press shift+H to reveal the patch
+                                    again.
+                                    <p>Save, compile and go and see how it looks
+                                    in ET.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="arch">Making an arch</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    We'll add an archway inside the room.&nbsp;
+                                    The same principle would apply to making
+                                    archways and tunnels outside of course.
+                                    <p>Draw a brush as shown, then Select
+                                    Complete Tall and Hide them.&nbsp; This just
+                                    makes it easier to see what we're doing in
+                                    the room.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image13.jpg" width="284" height="342">&nbsp;
+                                    <img border="0" src="images/tutorial/21/Image14.jpg" width="287" height="335"></p>
+                                    <p>Let's put in a couple of uprights to be
+                                    the arch supports.</p>
+                                    <p>Draw the brush as shown, caulk it and
+                                    make it detail.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image15.jpg" width="213" height="279"></p>
+                                    <p>Get a side view and make sure it goes
+                                    from floor to ceiling.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image16.jpg" width="201" height="384">
+                                    <img border="0" src="images/tutorial/21/Image17.jpg" width="366" height="417"></p>
+                                    <p>Select the 3 visible faces and give them
+                                    the church_c01dm texture.&nbsp; Press
+                                    ESC.&nbsp; Get the 2D overhead view and then
+                                    duplicate the brush, mirror it in the X-axis
+                                    (x-axis flip button), and move it to the
+                                    opposite wall.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image18.jpg" width="338" height="334"></p>
+                                    <p><img border="0" src="images/tutorial/21/Image19.jpg" width="463" height="364"></p>
+                                    <p>Press ESC.&nbsp; Now we'll put in the
+                                    connecting ceiling section prior to creating
+                                    the archway.</p>
+                                    <p>Draw a connecting brush as shown and
+                                    caulk it and make it detail.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image20.jpg" width="302" height="154"></p>
+                                    <p>Get a side view and shrink the brush up
+                                    to a narrow strip at the ceiling.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image21.jpg" width="327" height="250"></p>
+                                    <p>Apply the brick texture to the 3 visible
+                                    faces of the new brush.</p>
+                                    <p>Overhead view again in 2D and draw a
+                                    brush as shown.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image22.jpg" width="441" height="305"></p>
+                                    <p>Curve/Bevel to turn it into a patch, then
+                                    rotate it 90 degrees in the x-axis (x-axis
+                                    rotate button).</p>
+                                    <p>Reize the brush until it's the same width
+                                    as the columns.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image23.jpg" width="431" height="191"></p>
+                                    <p>It's the wrong way round for this side of
+                                    the archway, so rotate it twice in the Z
+                                    axis.&nbsp; Then ctrl+tab twice so we can
+                                    move it vertically into place.&nbsp; It
+                                    should be placed as shown here:</p>
+                                    <p><img border="0" src="images/tutorial/21/Image24.jpg" width="247" height="428"></p>
+                                    <p>In the 3D view we can see the texture is
+                                    on the inner face and we want it on the
+                                    outer face: Curve\Matrix\Invert.</p>
+                                    <p>Now we can also see that the texture is
+                                    oddly stretched.&nbsp; Press <b>shift</b>+S
+                                    and click Natural, then rotate it 90 degrees
+                                    by clicking the up arrow rotate step twice.</p>
+                                    <p>Now to fill in the gap: Curve\Cap
+                                    Selection\Inverted Bevel\OK.</p>
+                                    <p>We end up with a func_group consisting of
+                                    the curve and two caps to plug the gap.</p>
+                                    <p>With the group still selected, get an
+                                    overhead view, duplicate the group, mirror
+                                    it in the x-axis and move it to the other
+                                    side of the archway.&nbsp; Press ESC.&nbsp;
+                                    It should now look like this:</p>
+                                    <p><img border="0" src="images/tutorial/21/Image25.jpg" width="340" height="471"></p>
+                                    <p>When you press shift+H to reveal the
+                                    hidden brushes you will see the light is
+                                    sticking through the arch wall, so move the
+                                    light so that it isn't stuck in the
+                                    wall.&nbsp; It is shown in the next picture
+                                    with models filtered out so you can see
+                                    where I moved it.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image26.jpg" width="304" height="489"></p>
+                                    <p>Duplicate the light and drag the new
+                                    light down to the middle of the new room
+                                    area.</p>
+                                    <p><img border="0" src="images/tutorial/21/Image27.jpg" width="296" height="556"></p>
+                                    <p>Save, compile and test the look of the
+                                    arch.&nbsp; Backup your work if you haven't,
+                                    in case it all goes pear shaped later on.</p>
+                                    <p>Strictly speaking we should cut the
+                                    upright columns and caulk the faces that are
+                                    obscured by the arch patches.&nbsp; Let's
+                                    take that as read and move on :)
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial22.htm">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,70 @@
+*
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+body
+{
+	background-image: url();
+	background-color: #eceef0;
+	font-size: 100%;
+	margin: 0;
+	margin-top: 0;
+}
+
+th { font-size: 80%}
+th p { font-size: 100%}
+th p b { font-size: 110%}
+td ul { font-size: 100%; line-height: 150%}
+td ol { font-size: 100%}
+td ul ul { font-size: 100%}
+td ul ul ul { font-size: 100%}
+td p { font-size: 100%}
+td label { font-size: 100%}
+td { font-size: 80%}
+
+.header
+{
+	font-size: 12pt;
+	font-weight: bold;
+	color: #222;
+}
+
+.grey_bg
+{
+	background-image: url('/images/content_main_tbl_bg.jpg');
+}
+
+.grey
+{
+	background-image: url('/images/grey.gif');
+}
+
+a:active, a:link, a:visited, a:focus
+{
+	color: #0000FF;
+}
+
+a:hover
+{
+	color: #0000FF;
+	text-decoration: none;
+}
+
+.nicefield {
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid;
+	border-color: #DCDDE7;
+	background-color: #F8F8F8;
+}
+
+.style1
+{	color: #8997A2}
+
+.text
+{
+    FONT-SIZE: 10pt;
+    COLOR: #333333;
+    FONT-FAMILY: Arial;
+    TEXT-ALIGN: justify
+}

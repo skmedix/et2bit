@@ -1,0 +1,260 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              20</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Command Posts<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#cp">Command Posts</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="cp">Command Posts</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Of all the constructibles, destructibles,
+                                    health cabinets and whatnot, the one thing
+                                    you really don't want to make from scratch
+                                    is a Command Post.
+                                    <p>Ok you can make a constructible wall by
+                                    hand if you like, it's a little long-winded,
+                                    but quite easily achievable without
+                                    resorting to &quot;here's one I made
+                                    earlier.&quot;.</p>
+                                    <p>But a Command Post has a number of
+                                    fiddly, angled models and a variety of
+                                    invisible brushes, and it really isn't
+                                    realistic to make one by hand.</p>
+                                    <p>So here are the <a href="tutorial/tutorial_command_posts.zip"> prefabs</a> you
+                                    need.&nbsp;&nbsp; :)</p>
+                                    <p>Unzip them and stick all 6 files into
+                                    your prefabs folder.&nbsp; There are 3 pairs
+                                    of .map and .script files, being a pair each
+                                    for the Allies, Axis and Neutral Command
+                                    Posts.</p>
+                                    <p>Run Radiant and open your map.</p>
+                                    <p>We'll put a Command Post against the
+                                    north wall.&nbsp; The command post model is
+                                    so complicated you really want to avoid
+                                    having to change its angle.&nbsp; So I
+                                    always find a suitable wall against which I
+                                    can stick a command post without having to
+                                    turn it around.&nbsp; You have been warned
+                                    :)</p>
+                                    <p>Suppose we want to put the Axis CP there.</p>
+                                    <p>Go to File/Import... and navigate to
+                                    prefab_axis_cp and import it.&nbsp; The
+                                    model will appear below/left of
+                                    (0,0,0).&nbsp; Drag it to the north
+                                    wall.&nbsp; It happens to have the correct Z
+                                    co-ord value of zero, because I tend to save
+                                    prefabs with a Z co-ord of 0, and I try to
+                                    keep much of my map floor surface around Z 0
+                                    for this reason.&nbsp; It makes building
+                                    things easier. (I also try to keep major
+                                    height differences to multiples of 128 or
+                                    256, because again it makes something
+                                    easier: texturing.&nbsp; It cuts down on
+                                    having to re-align a texture.)</p>
+                                    <p><img border="0" src="images/tutorial/20/Image1.jpg" width="307" height="314"></p>
+                                    <p>Press ESC.&nbsp; Compile the map but
+                                    don't yet go to ET to test it.</p>
+                                    <p>Now edit the prefab_axis_cp.script, and
+                                    copy and paste the lot into the bottom of
+                                    your tutorial.script file.&nbsp; (As your
+                                    script file grows, try to position new
+                                    procedures in the right place
+                                    alphabetically, ie put &quot;allies&quot;
+                                    procedures before &quot;axis&quot;, and
+                                    arrange all subsequent procedures by
+                                    alphabetical procedure name.&nbsp; This
+                                    makes it easier to find things later.)</p>
+                                    <p>Don't worry about trying to interpret the
+                                    contents of the Command Post procedure, it
+                                    works just fine and you don't need to know
+                                    how the script works (until later in the
+                                    tutorial.)</p>
+                                    <p>Save and exit from the .script file.</p>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <p>Run ET.&nbsp; We are not quite
+                                    finished.&nbsp; We have to add the CP
+                                    speaker.&nbsp; /devmap the map.&nbsp; Be an
+                                    Axis Engineer.</p>
+                                    <p>Go and stand directly in front of the
+                                    unmade CP.&nbsp; It probably seems a bit
+                                    dark.&nbsp; CPs generally have extra light
+                                    shone on them by an explicit light entity,
+                                    as for some reason they otherwise show up
+                                    dark.&nbsp; I don't know why.&nbsp; Don't
+                                    worry about it now.</p>
+                                    <p>Bring up the console and type:</p>
+                                    <p><b>\editspeakers<br>
+                                    \dumpspeaker<br>
+                                    \modifyspeaker</b><br>
+                                    <br>
+                                    Then exit the console.&nbsp; Make sure the
+                                    speaker is just in front of the CP.</p>
+                                    <p><img border="0" src="images/tutorial/20/Image2.jpg" width="334" height="350"></p>
+                                    <p>Enter these values into the boxes:</p>
+                                    <p><b>Noise</b>: <font SIZE="2">sound/world/radio_axis.wav&nbsp;&nbsp;
+                                    The &quot;/&quot; must not be a
+                                    &quot;\&quot; this time!<br>
+                                    <b>Targetname</b>: speaker_axis_cp<br>
+                                    <b>Looped</b>: on&nbsp;&nbsp;&nbsp; Make
+                                    sure you hear the axis CP sound.&nbsp; If
+                                    not, you have mis-spelt the <b>noise</b>.&nbsp;
+                                    Go back and get it right then proceed from
+                                    here.<br>
+                                    <b>Looped</b>: off<br>
+                                    <b>Broadcast</b>: nopvs<br>
+                                    <b>Volume</b>: 32<br>
+                                    <b>Range</b>: 1250</font></p>
+                                    <p><font size="2">And click OK.</font></p>
+                                    <p><font size="2">Go to the console, up
+                                    arrow 3 times and press return to cancel
+                                    speaker editing mode.</font></p>
+                                    <p><font size="2">Enter <b>\map_restart</b></font></p>
+                                    <p><font size="2">Come out of the console.</font></p>
+                                    <p>Go to your unmade CP; there should be no
+                                    CP noise.&nbsp; Make the CP.&nbsp; You
+                                    should now get the noise and a working CP.</p>
+                                    <p>Make yourself an allied cov ops and prove
+                                    you can blow up the CP and that everything
+                                    looks normal.</p>
+                                    <p>&nbsp;</p>
+                                    <p><b>You are all done!</b></p>
+                                    <p>&nbsp;</p>
+                                    <p>The allied prefab works just the same
+                                    way, with these changed values:</p>
+                                    <ul>
+                                      <li><b>Noise</b>: <font SIZE="2">sound/world/radio_allies.wav</font></li>
+                                      <li><b>Targetname</b>: speaker_allied_cp</li>
+                                    </ul>
+                                    <p>For the neutral CP you'll need 2
+                                    speakers, one for Axis and one for
+                                    Allies.&nbsp; Put them beside each other.</p>
+                                    <p>Easy!!!!!&nbsp; :)
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial21.htm">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

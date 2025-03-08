@@ -1,0 +1,476 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              5b</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Making a building outline in your environment<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#floor">Floor and ceiling</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="floor">Floor and Ceiling</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Run Radiant.&nbsp; Open the tutorial
+                                    map.&nbsp; Adjust zoom and scroll
+                                    (right-click and drag) in the 2D window so
+                                    you can see your building outline. You might
+                                    want to move your 3D view too so that you
+                                    can see what you are building in the 2D
+                                    window.<br>
+                                    &nbsp;
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+    A quick way to find the area you want in your 2D window, which happens more
+    often as the map gets bigger and more complicated, is to select one of the
+    brushes of interest in the 3D view, and then press ctrl+tab.&nbsp; The
+    selected brush is now centred in the 2D window.&nbsp; Usually you would
+    press ctrl+tab twice more to return to the top down view.
+	</td>
+</tr>
+</table>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Press 8 to make the floor brush creation
+                                    very easy.
+                                    <p>We're going to want to make a couple of
+                                    caulk brushes - rather than create them with
+                                    a random texture then caulk them, we'll set
+                                    the texture before creating the brushes:
+                                    click on the Caulk texture in the textures
+                                    window.</p>
+                                    <p>Make a brush as shown in this picture.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image22.jpg" width="380" height="386"></p>
+                                    <p>Press ctrl+tab to get a side
+                                    view.&nbsp;&nbsp; Press 4 to reduce the grid
+                                    scale, and then reduce the height of your
+                                    floor down to very flat:</p>
+                                    <p><img border="0" src="images/tutorial/05/Image23.jpg" width="470" height="160"></p>
+                                    <p>Press ctrl+tab twice to get back to the
+                                    normal 2D view.&nbsp; Press ESC.</p>
+                                    <p>Draw another brush as shown.&nbsp; This
+                                    one will be of the right height already as
+                                    you will immediately see in the 3D window :)</p>
+                                    <p><img border="0" src="images/tutorial/05/Image24.jpg" width="261" height="275"></p>
+                                    <p>Press ESC.&nbsp; Select the environment
+                                    ceiling brush and Hide it - you will only
+                                    accidentally keep selecting it
+                                    otherwise.&nbsp; You can reveal hidden
+                                    brushes with shift+H.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    With floors and ceilings it is often the
+                                    case that you accept some overlap with the
+                                    walls, and don't worry about the strip of
+                                    texture &quot;wasted&quot;.&nbsp; It can
+                                    become just too grim trying to angle
+                                    everything to prevent this.&nbsp; However,
+                                    for the purpose of making quick progress we
+                                    are creating this building sitting on the
+                                    main exterior hull-caulked wall (which we've
+                                    given a snow texture to on one side) and
+                                    ordinarily you don't do that.&nbsp;
+                                    Generally we will have created terrain and
+                                    then set the building into it; or the
+                                    building will be contained in its own volume
+                                    of space, like our original tiny room.
+                                    <p>In both of those cases you can usually
+                                    create an efficient floor space, in the
+                                    knowledge of what the player will actually
+                                    be able to see.&nbsp; We'll get to this
+                                    later.</p>
+                                    <p>So for now we're being a little quick and
+                                    dirty, but it will have a negligible effect
+                                    on FPS so don't worry.</p>
+                                    <p>Let's move our walls up a notch so that
+                                    they sit on the new floor.</p>
+                                    <p>Select all the walls in the 3D window by
+                                    shift+clicking them all one after the other.</p>
+                                    <p>Press ctrl+tab to get a side view.</p>
+                                    <p>Move the walls up one notch so they rest
+                                    on the floor brushes.</p>
+                                    <p>Press ESC, ctrl+tab twice, and
+                                    right-click/drag the building back into view
+                                    if it has wandered off centre.</p>
+                                    <p>Let's texture the floor.&nbsp; In the 3D view, ctrl+shift+click a floor
+                                    brush face.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image25.jpg" width="640" height="393"></p>
+                                    <p>Then ctrl+shift+<b>alt</b>+click the other
+                                    brush's floor face.</p>
+                                    <p>Then click Textures/egypt/egypt_floor_sd
+                                    and click the block-16sq texture.</p>
+                                    <p>Remember you can adjust the relative
+                                    sizes of the Radiant windows so you can
+                                    access more easily what you want at any
+                                    given time.&nbsp; So I made the textures
+                                    window bigger, clicked the texture I
+                                    wanted, and then made it back to smaller
+                                    again.&nbsp; Also I find the Texture
+                                    Window Scale of 50% to usually be the most workable.</p>
+                                    <p>Press ESC to deselect the faces and press
+                                    <b>8</b> to go back to a big grid
+                                    scale.&nbsp; Always worth doing as a
+                                    habit.</p>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">You may have noticed that with
+                                    a small grid scale, when you zoom out, the
+                                    grid display loses the finer lines and only
+                                    draws major lines, giving the impression of
+                                    a larger grid scale.&nbsp; Mind you don't
+                                    get caught out by this.
+	</td>
+</tr>
+</table>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    As the walls are now sitting on the floor,
+                                    we can see a thin rim around the bottom
+                                    which is the caulked sides of the floor
+                                    brushes.&nbsp; We'll need to texture them
+                                    too.
+                                    <p>You can also see that by texturing the
+                                    lower edge of the longer floor brush, half
+                                    of its length will be obscured by the square
+                                    floor brush, which is something we can
+                                    easily avoid and it demonstrates another
+                                    option available to the mapper, the Clipper
+                                    Tool:</p>
+                                    <p>Select the large floor brush, and either
+                                    press <b>X</b> or click the button shown: <img border="0" src="images/tutorial/05/Image26.jpg" width="186" height="49"></p>
+                                    <p>Click on the vertices shown in this
+                                    picture, starting with the uppermost
+                                    one.&nbsp; When you click on the first one,
+                                    the number 1 will appear next to it.&nbsp;
+                                    When you click on the second, the number 2
+                                    will appear, and the brush will be shown
+                                    with a dividing line defined by where you
+                                    clicked 1 and 2, with one chunk shown yellow
+                                    and the other still red.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image27.jpg" width="398" height="394"></p>
+                                    <p>The Clipper Tool has two functions.&nbsp;
+                                    It can...</p>
+                                    <ol>
+                                      <li>Crop an unwanted chunk of a brush: if
+                                        you were to press Return (don't in this
+                                        instance), the yellow section would
+                                        remain and the red would be deleted.</li>
+                                      <li>Split a brush into two: if you press
+                                        shift+Return (yes please, do it now) the
+                                        brush is merely split along the line
+                                        defined.</li>
+                                    </ol>
+                                    <p>Both chunks remain selected and the
+                                    cropper tool remains active.&nbsp; Press ESC
+                                    (or X or click the button again) to turn off
+                                    the cropper.</p>
+                                    <p>Press ESC to deselect the brushes.</p>
+                                    <p>Now we can texture all the wall rim
+                                    without having some texture wastefully drawn
+                                    but not visible.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Select all the wall rims by
+                                    ctrl+shift+clicking one followed by
+                                    ctrl+shift+<b>alt</b>+clicking all the
+                                    others (in the 3D view).&nbsp; You'll need
+                                    to use the right-click in the 3D window to
+                                    allow free movement/turning in that view so
+                                    you can see all the rims.&nbsp; Don't forget
+                                    the ones round the back.
+                                    <p><img border="0" src="images/tutorial/05/Image28.jpg" width="492" height="162"></p>
+                                    <p>Apply a suitable texture, say
+                                    Textures/town/town_wall town_c61a.&nbsp;
+                                    Press ESC.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">Another good habit
+    to cultivate is to deselect anything you're done
+                                    with.&nbsp; A <i><b>very</b></i> common
+                                    error is to leave something selected, then
+                                    select and work on something else, then
+                                    wonder wtf mangled your first brush into
+                                    such a bizarre shape :(
+	</td>
+</tr>
+</table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    We'll hold off from putting a ceiling on for
+                                    a minute.&nbsp; Let's make an opening in a
+                                    wall so we can walk through it.&nbsp; If you
+                                    make a mistake during this, use ctrl+z to
+                                    undo.&nbsp; Also might be worth doing a
+                                    quick file save before you start, for good
+                                    measure :)
+                                    <p>Select the indicated wall in the 3D
+                                    window, and press ctrl+tab to see it side
+                                    on.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image29.jpg" width="466" height="362"></p>
+                                    <p><img border="0" src="images/tutorial/05/Image30.jpg" width="250" height="166"></p>
+                                    <p>Press <b>5</b> for a smaller grid scale,
+                                    then use the clipper tool and define a cut
+                                    line as shown:</p>
+                                    <p><img border="0" src="images/tutorial/05/Image31.jpg" width="402" height="270"></p>
+                                    <p>Press shift+return to divide the brush
+                                    into 2.</p>
+                                    <p>In the 3D window, click on the <b>smaller</b>
+                                    chunk to deselect it, leaving the other
+                                    selected and the clipper active.&nbsp; Then
+                                    define another cut as shown.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image32.jpg" width="400" height="238"></p>
+                                    <p>Press shift+return to divide the brush
+                                    into 2.</p>
+                                    <p>In the 3D window, click on the <b>larger</b>
+                                    chunk to deselect it, leaving the other
+                                    selected and the clipper active.&nbsp; Then
+                                    define another cut as shown.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image33.jpg" width="412" height="276">
+                                    <p>This time we want to make an empty door
+                                    space, but the yellow chunk is the wrong one
+                                    to keep - so press ctrl+return to swap the
+                                    yellow marker over, then press Return.
+                                    <p>Press ESC twice now, as we are done
+                                    clipping.
+                                    <p>We have an opening.&nbsp; The faces of
+                                    the opening are caulk so we must do
+                                    something about it.
+                                    <p>For now, we won't bother putting in a
+                                    door frame, we'll be a bit quick and dirty
+                                    and texture the visible caulk.&nbsp; This is
+                                    slightly wasteful, because the two side
+                                    faces extend up beside the small chunk of
+                                    wall over the doorway.&nbsp; Later when we
+                                    make the door, we'll fix this.&nbsp; As I
+                                    said, sometimes it won't be worth the grief
+                                    in trying to stop everything from being
+                                    drawn if it won't be seen - but if you do
+                                    this where practicable, you'll keep the FPS
+                                    up and everyone playing will be grateful
+                                    that your map doesn't play like running
+                                    through custard :)
+                                    <p>Select the 3 caulked faces that surround
+                                    the door opening.&nbsp; Apply Textures/wood
+                                    wood_c01 and press ESC.
+                                    <p><img border="0" src="images/tutorial/05/Image34.jpg" width="373" height="484">
+                                    <p>This leads us to another useful
+                                    technique, that of being able to orientate a
+                                    texture.&nbsp; We can see that the upright
+                                    wooden texture looks fine, but the
+                                    crossmember texture is aligned 90 degrees to
+                                    what we really wanted.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Select the face with the wrongly aligned
+                                    texture.&nbsp; Press <b>S</b> to get access
+                                    to the Surface Inspector.&nbsp; Click the
+                                    indicated up arrow twice to rotate the
+                                    texture through 90 degrees and click Done.
+                                    <p>&nbsp;<img border="0" src="images/tutorial/05/Image35.jpg" width="309" height="390"></p>
+                                    <p>Press ESC to deselect the face.&nbsp;
+                                    Looks good now :)</p>
+                                    <p><img border="0" src="images/tutorial/05/Image36.jpg" width="394" height="472">
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Probably about time for you to trial your
+                                    creation so far.&nbsp; Let's put the allied
+                                    start point indoors.
+                                    <p>Press ctrl+tab until you get the overhead
+                                    view.&nbsp; Shift+click on the blue box and
+                                    the yellow box behind it.&nbsp; You can
+                                    actually select entities this way even
+                                    through intervening regular brushes, which
+                                    is quite handy.</p>
+                                    <p>Drag them into the room.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image37.jpg" width="304" height="304"></p>
+                                    <p>Press ctrl+tab and you will see the
+                                    player start is buried in the ground.&nbsp;
+                                    Lift the entities up a notch until the
+                                    player is on or just above the floor.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image38.jpg" width="376" height="264"></p>
+                                    <p>Press ESC and then select the player
+                                    start point alone.&nbsp; Press ctrl+tab to
+                                    get the overhead view.&nbsp; If you zoom in
+                                    you will see an arrow in the blue box.&nbsp;
+                                    It indicates the direction the player will
+                                    be looking in when he spawns.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image39.jpg" width="450" height="576"></p>
+                                    <p>Let's get him to face the door.&nbsp;
+                                    Press <b>N</b>.&nbsp; At bottom left of the
+                                    Entities window is a little cluster of boxes
+                                    with degree angle numbers written in
+                                    them.&nbsp; Their arrangement in the box
+                                    indicates the direction the number
+                                    represents.&nbsp; Click the 270 button.</p>
+                                    <p>Close the Entities window and press ESC -
+                                    you can see now that the player will arrive
+                                    facing the door.</p>
+                                    <p>Save your work, compile it and give it a
+                                    little playtest.&nbsp; You should see
+                                    something like this:</p>
+                                    <p><img border="0" src="images/tutorial/05/Image40.jpg" width="640" height="512"></p>
+                                    <p>Notice that the indoor footsteps sound is
+                                    different to the snowy.&nbsp; The tiles used
+                                    don't actually have any special sound
+                                    properties given to them (in the way that
+                                    the snow texture has).&nbsp; Instead ET uses
+                                    a default footstep sound for anything not
+                                    coming with its own sound defined - and the
+                                    default is fine for this sort of texture
+                                    when walked on.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Well done if you've reached this far
+                                    successfully.&nbsp; You've actually used
+                                    many of the viewing/selecting/editing
+                                    techniques and tools that will be your
+                                    mainstay for much of your mapping
+                                    career.&nbsp; We'll add more to them later
+                                    on.&nbsp; In the next lesson we'll put in a
+                                    ceiling then go on to put some lights inside
+                                    the room, make a door and some windows we
+                                    can shoot.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial05c.htm">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+									</td>
+								</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

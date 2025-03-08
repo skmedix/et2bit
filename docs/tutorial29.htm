@@ -1,0 +1,469 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              29</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Forward Spawn Flags<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#flag">Forward Spawn Flags</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#script">Scripting</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="flag">Forward Spawn Flags</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    These are quite easy to do, but you need to
+                                    be careful with the script to make sure they
+                                    will perform the right way for the situation
+                                    you want.
+                                    <p>There are a few varieties of behaviour,
+                                    such as:</p>
+                                    <ul>
+                                      <li>&nbsp;the flag is owned by no-one at
+                                        the start</li>
+                                      <li>&nbsp;the flag is owned by a team at
+                                        the start but they can't spawn there</li>
+                                      <li>&nbsp;the flag is owned by a team at
+                                        the start and they can spawn there but
+                                        it's not the default</li>
+                                      <li>when the flag is captured, it becomes
+                                        the default spawn for the capturing team</li>
+                                      <li>when the flag is captured, it <i>doesn't
+                                        </i>become the default spawn for the
+                                        capturing team</li>
+                                    </ul>
+                                    <p>All variations on a theme.&nbsp; The one
+                                    I'll demonstrate is the flag owned by
+                                    no-one, which will become the default spawn
+                                    for the capturing team.&nbsp; The losing
+                                    team will then spawn back at their original
+                                    spawn point.</p>
+                                    <p>Run Radiant&nbsp; and open the map.&nbsp;
+                                    Don't forget to make backups from time to
+                                    time.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    We'll start by putting the flag down.&nbsp;
+                                    In the 2D view, right click at the point
+                                    shown and select <b>team/team_wolf_checkpoint</b>.
+                                    <p><img border="0" src="images/tutorial/29/Image1.jpg" width="360" height="392"></p>
+                                    <p>In the side 2D view, move the entity
+                                    until its bottom just about goes into the
+                                    ground.&nbsp; Be aware that if you put a
+                                    flag on a rooftop, the rolled up flag of the
+                                    losing team will appear below the bottom of
+                                    the flagpole, which might appear to be
+                                    hanging from the ceiling of the room
+                                    below...</p>
+                                    <p><img border="0" src="images/tutorial/29/Image2.jpg" width="440" height="384"></p>
+                                    <p>Press N.&nbsp; Close the window and press
+                                    N again.</p>
+                                    <p>Tick the <b>spawnpoint</b> box.</p>
+                                    <p>We need to provide a name for the entity
+                                    so we can have a script procedure for
+                                    it.&nbsp; Enter a <b>targetname</b> of <b>forward_flag</b>
+                                    and then a <b>scriptname</b> also of <b>forward_flag</b>.</p>
+                                    <p>The name can be anything of course, but
+                                    we'll use forward_flag for now.&nbsp; This
+                                    value is not shown to players.</p>
+                                    <p>Finally we need to tell the flag the
+                                    names of the spawn locations that it is
+                                    controlling: enter a <b>target</b> of <b>forward_spawns</b>.</p>
+                                    <p><img border="0" src="images/tutorial/29/Image3.jpg" width="292" height="215"></p>
+                                    <p>Ok, now we'll add the spawn points for
+                                    both teams.&nbsp; We'll add just one of each
+                                    to illustrate the technique - but you would
+                                    need to add 32 for each side.</p>
+                                    <p>Right-click in the 2D overhead view where
+                                    you want the first allied soldier to arrive,
+                                    and select <b>team/team_ctf_bluespawn</b>.&nbsp;
+                                    In the side view make sure the entity is on
+                                    or just above the ground.&nbsp; For
+                                    irregular surfaces like terrain, make it
+                                    just above, otherwise he'll start with his
+                                    feet in the ground and not be able to move.</p>
+                                    <p>Press N, and tick the <b>invulnerable</b>
+                                    box.&nbsp; I think this may be redundant but
+                                    what the heck.&nbsp; We won't tick the <b>startactive</b>
+                                    box because we don't want him spawning here
+                                    yet.</p>
+                                    <p>Click on one of the 8 directional buttons
+                                    at bottom left of the Entities window, to
+                                    set the direction the player will be looking
+                                    in on spawning.</p>
+                                    <p>Enter a <b>targetname</b> of <b>forward_spawns</b>
+                                    and close the entities window.&nbsp; If you
+                                    have done everything right, the flag will
+                                    now have a line drawn to the blue spawn
+                                    entity.&nbsp; Press ESC.</p>
+                                    <p><img border="0" src="images/tutorial/29/Image4.jpg" width="364" height="346"></p>
+                                    <p>Now right-click in the 2D overhead view
+                                    where you want the Axis soldier to
+                                    spawn.&nbsp; If space is tight, the axis
+                                    spawns can overlap the allied spawns.&nbsp;
+                                    Select <b>team/team_ctf_redpawn</b> and
+                                    position it clear of the ground and press N.</p>
+                                    <p>Now do the same things that you did for
+                                    the blue spawn, that is, set the <b>invulnerable
+                                    </b>box and give it the same <b>targetname</b>,
+                                    and any facing direction you want.&nbsp;
+                                    Close the window and press ESC.</p>
+                                    <p><img border="0" src="images/tutorial/29/Image5.jpg" width="370" height="394"></p>
+                                    <p>You should have a red line connecting the
+                                    flag to the spawn.</p>
+                                    <p>Finally we need to add the command map
+                                    marker entity to show where the flag
+                                    is.&nbsp; Usually you put this over the flag
+                                    entity.&nbsp; So right-click on the flag
+                                    entity in the overhead view and select <b>team/team_wolf_objective</b>.&nbsp;
+                                    Position the entity a little over the flag.</p>
+                                    <p>Press N.&nbsp;&nbsp; There has to be a
+                                    default owner, even if really there is
+                                    none.&nbsp; So tick the <b>default_axis</b>
+                                    box.&nbsp; We'll take care of the real
+                                    situation in the script.</p>
+                                    <p>Enter a <b>description</b> of <b>Forward
+                                    Flag</b> - this text will be shown on the
+                                    command map.&nbsp; Enter a <b>targetname</b>
+                                    and <b>scriptname</b> of <b>forward_wobj</b>.</p>
+                                    <p><img border="0" src="images/tutorial/29/Image6.jpg" width="253" height="183"></p>
+                                    <p>Close the window and press ESC.&nbsp; We
+                                    have completed the mapping element.</p>
+                                    <p><img border="0" src="images/tutorial/29/Image7.jpg" width="388" height="524"></p>
+                                    <p>Save the map and compile it.&nbsp; Don't
+                                    run ET yet.</p>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="script">Scripting</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Open tutorial.script, and enter the
+                                    following script just before the <b>gate</b>
+                                    procedure, as this procedure will start with
+                                    &quot;F&quot;.
+                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
+                                      <tr>
+                                        <td><b>forward_flag</b></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td><b>{</b></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td><b>}</b></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                    </table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Then inside the curly brackets, put in the
+                                    following text.&nbsp; I suggest you cut and
+                                    paste it from here, but you ought to add the
+                                    indentation manually so you can see where
+                                    everything belongs:
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#FFFFFF">
+                                    <font SIZE="2">spawn
+                                    <p>{</p>
+                                    <p>accum 0 set 2 // Who owns flag: 0-Axis,
+                                    1-Allied, 2-Nobody</p>
+                                    <p>}</p>
+                                    <p>trigger axis_capture // Touched by an
+                                    Axis player</p>
+                                    <p>{</p>
+                                    <p>accum 0 abort_if_equal 0 // do Axis own
+                                    flag?</p>
+                                    <p>accum 0 trigger_if_equal 1 forward_flag
+                                    axis_reclaim // Reclaimed from Allies</p>
+                                    <p>accum 0 set 0 // Axis own the flag</p>
+                                    <p>wm_announce &quot;Axis have captured the
+                                    Forward Flag!&quot;</p>
+                                    <p>setstate forward_wobj default</p>
+                                    <p>}</p>
+                                    <p>trigger axis_reclaim</p>
+                                    <p>{</p>
+                                    <p>alertentity forward_wobj // Switch
+                                    command map marker</p>
+                                    <p>}</p>
+                                    <p>trigger allied_capture // Touched by an
+                                    allied player</p>
+                                    <p>{</p>
+                                    <p>accum 0 abort_if_equal 1 // do Allies own
+                                    flag?</p>
+                                    <p>accum 0 set 1 // Allied own the flag</p>
+                                    <p>wm_announce &quot;Allies have captured
+                                    the Forward Flag!&quot;</p>
+                                    <p>setstate forward_wobj default</p>
+                                    <p>alertentity forward_wobj // Switch
+                                    command map marker</p>
+                                    <p>}</font>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    It should look like this in layout:
+                                    <p><img border="0" src="images/tutorial/29/Image8.jpg" width="565" height="433"></p>
+                                    <p>Finally you'll need to add this line into
+                                    your game_manager procedure (<font size="2">so that the
+                                    flag doesn't initially show on the command
+                                    map)</font></p>
+                                    <p><font SIZE="2"><b>setstate forward_wobj
+                                    invisible</b></font></p>
+                                    <p>...and change the autospawn locations to
+                                    &quot;Forward Flag&quot; so
+                                    that both teams will automatically spawn at
+                                    the forward flag, if it is available to
+                                    them.&nbsp; If not, the players will spawn
+                                    back at the original spawn.</p>
+                                    <p><font size="2">So your game_manager ought
+                                    to look like:</font></p>
+                                    <p><font size="2"><img border="0" src="images/tutorial/29/Image9.jpg" width="651" height="361"></font></p>
+                                    <p><font size="2">You can now have a go in
+                                    ET and delight in your forward spawning
+                                    opportunities :)</font></p>
+                                    <p><font size="2">You may find the flying
+                                    flag is a bit dark.&nbsp; You can either add
+                                    a little light entity over or near it, or
+                                    experiment with changing the direction the
+                                    flag flies in - just set the <b>angle</b> of
+                                    the </font> <b>team_wolf_checkpoint</b>
+                                    (flag entity)<b>.</b></p>
+                                    <p><font size="2">If you are not interested
+                                    in what the script is doing, skip to the
+                                    next lesson now.&nbsp; Otherwise keep
+                                    reading, as this starts to get us into the
+                                    scripting fundamentals.</font>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <b><u>Explanation of the script</u></b>
+                                    <p>On game start, the flag's <b>spawn</b>
+                                    trigger is executed.&nbsp; It sets <b>accum
+                                    0</b> to <b>2</b>.&nbsp; An
+                                    &quot;accum&quot; (short for accumulator, a
+                                    term used in assembly programming) is a
+                                    variable, in which you can store integers.</p>
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" style="float: left" width="48" height="42">Each
+    procedure can use up to 10 accums, numbered 0 to 9.&nbsp; The values stored
+    in these procedural accums are not accessible to other procedures.&nbsp; If
+    you need to have values accessible across procedures, you use a <b>globalaccum</b>
+    which are also numbered 0 to 9.&nbsp; A map can only have a maximum of 10
+    globalaccums.
+	</td>
+</tr>
+</table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Accum 0 is used by this procedure to
+                                    indicate the condition that the flag is in,
+                                    ie who owns it.&nbsp; It uses the value 2 to
+                                    indicate &quot;no owner&quot;.
+                                    <p>The <b>allied_capture</b> and <b>axis_capture</b>
+                                    triggers are predefined names, and the
+                                    relevant trigger is executed when a player
+                                    touches the flag (even if his team already
+                                    own the flag).</p>
+                                    <p>We'll look at <b>allied_capture</b>
+                                    first:</p>
+                                    <p>When an allied soldier touches the flag,
+                                    the trigger is executed.&nbsp; The first
+                                    thing it does is check the value of accum 0.</p>
+                                    <p>If the value in accum 0 is 1 it indicates
+                                    that the allies already own the flag, so the
+                                    code is aborted and nothing else happens.</p>
+                                    <p>Otherwise the allies have captured the
+                                    flag, so accum 0 is set to 1 to record this.</p>
+                                    <p>Then the <b>wm_announce</b> is executed
+                                    to tell the players about this event.</p>
+                                    <p>Now that the flag has been captured, the
+                                    allies can spawn at it, so it must appear on
+                                    the command map: <b>setstate forward_wobj
+                                    default</b> means makes the command map icon
+                                    visible.</p>
+                                    <p>Finally, <b>alertentity forward_wobj</b>
+                                    toggles the owner of the spawnpoint, from
+                                    Axis to Allied.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Now look at <b>axis_capture</b>.
+                                    <p>When an axis soldier touches the flag,
+                                    the trigger is executed.&nbsp; The first
+                                    thing it does is check the value of accum 0.</p>
+                                    <p>If the value in accum 0 is 0 it indicates
+                                    that the axis already own the flag, so the
+                                    code is aborted and nothing else happens.</p>
+                                    <p>Then it checks to see if the flag was
+                                    previously owned by Allies - this will
+                                    always be the case after the allies have
+                                    captured the flag for the first time.&nbsp;
+                                    But if the allies are yet to capture the
+                                    flag, the <b>default_axis</b> setting means
+                                    the axis are deemed to already be the
+                                    owners, so we wouldn't want to toggle the
+                                    owner away.</p>
+                                    <p>So if the allies <i> were</i> the owners, the <b>trigger
+                                    axis_reclaim</b> trigger is executed (this
+                                    is a routine I created, not an ET
+                                    pre-supplied one).&nbsp; Its function is
+                                    just to toggle the owner back to axis.</p>
+                                    <p>Then just like the allied routine, the
+                                    new owner is recorded, an announcement made,
+                                    and the command map icon made visible.</p>
+                                    <p>That's it.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial30.htm">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

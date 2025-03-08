@@ -1,0 +1,290 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              35</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Making the command map<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#map">Making the command map</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="map">Making the command map</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    You'll need an image editor for this.
+                                    <p>First of all though, we'll create a new
+                                    shader file which is also required.</p>
+                                    <p>Create a text file: etmain/scripts/<b>tutorial_levelshots.shader</b></p>
+                                    <p>Put these lines in it:</p>
+                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
+                                      <tr>
+                                        <td colspan="3"><font SIZE="2">levelshots/tutorial_cc_automap
+                                          <p>{</font></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="40">&nbsp;</td>
+                                        <td><font SIZE="2">nopicmip
+                                          <p>nocompress</p>
+                                          <p>nomipmaps</font></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td><font SIZE="2">&nbsp;</font></td>
+                                        <td><font SIZE="2">{</font></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td><font SIZE="2">clampmap
+                                          levelshots/tutorial_cc.tga
+                                          <p>depthFunc equal</p>
+                                          <p>rgbGen identity</font></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td><font SIZE="2">}</font></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="3"><font SIZE="2">}
+                                          <p>levelshots/tutorial_cc_trans</p>
+                                          <p>{</font></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td><font SIZE="2">nopicmip
+                                          <p>nocompress</p>
+                                          <p>nomipmaps</p>
+                                          <p>{</font></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td><font SIZE="2">clampmap
+                                          levelshots/tutorial_cc.tga
+                                          <p>blendfunc blend</p>
+                                          <p>rgbGen identity</p>
+                                          <p>alphaGen vertex</font></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td><font SIZE="2">}</font></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td><font SIZE="2">}</font></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                    </table>
+                                    <p>When making this file for your own maps,
+                                    change all instances of &quot;tutorial&quot;
+                                    to whatever map name you are using.</p>
+                                    <p>I use Paint Shop Pro for image editing,
+                                    so I will explain the next step using that
+                                    tool.&nbsp; Your own image editor will no
+                                    doubt offer the same features but maybe
+                                    under different names.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Run PSP or equivalent.
+                                    <p>Open <b>tutorial_tracemap.tga</b> which
+                                    will be in the <b>maps</b> folder.</p>
+                                    <p>This is what mine looks like:</p>
+                                    <p><img border="0" src="images/tutorial/35/tutorial_tracemap.jpg" width="256" height="256"></p>
+                                    <p>You can see the building and the wall on
+                                    the slab, and the rest is pretty much
+                                    smudgy.</p>
+                                    <p>We want to split the image into its 3
+                                    constituent RGB (Red/Green/Blue) channels -
+                                    one of which might give us a better picture.</p>
+                                    <p>In PSP, click <b>colors/split
+                                    channel/split to RGB</b></p>
+                                    <p>You get 3 new images.&nbsp; Discard the 2
+                                    most useless ones, and keep the
+                                    clearest.&nbsp; I'm using:</p>
+                                    <p><img border="0" src="images/tutorial/35/Red1.jpg" width="256" height="256"></p>
+                                    <p>The image is 256*256 - expand it to
+                                    512*512 (don't just zoom in, actually make
+                                    the image bigger).&nbsp; Also increase the
+                                    colour depth to 24 bit, ie around 16 million
+                                    colours.</p>
+                                    <p>Using picture editing tools, tidy up the
+                                    image to remove little grey specks (eg the
+                                    fence posts, CP, ramp boxes, etc).</p>
+                                    <p><img border="0" src="images/tutorial/35/tutorial_cc.jpg" width="512" height="512"></p>
+                                    <p>Then you should try to improve the look
+                                    of it.&nbsp; I will give it a greeny colour,
+                                    other than the buildings.&nbsp; So I select
+                                    the buildings, invert the selection (to
+                                    select everything else) and colorize it to a
+                                    shade of green.</p>
+                                    <p><img border="0" src="images/tutorial/35/Image2.jpg" width="536" height="529"></p>
+                                    <p>Then I apply a <b>contour</b> function,
+                                    to make the green area look like a paper
+                                    map.</p>
+                                    <p><img border="0" src="images/tutorial/35/Image3.jpg" width="524" height="522"></p>
+                                    <p>Then I fill in some of the areas with
+                                    better colours:</p>
+                                    <p><img border="0" src="images/tutorial/35/Image4.jpg" width="525" height="527"></p>
+                                    <p>Finally I perform a <b>blur</b> function
+                                    to soften the edges of the contours.</p>
+                                    <p><img border="0" src="images/tutorial/35/Image5.jpg" width="512" height="512"></p>
+                                    <p>If you want to add writing (bear in mind
+                                    there will be icons and marker text put onto
+                                    the map in ET) you should create new layers
+                                    and put the text onto them.&nbsp; Then if
+                                    you want to change/move the text later on,
+                                    you can.&nbsp; You won't be able to if
+                                    you've put the text straight onto the map
+                                    image.</p>
+                                    <p>There are many graphical effects you
+                                    could employ to make the map more stylish
+                                    and interesting - it's up to you, your
+                                    imagination and your patience.</p>
+                                    <p>Save the file to a PSP format (to retain
+                                    the layers info) then save a copy of it to
+                                    etmain/levelshots/<b>tutorial_cc.tga</b> -
+                                    make sure the file is saved as a TGA
+                                    type.&nbsp; Always work on the PSP version
+                                    and save revised copies to the TGA version.</p>
+                                    <p>Run ET and run the map - you should see
+                                    your own command map :)
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial36.htm">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              17</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Lighting<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#ambient">Ambient light</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#entities">Light entities</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#red">Put on the red light</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#corona">Adding a corona</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#emit">Light-emitting textures</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="ambient">Ambient light</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Run Radiant and open your map.
+                                    <p>You can give your map an overall minimum
+                                    level of light, regardless of the location
+                                    and lighting you've included.&nbsp; This is
+                                    the ambient light setting.&nbsp; It is
+                                    optional.</p>
+                                    <p>If you feel your creation is just a
+                                    little too gloomy generally, you might
+                                    consider setting the ambient light.</p>
+                                    <p>To set it, select a regular brush and
+                                    press N to get at the worldspawn settings.</p>
+                                    <p>Enter &quot;ambient&quot; in the key and
+                                    a number say &quot;10&quot; in the value and
+                                    press return.&nbsp; Close the window.&nbsp;
+                                    I wouldn't really go above 20 as it starts
+                                    to wash things out and reduces the
+                                    appearance of shadows.&nbsp; As a guide,
+                                    Breakout has a setting of 20; 6flags has a
+                                    setting of 10; and 2tanks has no ambient
+                                    light.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="entities">Light entities</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    We've already added 3 light entities to the
+                                    tutorial map.&nbsp; We'll look at them in
+                                    more detail and make them look better.
+                                    <p>In 2D overhead view, zoom in to the room
+                                    with the Allied start point in it.&nbsp; I
+                                    have moved the start up a little so it
+                                    doesn't confuse the picture with the light
+                                    that is overhead.</p>
+                                    <p><img border="0" src="images/tutorial/17/Image1.jpg" width="339" height="411"></p>
+                                    <p>Right click on the centre of the green
+                                    light box and select misc/misc_model.&nbsp; Then navigate to mapobjects\light and select
+                                    cagelight.md3.</p>
+                                    <p><img border="0" src="images/tutorial/17/Image2.jpg" width="218" height="254"></p>
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">I've
+    found that some light models either add hours to the compile time, or crash
+    the game.&nbsp; These are my findings:<br>
+    <table border="0" cellpadding="4" cellspacing="0">
+      <tr>
+        <td><b>These models are safe:</b></td>
+      </tr>
+      <tr>
+        <td>cagelight<br>
+          cagelighta<br>
+          cagelightr<br>
+          p_nolight<br>
+          lantern</td>
+      </tr>
+      <tr>
+        <td><b>These models should be avoided</b></td>
+      </tr>
+      <tr>
+        <td>pendant10k<br>
+          sdsconce3</td>
+      </tr>
+    </table>
+	</td>
+</tr>
+</table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Get a side view and move the lantern up to
+                                    the ceiling.
+                                    <p><img border="0" src="images/tutorial/17/Image3.jpg" width="313" height="360"></p>
+                                    <p>Press <b>2</b> and lower the lantern one
+                                    notch.&nbsp; We have to bring the lantern
+                                    ever-so-slighty out of the ceiling because
+                                    you can't put a model into a structural
+                                    brush.&nbsp; If the ceiling had been a
+                                    detail brush you could have put the model
+                                    partially into it.&nbsp; If you find you can
+                                    see the gap between the model and the
+                                    ceiling, make yourself a detail brush to run
+                                    along the ceiling and close the gap between
+                                    the ceiling and the light - make it look
+                                    like electrical trunking for example.</p>
+                                    <p><img border="0" src="images/tutorial/17/Image4.jpg" width="339" height="355"></p>
+                                    <p>Move the light entity down a bit.&nbsp;
+                                    It usually is just below the model.</p>
+                                    <p><img border="0" src="images/tutorial/17/Image5.jpg" width="239" height="292"></p>
+                                    <p>If you put the light too close to the
+                                    model it will cast a shadow of the model
+                                    onto the ceiling.&nbsp; Which might be ok,
+                                    depends on what effect you want.</p>
+                                    <p>Compile and test that you see an
+                                    illuminated cagelight model and that the
+                                    light illuminates the room
+                                    satisfactorily.&nbsp; (In Radiant the
+                                    cagelight will appear unilluminated.)</p>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="red">Put on the red light</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Let's give the cagelight a red bulb.&nbsp;
+                                    There is already a model for this.
+                                    <p>Select the cagelight model and press
+                                    N.&nbsp; Press the <b>model</b> button at
+                                    the bottom right of the entities window.</p>
+                                    <p>Navigate to mapobjects/light and select
+                                    cagelightr.md3.</p>
+                                    <p>Press ESC then select the light entity
+                                    and press N.&nbsp; Enter the
+                                    &quot;_color&quot; key and &quot;0.900000
+                                    .0100000 0.100000&quot; value as shown, to
+                                    make this light red instead of white.</p>
+                                    <p><img border="0" src="images/tutorial/17/Image6.jpg" width="306" height="173"></p>
+                                    <p>The numbers of the _color value are the
+                                    amount of RGB (Red Green Blue) in the
+                                    light.&nbsp; Values are 0 to 1 to 6 decimal
+                                    places.</p>
+                                    <p>Close the entities window and press ESC.</p>
+                                    <p>Let's give this light a corona too.&nbsp;
+                                    The corona is the glow that a player sees,
+                                    which is bigger the more of the light source
+                                    he can see.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="corona">Adding a corona</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Right click in the 2D view at the point
+                                    shown, and select <b>Corona</b>.
+                                    <p><img border="0" src="images/tutorial/17/Image7.jpg" width="316" height="270"></p>
+                                    <p>Then press N.&nbsp; If you haven't
+                                    clicked on any other entitiy keys in the
+                                    entity window since setting the light color,
+                                    the _color stuff will still be in the key
+                                    and value boxes.&nbsp; If so, just press
+                                    return to input them.&nbsp; This is a handy
+                                    shortcut to setting the corona colour
+                                    (although coronas are generally white
+                                    because most light sources in a map will be
+                                    white).&nbsp; If the key is not _color
+                                    already, one trick is to select the light
+                                    entity, press N and click on the _color row
+                                    - this puts their values into the key/value
+                                    boxes.&nbsp; Then close the window, press
+                                    ESC and select the corona.&nbsp; Now when
+                                    you press N you'll have the boxes
+                                    pre-filled.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    If you corona is still selected, press ESC.
+                                    <p>Compile and test the red light and make
+                                    sure the corona is placed
+                                    realisitically.&nbsp; Two things to note:
+                                    one is that a coloured corona doesn't show
+                                    up as much as a white one, and also that the
+                                    coloured light has actually been shone
+                                    through the closed door and has coloured the
+                                    snow!</p>
+                                    <p>So this would be no good in a map -
+                                    either you'd have to move the door or light,
+                                    or make the light white, which is what we'll
+                                    do:</p>
+                                    <p>Select the cagelight model, press N and
+                                    click <b>model</b> and change the model back
+                                    to cagelight.md3.&nbsp; Close the entity
+                                    window and press ESC.</p>
+                                    <p>Select the corona, press N and click the
+                                    _color row then click <b>del key/pair</b>,
+                                    close the window and press ESC.</p>
+                                    <p>Select the light, press N and click the
+                                    _color row then click <b>del key/pair</b>,
+                                    close the window and press ESC.</p>
+                                    <p>Compile and test, and you'll see the
+                                    effect is now fine.</p>
+                                    <p><img border="0" src="images/tutorial/17/Image8.jpg" width="180" height="218"></p>
+                                    <p><img border="0" src="images/tutorial/17/Image9.jpg" width="495" height="484"></p>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="emit">Light-emitting textures</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    As you know, textures can give off an
+                                    ambient light of their own, such as if you
+                                    put a sky texture on a ceiling or wall
+                                    face.&nbsp; This is done by creating a
+                                    shader (a set of instructions) for the
+                                    texture.&nbsp; We won't need to do this
+                                    ourselves because there are plenty of
+                                    pre-supplied light textures with the shaders
+                                    already done.
+                                    <p>Select both of the other lights in the
+                                    room and delete them.</p>
+                                    <p>In 2D topdown view, create a brush which
+                                    we will make into a ceiling light.</p>
+                                    <p>Press shift+M so that the models aren't
+                                    shown.&nbsp; This makes it easier to see
+                                    what we're doing.</p>
+                                    <p>Press <b>5</b> and draw a brush as
+                                    shown.&nbsp; Caulk it and <b>make it detail.</b>&nbsp;
+                                    Select the brush again.</p>
+                                    <p><img border="0" src="images/tutorial/17/Image10.jpg" width="297" height="357"></p>
+                                    <p>Ctrl+tab so you can move the brush up to
+                                    the ceiling.&nbsp; Press <b>4</b> so you can
+                                    get it flush against the ceiling.
+                                    <p><img border="0" src="images/tutorial/17/Image11.jpg" width="374" height="292"><p>Apply
+                                    a metal texture to all of the 4 side faces
+                                    of the brush (shift+ctrl+click in 3D on one
+                                    face and shift+alt+ctrl+click the other
+                                    3).&nbsp; Metal_c07 will do, and it's
+                                    already listed in the texture window.
+                                    <p>Now shift+ctrl+click the bottom face,
+                                    which will be our light texture.
+                                    <p>Select Textures/lights and apply
+                                    light_xlight3_4000.
+                                    <p><img border="0" src="images/tutorial/17/Image12.jpg" width="519" height="312"><p>The
+                                    texture is misaligned on the face, so press
+                                    S and click Fit and Done, and press ESC.<p>Select
+                                    the brush, and shrink it upwards so it's not
+                                    such a chunky brush.&nbsp; Use grid scale 2
+                                    to achieve this.<p><img border="0" src="images/tutorial/17/Image13.jpg" width="247" height="214"><p>Press
+                                    ESC and press 5 to put the grid scale back
+                                    to something sensible.&nbsp; Press shift+M
+                                    to remove the models filter if you haven't
+                                    already.<p>Compile and test
+                                    and you should see something like this:
+                                    <p><img border="0" src="images/tutorial/17/Image14.jpg" width="461" height="418">
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial18.htm">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

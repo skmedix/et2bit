@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Summer Development Screenshots</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 15px;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 4px;
+        }
+
+        .lightbox-caption {
+            text-align: center;
+            margin-top: 10px;
+            color: #fff;
+            max-width: 100%;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .lightbox-next, .lightbox-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-next {
+            right: -60px;
+        }
+
+        .lightbox-prev {
+            left: -60px;
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-next, .lightbox-prev {
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
+
+            .lightbox-next {
+                right: -40px;
+            }
+
+            .lightbox-prev {
+                left: -40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Radar Summer Development Screenshots</h1>
+
+        <div class="gallery">
+            <div class="gallery-item" data-full="images/radar_summer1.jpg" data-caption="Moving along the road from the Allied spawn">
+                <img src="images/radar_summer1.jpg" alt="Moving along the road from the Allied spawn">
+            </div>
+            <div class="gallery-item" data-full="images/radar_summer2.jpg" data-caption="Approaching the bunker">
+                <img src="images/radar_summer2.jpg" alt="Approaching the bunker">
+            </div>
+            <div class="gallery-item" data-full="images/radar_summer3.jpg" data-caption="Passing the road hut (which is now an extra Axis spawn)">
+                <img src="images/radar_summer3.jpg" alt="Passing the road hut (which is now an extra Axis spawn)">
+            </div>
+            <div class="gallery-item" data-full="images/radar_summer4.jpg" data-caption="Viewing the main door from a new vantage point">
+                <img src="images/radar_summer4.jpg" alt="Viewing the main door from a new vantage point">
+            </div>
+            <div class="gallery-item" data-full="images/radar_summer5.jpg" data-caption="Passing through the main door">
+                <img src="images/radar_summer5.jpg" alt="Passing through the main door">
+            </div>
+            <div class="gallery-item" data-full="images/radar_summer6.jpg" data-caption="Dynamiting the North Radar Station, one of two extra objectives">
+                <img src="images/radar_summer6.jpg" alt="Dynamiting the North Radar Station, one of two extra objectives">
+            </div>
+            <div class="gallery-item" data-full="images/radar_summer7.jpg" data-caption="Axis high view of the West Radar Circuit">
+                <img src="images/radar_summer7.jpg" alt="Axis high view of the West Radar Circuit">
+            </div>
+            <div class="gallery-item" data-full="images/radar_summer8.jpg" data-caption="The tank is now repairable by Axis">
+                <img src="images/radar_summer8.jpg" alt="The tank is now repairable by Axis">
+            </div>
+            <div class="gallery-item" data-full="images/radar_summer9.jpg" data-caption="Moving the tank to a commanding defensive position">
+                <img src="images/radar_summer9.jpg" alt="Moving the tank to a commanding defensive position">
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-img" src="" alt="">
+            <div class="lightbox-caption"></div>
+            <div class="lightbox-next">&rsaquo;</div>
+            <div class="lightbox-prev">&lsaquo;</div>
+        </div>
+    </div>
+
+    <script src="js/lightbox.js"></script>
+</body>
+</html>

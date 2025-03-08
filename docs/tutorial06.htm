@@ -1,0 +1,329 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              6</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Making a door<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#frame">Making a door frame</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#door">Making a door</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="frame">Making a door frame</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Run Radiant.&nbsp; Open the tutorial map.&nbsp;
+                                    Select the environment ceiling and Hide
+                                    it.&nbsp; Select the roof over the doorway
+                                    and Hide it too.
+                                    <p>The default 4 grid size is fine this
+                                    time.&nbsp; Look at the doorway in the
+                                    overhead view and select one of the doorway
+                                    walls.&nbsp; Drag the wall 1 notch sideways
+                                    to make the door opening a little larger.&nbsp; Do the same with the opposite
+                                    wall.&nbsp; Make sure you deselect after
+                                    each wall adjustment.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image1.jpg" width="496" height="384"></p>
+                                    <p>Then select the wall above the opening
+                                    and stretch it both ways to meet the receded
+                                    side walls.</p>
+                                    <p>Press ctrl+tab to see the side view, so
+                                    you can shrink the wall over the door upward
+                                    a little.&nbsp; We have now made a space all
+                                    the way round the doorway to accommodate a
+                                    door frame.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image2.jpg" width="448" height="350"></p>
+                                    <p>Press ESC.&nbsp; Select in the 3D view
+                                    all the wood effect faces in the current
+                                    door frame, and click the Caulk texture in
+                                    the textures window.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image3.jpg" width="300" height="396"></p>
+                                    <p>Press ESC.&nbsp; Now we will create a
+                                    door frame, by creating brushes in the usual
+                                    way.</p>
+                                    <p>Ctrl+tab until you get the overhead
+                                    view.&nbsp; Then create a brush in the
+                                    doorway as shown.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image4.jpg" width="190" height="108"></p>
+                                    <p>Ctrl+tab.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image5.jpg" width="200" height="268"></p>
+                                    <p>Move the brush down a couple of notches.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image6.jpg" width="206" height="284"></p>
+                                    <p>Stretch the brush down to the floor.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image7.jpg" width="222" height="284"></p>
+                                    <p>Zoom in for close up work, and angle the
+                                    top part of the brush using the Edge tool.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image8.jpg" width="278" height="402"></p>
+                                    <p>Press <b>3</b>.</p>
+                                    <p>Ctrl+tab again, and drag in the <b>lower</b>
+                                    of the side blue dots one notch, as
+                                    indicated, for both sides:</p>
+                                    <p><img border="0" src="images/tutorial/06/Image9.jpg" width="252" height="540"></p>
+                                    <p>After you have dragged the two blue dots,
+                                    one after the other, you get a nicely
+                                    bevelled door frame side piece:</p>
+                                    <p><img border="0" src="images/tutorial/06/Image10.jpg" width="122" height="498"></p>
+                                    <p>You'll see this clearly in the 3D
+                                    view.&nbsp; Press ESC, then select the 3
+                                    main faces of the new brush, not the tiny
+                                    upper one.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image11.jpg" width="310" height="420"></p>
+                                    <p>Click on the wood_c01 texture in the
+                                    textures window and press ESC.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image12.jpg" width="242" height="408"></p>
+                                    <p>Get the overhead view via ctrl+tab if
+                                    needed.&nbsp; Press <b>4</b>.&nbsp; Select
+                                    the new brush.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image13.jpg" width="256" height="118"></p>
+                                    <p>Duplicate it, and click the &quot;x-axis
+                                    flip&quot; button <img border="0" src="images/tutorial/06/Image14.jpg" width="112" height="42">
+                                    then move the brush to the opposite wall
+                                    edge.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image15.jpg" width="210" height="86"></p>
+                                    <p>Ctrl+tab.&nbsp; Duplicate the
+                                    brush.&nbsp; Click the &quot;y-axis
+                                    rotate&quot; button 3 times <img border="0" src="images/tutorial/06/Image16.jpg" width="172" height="51">
+                                    and move the brush into place as shown.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image17.jpg" width="298" height="324"></p>
+                                    <p>Shrink it to size.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image18.jpg" width="327" height="154"></p>
+                                    <p>Then use the Edge tool to get its edge to
+                                    line up at 45 degrees.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image19.jpg" width="472" height="168"></p>
+                                    <p>Press ESC, and select all 3 visible faces
+                                    of this brush.&nbsp; Press <b>S</b>.&nbsp;
+                                    Click the up arrow to rotate the textures
+                                    through 90 degrees.&nbsp; Click Done.&nbsp;
+                                    Press ESC.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image35.jpg" width="309" height="390"></p>
+                                    <p>You've made the door frame.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="door">Making a door</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Get the overhead view.&nbsp; Press <b>3</b>.&nbsp;
+                                    Create a brush as shown, and caulk it.
+                                    <p>Ctrl+tab, and drag the brush into the
+                                    door opening.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image20.jpg" width="214" height="292"></p>
+                                    <p>Resize it to fill the doorway.&nbsp;
+                                    Press ESC.&nbsp; Hide the door frames and
+                                    walls that surround the door frames, so we
+                                    can see our door properly.</p>
+                                    <p>Select the 3 door edge faces, and apply
+                                    the wood_c01 texture.&nbsp; Press ESC.&nbsp;
+                                    Reselect the top face, press S, and rotate
+                                    the texture through 90 degrees.&nbsp; Press
+                                    ESC.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image21.jpg" width="405" height="402"></p>
+                                    <p>Select both of the main door faces, and
+                                    click Textures/doors and click the door_c01b
+                                    texture.&nbsp; The door will look a muddle;
+                                    don't worry.&nbsp; There are lots of door
+                                    textures, but most of them are scattered
+                                    about, rather than in the doors folder :(</p>
+                                    <p>Press <b>S</b>.&nbsp; Click
+                                    &quot;Fit&quot;.&nbsp; Click Done.&nbsp;
+                                    Press ESC.</p>
+                                    <p>We have our door (non-functioning at the
+                                    mo).&nbsp; Note that the door texture is
+                                    mirrored on the reverse face, which is handy
+                                    as it will keep the handle/hinges in the
+                                    right place.&nbsp; Textures are always
+                                    reversed on opposite edges.</p>
+                                    <p>Now to make the door work.</p>
+                                    <p>Get the overhead view, and draw a brush
+                                    as shown (yes it overlaps).&nbsp; It will
+                                    define the hinged side.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image22.jpg" width="398" height="136"></p>
+                                    <p>Get a side view.&nbsp; Adjust the brush
+                                    to be the same height as the door.</p>
+                                    <p>Click Textures/common and click the <b>Origin</b>
+                                    texture (orange check pattern).</p>
+                                    <p>Now select the door, so that it and the
+                                    origin brush are both selected.</p>
+                                    <p>In the 2D window, right click and select
+                                    &quot;func&quot; then
+                                    &quot;func_door_rotating&quot;.</p>
+                                    <p>Press N.&nbsp; Enter &quot;type&quot; as
+                                    a key and &quot;4&quot; as a value and
+                                    press return.&nbsp; Close the entities
+                                    window.</p>
+                                    <p>We have an operational door, but there is
+                                    one more thing we need to do, otherwise the
+                                    compile will fail.</p>
+                                    <p>Press ESC and shift+H to reveal all the
+                                    hidden brushes.</p>
+                                    <p>Select the 3 door frame brushes, then in
+                                    the 2D window right click and select&nbsp;
+                                    &quot;Make Detail&quot;.&nbsp; This is
+                                    because entities, such as an origin brush,
+                                    cannot fall within a structural brush (such
+                                    as all the walls made so far) but it's ok to
+                                    fall within a detail brush (to be explained
+                                    later).</p>
+                                    <p>You're all done.&nbsp; Save the work,
+                                    compile and test.&nbsp; Don't worry, it
+                                    isn't always this long-winded.&nbsp; Once
+                                    you've made something like a door, you make
+                                    it into a prefab (explained later) and then
+                                    you can just plonk copies of it into place
+                                    as and when you want.</p>
+                                    <p><img border="0" src="images/tutorial/06/Image23.jpg" width="640" height="512"></p>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">To
+    select the door entity, use shift+alt+click on any component brush, and the
+    whole assembly gets selected.&nbsp; To select a component brush of an entity
+    made up of several brushes, just use the regular shift+click.
+	</td>
+</tr>
+</table>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial07.htm">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

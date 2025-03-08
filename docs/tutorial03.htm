@@ -1,0 +1,492 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              3</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Making your first map<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#duplicate">Duplicating and rotating brushes</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#playerstart">Placing the player start points</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#worldspawn">Defining the world co-ordinates</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#compiling">Compiling the map</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#testing">Testing the map</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="duplicate">Duplicating and rotating brushes</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Ok we have a floor, let's add a wall.
+                                    <p>In the 2D view make sure we have the top
+                                    down view, and draw a rectangle next to one
+                                    side of the floor.&nbsp; Don't worry about
+                                    whatever texture gets used at the moment.</p>
+                                    <p><img border="0" src="images/tutorial/03/Image1.jpg" width="227" height="233"></p>
+                                    <p>Press ctrl+tab twice so we are looking
+                                    down the length of the (currently very
+                                    short) wall.</p>
+                                    <p><img border="0" src="images/tutorial/03/Image2.jpg" width="235" height="130"></p>
+                                    <p>Lift it so that the bottom edge of the
+                                    wall touches the top edge of the floor.
+                                    (Click inside the selected area and drag
+                                    up).</p>
+                                    <p><img border="0" src="images/tutorial/03/Image3.jpg" width="215" height="94"></p>
+                                    <p>Make the wall higher by putting the
+                                    cursor above the selected area and dragging
+                                    upwards.</p>
+                                    <p><img border="0" src="images/tutorial/03/Image4.jpg" width="315" height="205"></p>
+                                    <p>Ok we have a serviceable wall.&nbsp; Now
+                                    caulk it.&nbsp; <img border="0" src="images/tutorial/02/Image4.jpg" width="153" height="78">&nbsp;
+                                    and press ESC to deselect the brush.</p>
+                                    <p>As we are going to see only the inside of
+                                    the room, we only need to texture the inner
+                                    wall.</p>
+                                    <p>I am going to use a drab stone effect:
+                                    click Textures, Town, Town Wall.&nbsp; We
+                                    get the town wall textures shown.</p>
+                                    <p>In the 3D window, select the inner wall
+                                    face (ctrl+shift+click) and click on texture
+                                    town_c61a and press ESC to deselect the
+                                    face.</p>
+                                    <p><img border="0" src="images/tutorial/03/Image5.jpg" width="362" height="267"></p>
+                                    <p>Now make sure the 2D is topdown, and
+                                    select the wall brush (shift+click).</p>
+                                    <p><b>To duplicate a selection: press SPACE
+                                    BAR.</b> </p>
+                                    <p><img border="0" src="images/tutorial/03/Image6.jpg" width="231" height="235"></p>
+                                    <p>We want to rotate the new wall 90 degrees
+                                    around the Z axis.&nbsp; Press the button
+                                    shown, to do this.</p>
+                                    <p><img border="0" src="images/tutorial/03/Image7.jpg" width="382" height="102"></p>
+                                    <p>In the 2D window, drag the newly rotated
+                                    wall against the right edge of the floor.</p>
+                                    <p>Duplicate the new wall, rotate 90 degrees
+                                    again, and drag it to the bottom edge of the
+                                    floor.</p>
+                                    <p>Duplicate the new wall, rotate 90 degrees
+                                    again, and drag it to the left&nbsp; edge of
+                                    the floor.</p>
+                                    <p>Press ESC to deselect.</p>
+                                    <p><img border="0" src="images/tutorial/03/Image8.jpg" width="270" height="266">&nbsp;
+                                    <img border="0" src="images/tutorial/03/Image9.jpg" width="330" height="324"></p>
+                                    <p>Now we just need a ceiling.</p>
+                                    <table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+                                      <tr>
+                                        <td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+                                        <img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+                                        Be aware that in the 2D view when you
+                                        try to select a brush, Radiant will
+                                        select the uppermost brush you click on,
+                                        if there is more than one under your
+                                        cursor.&nbsp; This can be misleading, as
+                                        you can believe you have selected the
+                                        floor when actually you have selected
+                                        the ceiling.&nbsp; Another method of
+                                        selecting is to repeatedly use shift+alt+click,
+                                        which will drill down through each brush
+                                        under your cursor, selecting one after
+                                        the other.
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <p>Select
+                                    the floor, press ctrl+tab to get a side 2D
+                                    view, and duplicate the floor.&nbsp; Move it
+                                    to the top of the walls, then caulk it.</p>
+                                    <p><img border="0" src="images/tutorial/03/Image10.jpg" width="248" height="224"></p>
+                                    <p>Deselect it.&nbsp; Move your 3D viewpoint
+                                    inside the room and look at the ceiling face
+                                    - select it with crtl+shift+click.&nbsp;
+                                    We'll give it a sky effect.&nbsp; Sky
+                                    textures provide light, so we won't need to
+                                    put explicit light sources in the room.</p>
+                                    <p>Click Textures/Fueldump and pick the
+                                    FuelDumpSky texture.</p>
+                                    <p>Deselect the face - you have made a small
+                                    room with a sky ceiling.</p>
+                                    <table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+                                      <tr>
+                                        <td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+                                        <img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+                                        We will put the player inside the
+                                        room.&nbsp; He will only be able to see
+                                        the inside of the room.&nbsp; The sky is
+                                        actually a ceiling.&nbsp; Everything
+                                        outside the room is in the volume space
+                                        called void.&nbsp; You must ensure when
+                                        making a map that the player could
+                                        never trace a path to the void.&nbsp;
+                                        That is, the 3D space that encloses the
+                                        players must be airtight, with no gaps
+                                        that lead to the void, even if a player
+                                        could never see it.&nbsp; If you do,
+                                        your map compile will fail with a
+                                        &quot;Map is leaked&quot; error msg.
+                                        </td>
+                                      </tr>
+                                    </table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="playerstart">Placing the player start points</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    You need to include a minimum of 6
+                                    particular entities before a map can
+                                    function.&nbsp; <b>An entity is a game
+                                    component</b> other than an ordinary brush,
+                                    but you can convert brushes into special
+                                    purpose entities which you'll see later on.<p>To save the time involved in inserting
+                                    them, download (right-click) this <a href="/et/tutorial/players.zip" target="_blank">players.zip</a>
+                                    file which has them already defined.&nbsp;
+                                    Extract the players.map inside and put it into your \maps folder.</p>
+                                    <p>To include the contents of that file into
+                                    your map, click File/Import and select
+                                    &quot;players.map&quot;.&nbsp; The 6
+                                    entities arrive in your map, already
+                                    selected.</p>
+                                    <p><img border="0" src="images/tutorial/03/Image11.jpg" width="248" height="288"></p>
+                                    <p>Deselect them, then select each in turn
+                                    and move them inside the room.&nbsp; Do not
+                                    have any part of an entity sticking into a
+                                    wall, floor or ceiling, as if you do the map
+                                    compile will fail with the &quot;Map is
+                                    leaked&quot; error.</p>
+                                    <p>This is a
+                                    little cramped with this tiny example room; with
+                                    a large map there is plenty of space :)</p>
+                                    <p><img border="0" src="images/tutorial/03/Image12.jpg" width="356" height="364">&nbsp;
+                                    <img border="0" src="images/tutorial/03/Image13.jpg" width="350" height="274"></p>
+                                    <p>The entities you have just placed are:<br>
+                                    &nbsp;
+                                    <table border="1" cellpadding="2" cellspacing="0" bordercolor="#FFFFF4" bgcolor="#FFFFDD">
+                                      <tr>
+                                        <td><b>Blue&nbsp;box</b></td>
+                                        <td> Allied player spawn point - you
+                                          need 32 of these per Allied spawn
+                                          location.&nbsp; One will do for
+                                          testing.</td>
+                                      </tr>
+                                      <tr>
+                                        <td><b>Red box</b></td>
+                                        <td> Axis player spawn point - you need
+                                          32 of these per Axis spawn
+                                          location.&nbsp; One will do for
+                                          testing.</td>
+                                      </tr>
+                                      <tr>
+                                        <td><b>Yellow box near the blue
+                                          box&nbsp; </b></td>
+                                        <td>The clickable flag for the allies
+                                          spawn point shown on the command map -
+                                          one per spawn location</td>
+                                      </tr>
+                                      <tr>
+                                        <td><b>Yellow box near the red box</b></td>
+                                        <td> The clickable flag for the axis
+                                          spawn point shown on the command map -
+                                          one per spawn location</td>
+                                      </tr>
+                                      <tr>
+                                        <td><b>Large mauve box</b></td>
+                                        <td> Viewpoint within map until player
+                                          selects a team</td>
+                                      </tr>
+                                      <tr>
+                                        <td><b>Small mauve box</b></td>
+                                        <td> The entity that connects to your
+                                          script - you need exactly one of these
+                                          in a map</td>
+                                      </tr>
+                                    </table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="worldspawn">Defining the world co-ordinates</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    You need to tell ET how big your map is now,
+                                    so that it can position the icons on the
+                                    command map in the right place.
+                                    <p>Select any ordinary brush, like the
+                                    ceiling brush.&nbsp; Don't select an entity
+                                    such as a player spawn point at this time,
+                                    as to access the worldspawn values you have
+                                    to have an ordinary brush selected.<p>Press N.&nbsp; This brings
+                                    up the Entities window.<p>You'll see
+                                    the worldspawn entity.&nbsp; You would see
+                                    this for any regular brush you had selected,
+                                    it's just a way to set worldspawn values
+                                    which tell ET some basic map stats.&nbsp;
+                                    Enter &quot;mapcoordsmins&quot; as a Key,
+                                    and &quot;0 128&quot; as the Value and press
+                                    return.&nbsp; This is the top left
+                                    co-ordinate of your map.<p><img border="0" src="images/tutorial/03/Image14.jpg" width="561" height="710"><p>Then
+                                    enter &quot;mapcoordsmaxs&quot; as a Key,
+                                    and &quot;128 0&quot; as the Value and press
+                                    return.&nbsp; This is the bottom
+                                    right.&nbsp; The mins and maxs must define
+                                    a square, regardless of the actual shape of
+                                    your map.<p><img border="0" src="images/tutorial/03/Image17.jpg" width="229" height="128"><p>Close the entity window and
+                                    press ESC to deselect the brush.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="compiling">Compiling the map</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    It's about time you saved the map to
+                                    disk.&nbsp; Do a file save - I am using the
+                                    name &quot;tutorial&quot; for this map
+                                    example.&nbsp; Ensure the file is saved into
+                                    your \maps folder.<br>
+                                    <table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+                                      <tr>
+                                        <td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+                                        <img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+                                        Save your work often.&nbsp; It's very
+                                        painful to have to redo a lot of
+                                        creative work if Radiant crashes (which
+                                        it might) or you have a power cut.&nbsp;
+                                        I also save my work after a fair amount
+                                        of work to a copy of the map, eg
+                                        tutorial_051124a.map,
+                                        tutorial_051124b.map, etc.&nbsp;
+                                        Sometimes an error might creep in and
+                                        you'll need to recover to a map file a
+                                        few versions earlier.
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <p>Click BSP menu item and pick the longest
+                                    compile option, the one that starts <b> Simulate
+                                    old style</b>.</p>
+                                    <p>3 DOS windows will open one after the
+                                    other, and you will see a mirror of their
+                                    output whizz past in the Radiant output
+                                    window.</p>
+                                    <p>When the compiles finish the last lines
+                                    will say <b>Disconnecting</b> and <b>Connection
+                                    closed</b>.</p>
+                                    <p>If you haven't made an error and your
+                                    compile worked, you now have a tutorial.bsp file
+                                    created in the \maps folder.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="testing">Testing the map</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    You will need to add a couple of parameters
+                                    to the startup for ET.&nbsp; Add the text
+                                    &quot;+set g_gametype 2 +set sv_pure 0&quot;
+                                    to the target string.&nbsp; If you are
+                                    copying from this web page, paste the text
+                                    into a flat .txt file then copy and paste
+                                    into your shortcut from there.&nbsp;
+                                    Otherwise you may paste some non-printable
+                                    chars which will stop them from working
+                                    within your shortcut.&nbsp; The symptom for
+                                    that would be ET being unable to find your
+                                    map when you try to test it, when you know
+                                    it is there.
+                                    <p><img border="0" src="images/tutorial/03/Image15.jpg" width="367" height="509"></p>
+                                    <p>Run ET, and when the game comes up press
+                                    ESC and go into the console (tilde
+                                    key).&nbsp; Type &quot;\devmap
+                                    tutorial&quot; - if you didn't use tutorial
+                                    as the map name, use your map name in place
+                                    of &quot;tutorial&quot;.</p>
+                                    <p><b>Revel in being able to run around in your
+                                    own (very tiny) map!</b>&nbsp; Don't worry
+                                    about the command map, it will only be a
+                                    large black area edged in orange for now.
+                                    <p><img border="0" src="images/tutorial/03/Image16.jpg" width="480" height="384">
+                                    <p><a href="tutorial.htm">Back to the main
+                                    menu</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

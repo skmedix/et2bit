@@ -1,0 +1,344 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              22</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Cylinders, cones and curved roads<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#cylinder">Cylinders</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#cones">Cones</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#roads">Curved roads</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="cylinder">Cylinders</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Run Radiant and open the map.&nbsp; Default
+                                    grid scale 4 is ok.&nbsp; Draw a
+                                    brush as shown.
+                                    <p><img border="0" src="images/tutorial/22/Image1.jpg" width="411" height="433"></p>
+                                    <p>Click Curve\Cylinder - the brush becomes
+                                    a patch.&nbsp; Get a side view and stretch
+                                    the cylinder upwards to make it into some
+                                    sort of chimney-type pipe.</p>
+                                    <p><img border="0" src="images/tutorial/22/Image2.jpg" width="260" height="362"></p>
+                                    <p>Click on the metal_c07a texture to
+                                    texture the cylinder.&nbsp; The texture will
+                                    probably look all stretched and
+                                    horrid.&nbsp; Press <b>shift</b>+S and click
+                                    <b>natural</b> and <b>done</b>.
+                                    <p><img border="0" src="images/tutorial/22/Image3.jpg" width="384" height="416">
+                                    <p>Note that only the outer surface of the
+                                    cylinder is textured, the inner is
+                                    effectively nodraw.
+                                    <p>Let's warp the pipe.&nbsp; Press V and
+                                    get a side 2D view.&nbsp; Filter the models
+                                    (shift+M) to make the view clearer.&nbsp;
+                                    Zoom in.&nbsp; Note that the middle height
+                                    points may not fall on a grid
+                                    intersection.&nbsp; If not, drop down the
+                                    grid scale until they do.
+                                    <p><img border="0" src="images/tutorial/22/Image4.jpg" width="290" height="606">
+                                    <p>In my example, grid <b>3</b> will
+                                    do.&nbsp; Warp the tube in interesting ways
+                                    by grabbing the illuminated vertices and
+                                    dragging them, one at a time.&nbsp; The
+                                    cylinder will warp as you drag the vertex
+                                    point.&nbsp; In my example, I've dragged the
+                                    top vertices to the left somewhat, and I've
+                                    dragged the middle ones up, and outward to
+                                    give a leaning, bulging cylinder.
+                                    <p><img border="0" src="images/tutorial/22/Image5.jpg" width="270" height="456">
+                                    <p>Experiment, using different 2D views, to
+                                    see what sort of weird shapes it is possible
+                                    to create.&nbsp; You can also drag edges in
+                                    3D view, but this is trickier.&nbsp; Press V
+                                    or ESC to cancel vertex mode when you've
+                                    experimented enough, but leave the brush
+                                    selected.
+                                    <p>If you want to cap the open ends, and
+                                    create a solid-looking cylinder, click
+                                    Curve\cap selection.&nbsp; The top and
+                                    bottom are neatly capped, and the three
+                                    brushes are grouped for you
+                                    automatically.&nbsp; We don't really want
+                                    the bottom cap, so a quick way of getting
+                                    rid of it is to change to grid scale 9, lift
+                                    the group one notch so you can see under it
+                                    in 3D, deselect the group and then select
+                                    the bottom brush alone and delete
+                                    (Backspace) it.
+                                    <p>Then select the group (now only 2
+                                    brushes) with shift+alt+click and put it
+                                    back down one notch.
+                                    <p>If you want to see how your weird
+                                    cylinder came out, save compile and test.
+                                    <p><img border="0" src="images/tutorial/22/Image6.jpg" width="401" height="363">
+                                    <p>You can of course rotate these patches
+                                    just like any other brush.&nbsp; But if you
+                                    scale them, watch out!&nbsp; Scaling
+                                    downward may result in some of the critical
+                                    control vertices not aligning to exact grid
+                                    co-ordinates, eg instead of a co-ord being
+                                    (24, 56, 44) you might get (24.043, 56.324,
+                                    44.985), which tends to make things
+                                    crash.&nbsp; :(
+                                    <p>So if you <i>have</i> to scale a cylinder
+                                    (as I did when I wanted to make my V-1
+                                    creation of multiple cylinders about 75% of
+                                    its created size), you will need to examine
+                                    all the component vertices in close up, with
+                                    a grid scale of probably 1, and drag to
+                                    intersections any vertices that fall in the
+                                    gaps between them.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="cones">Cones</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Lets put a conical bulge on the roof.&nbsp;
+                                    Draw a brush as shown.&nbsp; It will
+                                    probably be as tall as your previous
+                                    cylinder - Radiant tries to guess your brush
+                                    height requirement for a new brush based on
+                                    what brush you last tinkered with.
+                                    <p><img border="0" src="images/tutorial/22/Image7.jpg" width="368" height="390"></p>
+                                    <p>Click Curve\cone.&nbsp; The brush becomes
+                                    a conical patch.</p>
+                                    <p><img border="0" src="images/tutorial/22/Image8.jpg" width="286" height="296"></p>
+                                    <p>Move it up onto the roof.</p>
+                                    <p>My example looks like the nose of a V-2
+                                    rocket.&nbsp; But you can change the shape
+                                    of a cone by using the <b>V</b>ertex tool,
+                                    just like with a cylinder.&nbsp; Try
+                                    dragging the vertices around to create a
+                                    rounder or a fatter cylinder, whatever you
+                                    need.&nbsp; If you need finer control of the
+                                    shape, you can add more vertex points: click
+                                    Curve\Insert\Add 2 rows.</p>
+                                    <p><img border="0" src="images/tutorial/22/Image9.jpg" width="229" height="433"></p>
+                                    <p>You can get some really weird shapes by
+                                    dragging these vertices about.&nbsp; You can
+                                    make some very intereting sculptures...</p>
+                                    <p><img border="0" src="images/tutorial/22/Image10.jpg" width="340" height="464">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="roads">Curved roads</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Make the tutorial map twice as big in area
+                                    to give us some work space.&nbsp; Use grid
+                                    scale 9 for this.&nbsp; Don't forget to set
+                                    the mapcoordsmins etc to 2048 0 and 0
+                                    2048.&nbsp; Just enlarge each surrounding
+                                    brush in turn, and hide them after resizing
+                                    so you can easily get to the next brush.
+                                    <p><img border="0" src="images/tutorial/22/Image11.jpg" width="357" height="376"></p>
+                                    <p><img border="0" src="images/tutorial/22/Image16.jpg" width="238" height="339"></p>
+                                    <p>Out in the new space we will create a
+                                    curving path.&nbsp; Hide the ceiling so it
+                                    doesn't get in the way.&nbsp; Select grid
+                                    scale 5 and zoom in a bit.&nbsp; Then create
+                                    a brush as shown.&nbsp; You can show models
+                                    again now if you like (shift+M).</p>
+                                    <p><img border="0" src="images/tutorial/22/Image12.jpg" width="337" height="333"></p>
+                                    <p>Move the brush down until it sits on the
+                                    ground.</p>
+                                    <p><img border="0" src="images/tutorial/22/Image13.jpg" width="350" height="264"></p>
+                                    <p><b>Make sure you have the overhead 2D
+                                    view</b>.&nbsp; Then click Curve\Simple
+                                    Patch Mesh and click OK.&nbsp; This turns
+                                    the brush into a patch of the same area as
+                                    the brush, but with no depth.</p>
+                                    <p>Make the road curve by pressing V and
+                                    dragging the vertices as wanted.&nbsp; I've
+                                    made a gentle curve of uniform width for its
+                                    length, by dragging all the vertices in the
+                                    same row by the same amount, whether to the
+                                    left or the right.</p>
+                                    <p><img border="0" src="images/tutorial/22/Image14.jpg" width="358" height="482"></p>
+                                    <p><img border="0" src="images/tutorial/22/Image15.jpg" width="392" height="456"></p>
+                                    <p>Press V to turn off the Vertex
+                                    tool.&nbsp; Next we'll give the curve some
+                                    depth.</p>
+                                    <p>Click Curve\Thicken... then as we want
+                                    the curve to be 16 units deep (just so it
+                                    touches the ground in this example), enter
+                                    16 and click OK.&nbsp; You get a chunky
+                                    curve like a piece of scalextric track,
+                                    defined as a group.&nbsp; We can delete the
+                                    bottom face like we deleted the bottom cap
+                                    of the cylinder, by lifting the group,
+                                    deselecting it, selecting and deleting the
+                                    bottom face, selecting the group again and
+                                    putting it back in place.</p>
+                                    <p>You can create upward/downward slants in
+                                    the curved path by lifting its vertices
+                                    up/down before applying the Thicken.</p>
+                                    <p>You don't have to worry about Detail
+                                    brushes for patches, ET treats them all as
+                                    detail anyway.</p>
+                                    <p>Save, compile and check out your
+                                    creations.</p>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <a href="tutorial23.htm">
+                                    Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

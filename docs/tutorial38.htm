@@ -1,0 +1,614 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              38</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+The Tank<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#tank">Creating the Tank</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#plot">Plotting the route</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#barrier">Making a tank barrier</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="#script">Writing the script</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="tank">Creating
+                                            the Tank</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    The tank is the biggest single element that
+                                    you definitely don't want to create from
+                                    scratch.&nbsp; The Jagdpanther I first used
+                                    was taken from the sample Goldrush map
+                                    supplied by Radiant.&nbsp; It took some time
+                                    to even recognize some of the tank
+                                    components as being tank components,
+                                    especially those that the author didn't
+                                    happen to put immediately adjacent to the
+                                    tank.&nbsp; It took even longer to
+                                    understand what the sizeable script was
+                                    doing and rework it to do what I wanted.
+                                    <p>So to save you a lot of time and grief, I
+                                    have made a <a href="tutorial/tank.zip" target="_blank">self-contained
+                                    map</a> (we won't be using the tutorial map
+                                    for this) and script, which includes a fully
+                                    operational tank and tank barrier.&nbsp; I
+                                    will explain all the components so that you
+                                    can get them
+                                    working in your own map.&nbsp; I have
+                                    rationalized and re-ordered the script
+                                    components (eg arranged them alphabetically,
+                                    improved the comments, re-coded some
+                                    elements for clarity) in an effort to make
+                                    the scripting side as easy as
+                                    possible.&nbsp; Note that even this minimal
+                                    example tank script is 715 lines long -
+                                    happily you only need to understand a
+                                    fraction of
+                                    it to make it work for you.&nbsp;
+                                    :)
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Download the tank.zip file and put the
+                                    tank.map and tank.script in your etmain/maps
+                                    folder.
+                                    <p>Run Radiant and open tank.map.&nbsp; You
+                                    will see the tank (smothered in trigger
+                                    boxes), which is repairable by
+                                    the allies, and a barrier, which is
+                                    constructible by the axis.</p>
+                                    <p>If you want to immediately see what the
+                                    tank will do in this sample map, compile it
+                                    and have a go in ET.&nbsp; You should build
+                                    the barrier, mend the tank and drive it to
+                                    the barrier, destroy the barrier and then
+                                    escort the tank (in an oval route back to
+                                    the start) until it stops and fires the
+                                    gun.&nbsp; Then come back to Radiant.</p>
+                                    <p>Hide the ceiling brush, it will make
+                                    examining the tank easier.&nbsp; We'll look
+                                    at each component - get a 3D view that shows
+                                    all the tank elements, like this:
+                                    <p><img border="0" src="images/tutorial/38/Image1.jpg" width="448" height="555">
+                                    <p>Note that it doesn't matter where the
+                                    tank or any of its components is actually
+                                    placed in the map - it will be immediately
+                                    placed on the first point of the route it
+                                    will follow, when the map starts.
+                                    <p>Use shift+alt+click to select the largest
+                                    trigger box.&nbsp; We need to use
+                                    shift+alt+click quite a bit because many of
+                                    these components have origin brushes inside
+                                    and we want to include them when we examine
+                                    and hide each element.
+                                    <p><img border="0" src="images/tutorial/38/Image2.jpg" width="418" height="367">
+                                    <p>Press N, close the window, press N again.
+                                    <p>This is the <b>tank_trigger</b> - when an
+                                    allied soldier stands within it, the tank is
+                                    enabled to move (notwithstanding other
+                                    reasons why it can't, such as damage or a
+                                    barrier).
+                                    <p>Just use a regular mouse click on the 3D
+                                    pane and press H to hide the trigger while
+                                    leaving the entities window open, and
+                                    shift+alt+click the remaining big trigger
+                                    box.&nbsp; We'll use the same technique for
+                                    selecting and hiding each component.
+                                    <p><img border="0" src="images/tutorial/38/Image3.jpg" width="472" height="426">
+                                    <p><img border="0" src="images/tutorial/38/Image4.jpg" width="545" height="349"><p>The
+                                    <b>tank_build</b> trigger is used to allow
+                                    allied engineers to repair the tank.<p>As
+                                    this tank is to be esorted by the Allies,
+                                    the <b>allied_objective</b> box is ticked.<p>The
+                                    <b>shortname</b> will be shown on the
+                                    command map.<p><b>infoAxis, infoAllied</b>
+                                    and <b>override</b> are redundant, and have
+                                    never been changed since their use in
+                                    Goldrush.<p>The <b>track</b> is shown along
+                                    with &quot;You are near&quot;.<p>This
+                                    trigger is actually associated, via the <b>target</b>,
+                                    to a func_constructible called <b>tank_construct</b>.&nbsp;
+                                    To the player it appears that the
+                                    plier-waving is for the tank, when in fact
+                                    there is an invisible box in the air (the
+                                    nodraw non-solid yellow box) which he is
+                                    repairing (because the tank is not a
+                                    func_constructible).<p>The <b>customimages</b>
+                                    tell ET which icon to show on the command
+                                    map.
+                                    <p>Hide the trigger and shift+alt+click the
+                                    yellow box.
+                                    <p><img border="0" src="images/tutorial/38/Image5.jpg" width="126" height="122">
+                                    <p>It's shown as a func_constructible.&nbsp;
+                                    The health is a dummy value and doesn't
+                                    matter what it is.&nbsp; The tank's health
+                                    will be specified elsewhere.
+                                    <p>Hide it, and shift+alt+click the tank
+                                    brushes.
+                                    <p><img border="0" src="images/tutorial/38/Image6.jpg" width="380" height="320">
+                                    <p><img border="0" src="images/tutorial/38/Image7.jpg" width="532" height="247"><p>This
+                                    is the principal tank component.&nbsp; It is
+                                    a <b>script_mover</b> collection of brushes,
+                                    because the brushes have to be capable of
+                                    movement.&nbsp; The brushes are all <b>clip
+                                    weapon metal</b> textured, to make the
+                                    bullet ping sound when shot.<p>By default,
+                                    script_movers are non-solid, so that players
+                                    would pass through them; so the <b>solid</b>
+                                    box is ticked.<p>We only want explosives to
+                                    harm this script_mover, so the <b>explosivedamageonly</b>
+                                    box is ticked.<p>When the script_mover is
+                                    destroyed, we want it to be able to start
+                                    again with full health, so the <b>resurectable</b>
+                                    box is ticked.<p>It should appear on the <b>compass,</b>
+                                    and it can only be destroyed by the axis, so
+                                    the <b>allied</b> box is ticked.&nbsp; Yes,
+                                    a bit odd.&nbsp; Think of it as an allied
+                                    tank.<p>The tank has a <b>mounted_gun</b>.<p>The
+                                    <b>model2</b> specifies that this
+                                    tank-shaped collection of brushes should
+                                    actually be visible as the jagdpanther
+                                    tracks, which is a model.<p>The <b>health</b>
+                                    is 1200 which is the standard tank health
+                                    value.<p>The <b>description</b> is what is
+                                    shown when the player looks at the tank and
+                                    sees its health bar.<p>The <b>tagent</b> is
+                                    used to tell ET where the player using the
+                                    mounted gun should sit, ie in another entity
+                                    called the tank_shell.
+                                    <p>Hide it and select the tank model:
+                                    <p><img border="0" src="images/tutorial/38/Image8.jpg" width="370" height="330">
+                                    <p>This is the <b>tank_shell, </b>ie the
+                                    hull of the tank.&nbsp; The model sits on
+                                    the tracks.&nbsp; Hide it and select the gun
+                                    barrel.
+                                    <p><img border="0" src="images/tutorial/38/Image9.jpg" width="270" height="240">
+                                    <p>The tank turret is a separate entity, as
+                                    it has to be able to turn to the side.&nbsp;
+                                    Hide it and select the yellow
+                                    target_script_trigger on the left.
+                                    <p><img border="0" src="images/tutorial/38/Image10.jpg" width="284" height="180">
+                                    <p>This is the tank_trigger
+                                    target_script_trigger.&nbsp; It tells ET
+                                    which script element to run when someone
+                                    stands near the tank.&nbsp; Hide it and
+                                    select the mauve func_timer box.
+                                    <p><img border="0" src="images/tutorial/38/Image11.jpg" width="424" height="232">
+                                    <p>This is a timer, which executes every
+                                    second (wait = 1).&nbsp; Each time it
+                                    executes, it causes the script element
+                                    specified in the yellow
+                                    target_script_trigger shown on its right, to
+                                    run.&nbsp; Its purpose is to halt the tank
+                                    if no-one has been near it for a few
+                                    seconds.&nbsp; Hide it and select the yellow
+                                    box.
+                                    <p><img border="0" src="images/tutorial/38/Image13.jpg" width="434" height="246">
+                                    <p>You can see this is the <b>tank_disabler</b>.&nbsp;
+                                    Hide it and select the big red box on the
+                                    left.
+                                    <p><img border="0" src="images/tutorial/38/Image14.jpg" width="314" height="168">
+                                    <p>This is the smoke to be shown when the
+                                    tank is damaged.&nbsp; It will show black
+                                    smoke.&nbsp; Hide it and select the gun
+                                    flash model.&nbsp; You will probably need to
+                                    view the model from the back to select it.
+                                    <p><img border="0" src="images/tutorial/38/Image15.jpg" width="476" height="196">
+                                    <p>This is shown for a moment at the gun tip
+                                    when the gun fires.&nbsp; Hide it and select
+                                    the big red box next to it.
+                                    <p><img border="0" src="images/tutorial/38/Image16.jpg" width="396" height="172">
+                                    <p>This is something I've added.&nbsp; I
+                                    thought it would be nice to have a puff of
+                                    smoke at the tip of the gun barrel when it
+                                    fires, so I added this smoke entity and
+                                    called it tank_gunsmoke.&nbsp; Hide it and
+                                    select the little green box.
+                                    <p><img border="0" src="images/tutorial/38/Image17.jpg" width="260" height="156">
+                                    <p>This is just a placeholder entity to
+                                    allow the script to manipulate sounds
+                                    associated with the tank.&nbsp; It gives the
+                                    script a named procedure it can use, called <b>tank_sound</b>.
+                                    <p>Hide it and select the last red
+                                    box.&nbsp; This is a sound entity.&nbsp; I
+                                    used a different <b>noise</b> to the usual -
+                                    I don't remember why now, it was while I was
+                                    getting 2 tanks to work in the 2tanks
+                                    map&nbsp; - so you could put this back to
+                                    the standard gunfire sound: so<font SIZE="2">und/vehicles/tank/tank_fire.wav</font>
+                                    <p>Unhide everything again.&nbsp; That
+                                    completes the examination of all the parts
+                                    that make up the tank.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="plot">Plotting the route</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    You control where the tank goes by plotting
+                                    a route for it.&nbsp; Select the green box
+                                    near the front of the tank.
+                                    <p><img border="0" src="images/tutorial/38/Image18.jpg" width="462" height="354"></p>
+                                    <p><img border="0" src="images/tutorial/38/Image20.jpg" width="282" height="125"></p>
+                                    <p>The boxes are splines, an entity called <b>info_train_spline_main</b>.&nbsp;
+                                    Each spline points to the next spline along
+                                    the track, by using the <b>target</b> key.</p>
+                                    <p>I have made an oval circuit.&nbsp;
+                                    Normally the splines define a winding route,
+                                    not a circuit, and the last spline does not
+                                    have a <b>target</b> key, as there is no
+                                    next spline.</p>
+                                    <p>The origin of the tank tracks will follow
+                                    the origins of the splines.</p>
+                                    <p>When you're making the route, the easiest
+                                    way is to copy the last spline in the track
+                                    so far, move it into place, and rename its
+                                    targetname and target.&nbsp; Repeat as
+                                    necessary.</p>
+                                    <p>These example splines are actually too
+                                    far apart.&nbsp; As a rule of thumb, they
+                                    should be about 3 intersections apart at
+                                    grid scale 7.&nbsp; This is because when the
+                                    tank is damaged, it won't actually halt and
+                                    smoke until it reaches the next
+                                    spline.&nbsp; If you put them too far apart,
+                                    a wrecked tank will go on too far.</p>
+                                    <p>The pink boxes are <b>info_train_spline_controls</b>,
+                                    and they are used to smooth the turning from
+                                    one spline to the next.&nbsp; Without them,
+                                    the tank will turn quite abruptly.&nbsp;
+                                    Don't add them until you've laid out your
+                                    route with some confidence that it won't
+                                    change, because re-doing the spline controls
+                                    is really tiresome and best avoided - so
+                                    leave them to last.</p>
+                                    <p><img border="0" src="images/tutorial/38/Image21.jpg" width="424" height="151"></p>
+                                    <p>Select one and press N - you will see the
+                                    only thing of interest is its name.&nbsp; I
+                                    name them with the same name as the spline
+                                    they are controlling, plus
+                                    &quot;_c&quot;.&nbsp; Select a spline, like
+                                    one of those at the pointy end of the
+                                    circuit, and press N.&nbsp; You will see it
+                                    has a <b>control</b> key.&nbsp; Splines only
+                                    need a control key when you decide the tank
+                                    movement from this spline to the next needs
+                                    smoothing.</p>
+                                    <p>In the picture above, the centre spline
+                                    leads diagonally up to the left to the next
+                                    spline.&nbsp; It has a control, the pink box
+                                    to the left.&nbsp; So the tank won't go
+                                    straight along the green arrow, it will bow
+                                    out towards the pink box and then back to
+                                    the target spline.</p>
+                                    <p>This is best seen when you activate the <b>plot
+                                    splines</b> feature.&nbsp; Click this
+                                    button: <img border="0" src="images/tutorial/38/Image22.jpg" width="141" height="44">&nbsp;
+                                    Nothing seems to happen.&nbsp; Press ESC.</p>
+                                    <p><img border="0" src="images/tutorial/38/Image23.jpg" width="490" height="368"></p>
+                                    <p>This shows with the white line, the path
+                                    that the tank will actually follow.&nbsp;
+                                    Handy to spot lumpy plots that need
+                                    smoothing out with control splines.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="barrier">Making a tank barrier</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    I have put a fairly standard tank barrier in
+                                    this map - it's just a func_constructible,
+                                    like any other.&nbsp; This one has been made
+                                    an axis constructible.&nbsp; It's the script
+                                    that will make the tank react to the barrier
+                                    - without the script barrier detection, the
+                                    tank would otherwise just drive straight
+                                    through it.
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="script">Writing the script</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    Open the tank.script with Wordpad or
+                                    similar.&nbsp; I've arranged the scripting
+                                    elements alphabetically.&nbsp; I'll explain
+                                    just those elements of note or those you'll
+                                    need to amend to make the tank script work
+                                    in your own map.
+                                    <p>Look at the <b>barrier</b>
+                                    procedure.&nbsp; There are a number of <b>teamvoiceannounce
+                                    </b>commands - remember you will need to
+                                    include their definition in your <b>etmain/sounds/scripts/&lt;yourmapname&gt;.sounds</b>
+                                    file.&nbsp; You can copy them straight out
+                                    of the goldrush.sounds file.</p>
+                                    <p>If you made the barrier an explicit
+                                    objective, you'd need to add a limbo camera
+                                    and the objective ticking/crossing code.</p>
+                                    <p>Scroll down to the <b>tank</b> procedure.</p>
+                                    <p>All the <b>accum</b> comments are pretty
+                                    much what came with the goldrush script, and
+                                    you can more or less ignore them until you
+                                    get more proficient with scripting.</p>
+                                    <p>Scroll down to see each of the next
+                                    sections as they get described:</p>
+                                    <p><b>spawn</b> : (for your info) This puts
+                                    the tank onto the start of the route, and
+                                    gets it facing the right way (ie the way to
+                                    go from spln0 to spln1) by running the tank
+                                    forwards and then backwards along the first
+                                    spline.</p>
+                                    <table border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
+                                      <tr>
+                                        <td width="350"><font SIZE="2"><b>followspline</b>
+                                          0 spln0 50000 length 32 wait</font></td>
+                                        <td>Move the tank along a spline route</td>
+                                      </tr>
+                                      <tr>
+                                        <td><font SIZE="2">followspline <b>0</b>
+                                          spln0 50000 length 32 wait</font></td>
+                                        <td>Go forwards along this spline.&nbsp;
+                                          1 means go to the next spline and move
+                                          backwards to this one.</td>
+                                      </tr>
+                                      <tr>
+                                        <td><font SIZE="2">followspline 0 <b>spln0</b>
+                                          50000 length 32 wait</font></td>
+                                        <td>Identifies the spline to follow.</td>
+                                      </tr>
+                                      <tr>
+                                        <td><font SIZE="2">followspline 0 spln0 <b>50000</b>
+                                          length 32 wait</font></td>
+                                        <td>The speed to move at.&nbsp; Normally
+                                          speeds are 50-80.&nbsp; 50 is the
+                                          speed used in Goldrush.&nbsp; 80 is
+                                          used in Fueldump.&nbsp; 50000 is
+                                          extremely fast and is used just for
+                                          positioning at game start.</td>
+                                      </tr>
+                                      <tr>
+                                        <td><font SIZE="2">followspline 0 spln0
+                                          50000 <b>length 32</b> wait</font></td>
+                                        <td>Tells ET that the tank origin is not
+                                          at its actual centre, and to
+                                          compensate for this during turning.</td>
+                                      </tr>
+                                      <tr>
+                                        <td><font SIZE="2">followspline 0 spln0
+                                          50000 length 32 <b>wait</b></font></td>
+                                        <td>Tells ET to wait until the movement
+                                          is completed before executing the next
+                                          script line.</td>
+                                      </tr>
+                                    </table>
+                                    <p>Scroll down to <b>trigger dispatch</b>.</p>
+                                    <p>You'll need one of these lines per
+                                    spline.&nbsp; Make sure the numbers match,
+                                    eg <font SIZE="2">accum 3 trigger_if_equal <b>7</b>
+                                    tank run_<b>7</b></font></p>
+                                    <p><font size="2">Scroll down to <b>trigger
+                                    run_0</b>.</font></p>
+                                    <p><font size="2">You'll need one like this
+                                    for each normal spline, ie a spline that
+                                    isn't the last spline or a point at which a
+                                    barrier may impede tank progress.&nbsp;
+                                    Change run_<b>0</b> to run_&lt;the next
+                                    number&gt;.&nbsp; Changle spln<b>0</b> to
+                                    spln&lt;the next number&gt;.</font></p>
+                                    <p><font size="2">Look at <b>trigger run_3</b>.</font></p>
+                                    <p><font size="2">If the tank starts along
+                                    spline 3, it means it has passed the barrier
+                                    - so remove the barrier.</font></p>
+                                    <p><font size="2">Look at <b>trigger run_7</b>.</font></p>
+                                    <p><font size="2">This would be your last
+                                    spline.&nbsp; You can see the tracks stop,
+                                    the engine stops, the tank shudders to a
+                                    stop (the animations) and then the turret
+                                    will turn to fire.&nbsp; If you don't want
+                                    the tank turret to turn and fire, delete the
+                                    line <b>trigger tank_turret turn</b>.</font></p>
+                                    <p><font size="2">Scroll down to <b>trigger
+                                    stuck_check_finished.</b></font></p>
+                                    <p><font size="2">The <b>8</b> is the value
+                                    of the last spln number + 1.&nbsp; Change it
+                                    to your last spln number + 1.</font></p>
+                                    <p><font size="2">Scroll down to <b>trigger
+                                    stuck_check_barrier</b></font></p>
+                                    <p><font size="2">The <b>abort_if_not_equal
+                                    3</b> is being compared to the spln number
+                                    in front of the barrier, ie the point at
+                                    which the tank should stop if the barrier is
+                                    built.&nbsp; Change the 3 to wherever your
+                                    barrier is.&nbsp; If you have more than one
+                                    barrier, clone the <b>trigger
+                                    stuck_check_barrier</b> procedure with a
+                                    different name, and set the
+                                    abort_if_not_equal value accordingly.&nbsp;
+                                    You'll also need to clone the line <b>trigger
+                                    self stuck_check_barrier </b>into the name
+                                    of the new procedure, in the <b>trigger
+                                    stuck_check</b> routine.</font></p>
+                                    <p><font size="2">You can ignore the rest of
+                                    the script, it will work just fine as it is.</font>
+                                    <p><font size="2">Now go play with your tank
+                                    - experiment with changing the route and get
+                                    the hang of control splines.</font>
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    <font size="2">Next lesson - not yet ready.</font>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

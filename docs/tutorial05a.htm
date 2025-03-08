@@ -1,0 +1,294 @@
+<html>
+<head>
+<title>2Bit Enemy Territory</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#525C69">
+  <tr>
+    <td width="1"><a href="/" target="_blank"><img src="images/url.gif" alt="2Bit's Mapping Corner on www.PythonOnline.co.uk" hspace="36" vspace="5" border="0" width="166" height="15"></a></td>
+    <td width="1"><img src="images/s.gif" width="36" height="1"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr class=grey>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="images/logo.jpg" hspace="6" width="227" height="250"></td>
+							<td width="100%" align="center"><font size="6">ET Mapping Tutorial</font><p><font size="5">Lesson
+                              5a</font></p></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%" class=header>Topics</td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+<b><br>
+Making a building outline in your environment<br>
+&nbsp;</b>
+<table border="0" cellpadding="2" cellspacing="0" bordercolor="#FFFFFF">
+  <tr>
+    <td></td>
+    <td><a href="#l">Making an L-shaped outline</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="tutorial.htm">Back to main menu</a></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+<!-- Alert boxout
+<table border="0" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+	<td bordercolor="#000000" style="border-style: solid; border-width: 1" valign="top" bgcolor="#F4F4F4">
+	<img border="0" src="images/tutorial/alert.gif" width="48" height="42" style="float: left">
+	</td>
+</tr>
+</table>
+-->
+<!--
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="name">name</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+-->
+						<table width="100%"  border="0" cellspacing="0" cellpadding="8">
+						<tr>
+							<td>
+								<table width="100%"  border="0" cellpadding="5" cellspacing="2" class="nicefield">
+								<tr valign="top">
+									<td width="100%">
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td width="50%" class=header><a name="l">Making an L-shaped
+                                            outline</a></td>
+                                          <td width="50%" align="right"><a href="#">[Top]</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+								</tr> 
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    I have chosen an L-shape structure to
+                                    demonstrate the best practices for creating
+                                    joined walls, with the aim of using the
+                                    least number of brushes and visible faces.
+                                    <p>I am now assuming you know how to create,
+                                    caulk, duplicate, move and resize brushes -
+                                    please refer to earlier lessons for a
+                                    refresher if you don't remember.</p>
+                                    <p>Run Radiant.&nbsp; Open the tutorial
+                                    map.&nbsp; Leave the grid size at the
+                                    default 4 for the moment.&nbsp; Press
+                                    ctrl+tab to see the side 2D view.&nbsp; We
+                                    are going to move the environment down&nbsp;
+                                    a little, in order to make the upper face of
+                                    the floor run along the 0 (zero) Z
+                                    co-ordinate.&nbsp; This will make it easier
+                                    when we are creating new brushes, because
+                                    they will sit just on the ground by default,
+                                    rather than just through it.
+                                    <p>Draw a box around the whole environment
+                                    (mousewheel zoom out to see it all if
+                                    needed), and either right-click and
+                                    Select/Select Complete Tall or click the
+                                    indicated button, whichever you feel comes
+                                    more naturally.&nbsp; If you can't see
+                                    everything in the 2D window you can <b>scroll
+                                    the view by right-clicking it and dragging
+                                    around</b>.
+                                    <p><img border="0" src="images/tutorial/05/Image2.jpg" width="273" height="50">
+                                    <p>You should see this:
+                                    <p><img border="0" src="images/tutorial/05/Image3.jpg" width="464" height="204">
+                                    <p>Zoom in so you can see the grid, and move
+                                    the whole lot down one grid notch.
+                                    <p><img border="0" src="images/tutorial/05/Image4.jpg" width="412" height="320">
+                                    <p>Press ESC.&nbsp; Press ctrl+tab twice to
+                                    get the overhead view, and zoom out so you
+                                    can see the whole area again.&nbsp; <b>Set
+                                    the grid size to 8</b>.
+                                    <p>Draw a brush as shown below.&nbsp; Cycle
+                                    thru ctrl+tab to confirm the brush is
+                                    sitting on the floor level and is 128
+                                    high.&nbsp; If it isn't (because Radiant
+                                    remembers the last brush manipulation you
+                                    were doing) adjust it so that it is. 
+                                    <p><img border="0" src="images/tutorial/05/Image1.jpg" width="470" height="476">
+                                    <p>Caulk it.&nbsp; <b>Change the grid scale
+                                    to 5</b>, and reduce the width of the wall
+                                    by putting the cursor under the selection
+                                    and dragging up.&nbsp; You may want to zoom
+                                    in a little to clarify the grid lines for
+                                    yourself.
+                                    <p><img border="0" src="images/tutorial/05/Image5.jpg" width="452" height="472">
+                                    <p>Press ESC.&nbsp; In 3D view, select the
+                                    face that will be the inner wall - it's the
+                                    south facing wall that faces back to where
+                                    the player start points are.
+                                    <p>Apply Textures/chateau wood_test texture,
+                                    or some other wall texture if you
+                                    like.&nbsp; Press ESC.
+                                    <p><img border="0" src="images/tutorial/05/Image7.jpg" width="664" height="264">
+                                    <p>In 3D view take yourself around to the
+                                    outside face and apply an exterior
+                                    texture.&nbsp; I'm using
+                                    Textures/town/town_wall church_c01dm.&nbsp;
+                                    Press ESC again to deselect the face.
+                                    <p><img border="0" src="images/tutorial/05/Image8.jpg" width="516" height="402">
+                                    <p>Now select the wall brush and duplicate
+                                    it, then rotate the new wall by 90
+                                    degrees, in the usual way...&nbsp;
+                                    <p><img border="0" src="images/tutorial/03/Image7.jpg" width="382" height="102">
+                                    ...for making a wall
+                                    at right-angles to the previous wall, and
+                                    position it as shown.
+                                    <p><img border="0" src="images/tutorial/05/Image6.jpg" width="334" height="314">
+                                    <p>What you have here is the <b>wrong</b>
+                                    way to make adjacent walls.&nbsp; We will correct
+                                    this is a minute, but I'm doing this to show
+                                    you why you should avoid this construct when
+                                    possible (sometimes it will be
+                                    unavoidable).
+                                    <p>With walls butted up like this, the face <b>A</b>
+                                    will need an outer wall texture applied
+                                    (making 3 outer faces so far), and the face <b>B</b>
+                                    will overlap some of the inner texture
+                                    applied to the other brush, which is
+                                    wasteful because it means a face is textured
+                                    for its full length yet part of it cannot be
+                                    seen.  
+                                    <p>There is a more efficient way to arrange
+                                    the two walls:  
+                                    <p>Move the second wall up one notch so that
+                                    the brushes overlap.  
+                                    <p><img border="0" src="images/tutorial/05/Image9.jpg" width="258" height="248"><p>Press
+                                    <b>E</b> to bring up the <b>edges</b>
+                                    markers.<p><img border="0" src="images/tutorial/05/Image10.jpg" width="210" height="228">&nbsp;
+                                    The little blue dots mark the edge points we
+                                    can manipulate.<p>Click on the left blue dot
+                                    and drag it one notch down.<p><img border="0" src="images/tutorial/05/Image11.jpg" width="180" height="184">  
+                                    <p>Press shift+alt+click on the other wall
+                                    brush to select it, and press <b>E</b> to
+                                    show its edge points.  
+                                    <p><img border="0" src="images/tutorial/05/Image12.jpg" width="204" height="210">  
+                                    <p>Click on the bottom blue dot and drag it
+                                    left one notch.&nbsp; Press ESC twice to
+                                    turn off edge point display and deselect the
+                                    brush.  
+                                    <p><img border="0" src="images/tutorial/05/Image13.jpg" width="270" height="258">  
+                                    <p>You can see we have made a nice join now,
+                                    that means we only need 2 outer faces and
+                                    there is no wasted display of inner faces
+                                    because there is nothing partially
+                                    overlapping a textured face.  
+                                    <p>We're going to this trouble, when we
+                                    hadn't for the tiny room, because the outer
+                                    faces are going to be visible so it isn't ok
+                                    to leave chunky gaps on the outside faces -
+                                    it's all got to join and seal so that people
+                                    outside can't see ugly joins or see through
+                                    gaps, and vice versa.
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    We'll create more walls next to complete the
+                                    building outline.
+                                    <p>Select the second brush and angle its
+                                    bottom end using the edge points (you may
+                                    want to first select the main area ceiling
+                                    and hide (H) it).</p>
+                                    <p><img border="0" src="images/tutorial/05/Image14.jpg" width="192" height="212"></p>
+                                    <p>Duplicate the brush, rotate it 90 degrees
+                                    and attach it to the second brush:</p>
+                                    <p><img border="0" src="images/tutorial/05/Image15.jpg" width="196" height="196"></p>
+                                    <p>Reduce the length of the selected brush.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image16.jpg" width="472" height="500"></p>
+                                    <p>Duplicate it, rotate 90 degrees and move
+                                    into place.</p>
+                                    <p><img border="0" src="images/tutorial/05/Image17.jpg" width="457" height="464">
+                                    <p>Duplicate it, rotate 90 degrees <b>3
+                                    times </b>and move into place.
+                                    <p><img border="0" src="images/tutorial/05/Image18.jpg" width="446" height="460">
+                                    <p>Duplicate it, rotate 90 degrees and move
+                                    into place.
+                                    <p><img border="0" src="images/tutorial/05/Image19.jpg" width="482" height="476"><p>Press
+                                    ESC.&nbsp; Select the top brush, press E and
+                                    drag the bottom blue dot to the right to
+                                    make the join 45 degrees.<p>Press ESC.&nbsp;
+                                    Select the horizontal brush where the join
+                                    isn't right, press E and drag the top blue
+                                    dot to the right 2 notches.<p><img border="0" src="images/tutorial/05/Image20.jpg" width="416" height="346"><p>Press
+                                    ESC.&nbsp; Finally select the lower brush
+                                    and use the Edge blue dot to drag its inner
+                                    face up to meet the other at 45 degrees.<p><img border="0" src="images/tutorial/05/Image21.jpg" width="668" height="370">
+									</td>
+								</tr>
+								<tr valign="top">
+									<td width="100%" bgcolor="#EAEBED">
+                                    You've made an L-shaped outline with an
+                                    efficient use of faces.&nbsp; You could
+                                    compile here if you like and have a quick
+                                    run around to see how it looks.&nbsp; When
+                                    you come back, we'll add a floor, ceiling,
+                                    some windows you can smash, a door, and for
+                                    good measure, an outdoor MG42.
+                                    <p><a href="tutorial05b.htm">Next lesson</a>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>          
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>
